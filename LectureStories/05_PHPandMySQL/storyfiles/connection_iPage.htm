@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/05_PHPandMySQL/storyfiles/connection_iPage.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    February 18, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Connecting to MySQL - iPAge</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../js/slideToggle.js"></script> -->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  .r {
+	  	color:red;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Connecting to MySQL - iPage</h1>
+<p>Clicking on "Generate Code" will bring up a window like this.</p>
+<img src="../../../../images/lectures/connectScript.png" alt="connection script" />
+
+<p>Copy the code and put it in the "mysqli_connect.php" file that you will use on iPage.  Note that there is code below the little window so make sure to grab it all.  Change the obvious things and be sure to add the "i" in <span class="r">mysqli_connect</span> so that you can run improved PHP to MySQL queries.</p>
+<code>
+&lt;?php <br /> 
+$link = @<span class="r">mysqli_connect</span>('<span class="r">your_iPage_databasename</span>.ipagemysql.com', '<span class="r">database_name</span>', '<span class="r">your_password</span>');<br /> 
+if (!$link) { <br />
+    die('Could not connect: ' . mysql_error());<br /> 
+} <br />
+//echo 'Connected successfully';<br /> 
+//mysqli_select_db(yoursite); <br /> 
+// Set the encoding...<br />
+mysqli_set_charset($dbc, 'utf8');<br />
+?&gt;
+</code>
+
+<p>Change <code>$link</code> to <code>$dbc</code> if you want it to match your local version.  You can also put it all in that format.  This is what my iPage "mysqli_connect.php" file looks like (except for the password).</p>
+<code>
+&lt;?php 
+$dbc = @mysqli_connect('cs4550com.ipagemysql.com', 'fell', 'my_password'); 
+if (!$dbc) { <br />
+    die('Could not connect: ' . mysql_error()); <br />
+} <br />
+echo 'Connected successfully'; <br />
+//mysqli_select_db(mysite); <br />
+<br />
+// Set the encoding...<br />
+mysqli_set_charset($dbc, 'utf8');<br />
+?&gt;
+</code>
+
+
+</div>
+
+</body>
+</html>

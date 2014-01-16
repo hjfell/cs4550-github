@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Audio Tests 0</title>
+    <script>	
+    // from http://www.html5rocks.com/
+    
+    var context;
+	window.addEventListener('load', init, false);
+	function init() {
+  		try {
+    		context = new webkitAudioContext();
+  		}
+  		catch(e) {
+    		alert('Web Audio API is not supported in this browser');
+  		}
+	}
+ 	var mySoundBuffer = null;
+ 	
+
+	function loadSound(url) {
+		var request = new XMLHttpRequest();
+		request.open('GET', url, true);
+		request.responseType = 'arraybuffer';
+
+		// Decode asynchronously
+		request.onload = function() {
+			context.decodeAudioData(request.response, function(buffer) {
+				mySoundBuffer = buffer;
+			});
+		}
+		request.send();
+	}
+	
+	function playSound(buffer) {
+  		var source = context.createBufferSource(); // creates a sound source
+  		source.buffer = buffer;                    // tell the source which sound to play
+  		source.connect(context.destination);       // connect the source to the context's destination (the speakers)
+  		source.noteOn(0);                          // play the source now
+	}
+	
+	function drawIt(buffer) {
+		var canvas = document.getElementById('my_canvas');
+		
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+                   
+          bbb = buffer.getChannelData(0);
+          var step = (bbb.length)/1000;
+          ctx.translate(0, 100);
+          ctx.scale(1/step, 100);
+          ctx.lineWidth = 1/10;
+          ctx.fillStyle = 'blue';
+         // ctx.fillRect(1000, 0, 100, .5);
+          ctx.beginPath();
+                   
+          var start = 0;
+          ctx.moveTo(0, bbb[start]);
+          
+
+	      for (i = start; i < start+bbb.length; i=i+1) {
+          	ctx.lineTo(i, bbb[i]);
+          	
+          /*	if (bbb[i] > 0)  
+          		ctx.fillRect(i, 0, 1, bbb[i]);   
+          	else
+          		ctx.fillRect(i, bbb[i], 1, -bbb[i]);  
+          */
+	      }
+
+          ctx.stroke();
+
+        }
+	}
+	
+	</script>
+</head>
+<body onload="init();">
+<button type="button" onclick="loadSound('../sounds/jd_3921.wav');">Load Babble</button>
+<button type="button" onclick="loadSound('../sounds/numbersF.wav');">Load Numbers</button>
+
+<button type="button" onclick="playSound(mySoundBuffer);">Play Sound</button>
+<button type="button" onclick="document.write(mySoundBuffer.length);">Wave Buffer Length</button>
+<button type="button" onclick="drawIt(mySoundBuffer);">Draw It</button>
+<br />
+<canvas id="my_canvas" width="1000" height="200"  style="border: 1px solid black;"></canvas>
+
+</body>
+</html>

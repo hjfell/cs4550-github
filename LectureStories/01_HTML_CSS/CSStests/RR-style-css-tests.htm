@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: experiments/CSStests/RR-style-css-tests.htm
+    
+    Copyright 2011,
+    Harriet Fell,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 19, 2012
+-->
+<html lang="en">
+<meta charset="utf-8" />
+<head>
+  <title>Experiments with Rasala's style.css</title>
+  <link rel="Stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <!-- heading tests -->
+  <h1 class="fs200">h1 class=fs200</h1>
+  <h1 class="fs180">h1 class=fs180</h1>
+  <h1 class="fs150">h1 class=fs150</h1>
+  <h1 class="fs120">h1 class=fs120</h1>
+  <h1 class="fs100">h1 class=fs100</h1>
+  <h1 class="fs80">h1 class=fs80</h1>
+  <br />
+  <h2 class="fs200">h2 class=fs200</h2>
+  <h2 class="fs180">h2 class=fs180</h2>
+  <h2 class="fs150">h2 class=fs150</h2>
+  <h2 class="fs120">h2 class=fs120</h2>
+  <h2 class="fs100">h2 class=fs100</h2>
+  <h2 class="fs80">h2 class=fs80</h2>
+  <br />
+  <!-- paragraph styles -->
+  <p>
+    This is a simple paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p&gt;</code> The default is <code>text-align:
+      justify</code>.  I've added some extra words to get this paragraph onto a third line.   I've added some extra words to get this paragraph onto a third line.  I've added some extra words to get this paragraph onto a third line.</p>
+  <p class="left">
+    This is a left justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="left"&gt;</code></p>
+  <p class="center">
+    This is a centered paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+  <p class="right">
+    This is a right justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+
+<div class="inset1">
+<b>These paragraphs are in a div with class="inset1".</b>
+ <p>
+    This is a simple paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p&gt;</code> The default is <code>text-align:
+      justify</code>.  I've added some extra words to get this paragraph onto a third line.   I've added some extra words to get this paragraph onto a third line.  I've added some extra words to get this paragraph onto a third line.</p>
+  <p class="left">
+    This is a left justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="left"&gt;</code> </p>
+  <p class="center">
+    This is a centered paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+  <p class="right">
+    This is a right justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+</div>
+<br />
+<div class="inset3">
+<b>These paragraphs are in a div with class="inset3".</b>
+ <p>
+    This is a simple paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p&gt;</code> The default is <code>text-align:
+      justify</code>.  I've added some extra words to get this paragraph onto a third line.   I've added some extra words to get this paragraph onto a third line.  I've added some extra words to get this paragraph onto a third line.</p>
+  <p class="left">
+    This is a left justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="left"&gt;</code></p>
+  <p class="center">
+    This is a centered paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+  <p class="right">
+    This is a right justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+</div>
+<br />
+<div class="inset5">
+<b>These paragraphs are in a div with class="inset5".</b>
+ <p>
+    This is a simple paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p&gt;</code> The default is <code>text-align:
+      justify</code>.  I've added some extra words to get this paragraph onto a third line.   I've added some extra words to get this paragraph onto a third line.  I've added some extra words to get this paragraph onto a third line.</p>
+  <p class="left">
+    This is a left justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="left"&gt;</code></p>
+  <p class="center">
+    This is a centered paragraph with enough words to let us see what happens when the
+    text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+  <p class="right">
+    This is a right justified paragraph with enough words to let us see what happens
+    when the text rolls over onto a second line. <code>&lt;p class="center"&gt;</code></p>
+</div>
+
+<br />
+  <!-- Some tables -->
+  <table class="centerblock">
+    <tr>
+      <th>
+        Centered
+      </th>
+      <th>
+        Table
+      </th>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <code>class="centerblock"</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Left box
+      </td>
+      <td>
+        Right box
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table>
+    <tr>
+      <th>
+        Default
+      </th>
+      <th>
+        Table
+      </th>
+    </tr>
+    <tr>
+      <td>
+        Left box
+      </td>
+      <td>
+        Right box
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table style="border-collapse: separate;">
+    <tr>
+      <th>
+        No Border Collapse
+      </th>
+      <th>
+        Table
+      </th>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <code>style="border-collapse:separate;"</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Left box
+      </td>
+      <td>
+        Right box
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table border="1" style="border-collapse: separate;">
+    <tr>
+      <th>
+        Border and no Border Collapse
+      </th>
+      <th>
+        Table
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <code>border="1"</code>
+      </td>
+      <td>
+        <code>style="border-collapse:separate;"</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Left box
+      </td>
+      <td>
+        Right box
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table style="border:solid gray 5px; border-collapse: separate;">
+    <tr>
+      <th>
+        Border and no Border Collapse
+      </th>
+      <th>
+        Table
+      </th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <code>style="border:solid gray 5px; border-collapse: separate;</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Left box
+      </td>
+      <td>
+        Right box
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/10_ResponsiveDesign/storyfiles/viewports.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 15, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Viewports</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Viewports</h1>
+<p>For a desktop browser, the <em>viewport</em> is the visible area of the browser<br />
+<span class="indent2">and a <em>pixel</em> is a pixel.</span></p>
+<p>On phones there are <em>device pixels</em> and <em>CSS pixels</em>.</p>
+<p>CSS pixels don't always line up with device pixels
+<ul>
+<li>On a Retina display, one CSS pixel is two device pixels.</li>
+<li>If the user zooms to 200%, the CSS pixels double their height and width.</li>
+<li>The number of device pixels doesn't change.</li>
+<li>The number of CSS pixels that can be viewed inthe browser does change.</li>
+</ul>
+</p>
+
+To make things work better (or at least differently) on phones, add this to the <code>&lt;head&gt;</code> of your html file.
+<pre><code>
+	&lt;meta name="viewport" content="width=device-width" /&gt;
+</code></pre>
+
+<h3>Avoid these:</h3>
+<ul>
+<li>
+<code>
+	&lt;meta name="viewport" content="width=320px" /&gt;
+</code>
+</li>
+<li>
+<code>
+	&lt;meta name="viewport" content="height=anything_at_all" /&gt;
+</code>
+</li>
+<li>
+<code>
+	&lt;meta name="viewport" content="userscalable=no" /&gt;
+</code>
+</li>
+<li>
+<code>
+	&lt;meta name="viewport" content="minimum-scale=anything_at_all" /&gt;
+</code>
+</li>
+<li>
+<code>
+	&lt;meta name="viewport" content="maximum-scale=anything_at_all" /&gt;
+</code>
+</li>
+</ul>
+
+<p>Look at<br />
+<span class="indent1">http://cs4550.com/LectureStories/10_ResponsiveDesign/responsiveDesign_Kadlec/ch3/ch3.2.html</span>
+<br />on your phone.</p>
+
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

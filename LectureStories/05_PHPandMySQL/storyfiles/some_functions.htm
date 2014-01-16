@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/05_PHPandMySQL/storyfiles/some_functions.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    February 9, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Some PHP --> MySQL Functions</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../js/slideToggle.js"></script> -->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Some PHP --> MySQL Functions</h1>
+
+<p>Count the number of rows in a response<br />
+<span class="indent1"><code>$num = mysqli_num_rows($r);</code></span></p>
+
+<p>Check for a repeated email address - without causing a MySQL error<br />
+<code>$e = mysqli_real_escape_string($dbc, trim($_POST['email']));<br />
+		$q = "SELECT user_id FROM users WHERE email = '$e'";<br />
+		$r = @mysqli_query ($dbc, $q); // Run the query.<br />
+		$n = mysqli_num_rows($r);<br />
+		if ($n &gt; 0) {<br />
+<span class="indent1">$errors[] = "The email address $e is already in use.";</span><br />
+		}
+</code>
+</p>
+
+<p>Count the number of rows affected by INSERT, UPDATE, or DELETE<br />
+<span class="indent1"><code>$num = mysqli_affected_rows($dbc);</code></span></p>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

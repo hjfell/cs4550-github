@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/07_Cookies_LocalStorage/storyfiles/Title.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    February 22, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTTP Cookies</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">HTTP Cookies</h1>
+<p>
+A <em>cookie</em>, is usually a small piece of data sent from a website and stored in a user's web browser while a user is browsing a website. It contains some data:
+<ul>
+<li>A name-value pair containing the actual data</li>
+<li>An expiry date after which it is trashed<br />
+If you don't specify the expiry date the cookie is trashed when you close the browser.<br />
+This expiry date should be in UTC (Greenwich) time.</li>
+<li>The domain and path of the server it should be sent to</li>
+</ul>
+</p>
+
+<h3>How Cookies Work</h3>
+<ul>
+<li>When a user requests a page from a server to which a cookie should be sent, the cookie is added to the HTTP header.</li>
+<li>When the user's browser gets the page, the browser also gets the cookie, which it stores in a folder on your hard disk.</li>
+<li>When the user requests a page from the site again, the browser looks on the local hard disk for a cookie associated with the URL. If the cookie exists, the browser sends the cookie to the site along with the page request.</li>
+<li>Cookies are associated with a Web site, not with a specific page, so the browser and server will exchange the cookie information no matter what page you request from the site.</li>
+<li>As the user visits different sites, each site might send a cookie to the user's browser as well; the browser stores all the cookies separately.</li>
+<li>Most browsers support cookies of up to 4096 bytes. That is enough space for storing a few values on the user's computer. You might store a user number or other identifier so tha you could look up additional information in a database.</li>
+</ul>
+
+<h3>References:</h3>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/HTTP_cookie">Wikipedia on HTTP cookies</a></li>
+<li><a href="http://www.w3schools.com/js/js_cookies.asp">w3schools on Cookies</a></li>
+<li><a href="http://www.quirksmode.org/js/cookies.html">Quirksmode on Cookies</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/aa289495(v=vs.71).aspx#vbtchaspnetcookies101anchor1">msdn.microsoft.com on Cookies</a></li>
+</ul>
+
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

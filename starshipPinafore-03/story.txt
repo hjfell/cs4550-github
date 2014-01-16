@@ -1,0 +1,16 @@
+../starshipPinafore-03/sourceCodeTitleSlide.html	starshipPinafore-03 Source Code
+../../../story/showfile.htm?../starshipPinafore-03/index.html		starshipPinafore-03/index.html
+../../../story/showfile.htm?../starshipPinafore-03/reservations.html		starshipPinafore-03/reservations.html
+../../../story/showfile.htm?../starshipPinafore-03/rooms.html		starshipPinafore-03/rooms.html
+../../../story/showfile.htm?../starshipPinafore-03/locations.html		starshipPinafore-03/locations.html
+../../../story/showfile.htm?../starshipPinafore-03/services.html		starshipPinafore-03/services.html
+../../../story/showfile.htm?../starshipPinafore-03/contact.html		starshipPinafore-03/contact.html
+../../../story/showfile.htm?../starshipPinafore-03/css/starship.css		starshipPinafore-03/css/starship.css
+../../../story/showfile.htm?../starshipPinafore-03/css/styleLocations.css		starshipPinafore-01/css/styleLocations.css
+../../../story/showfile.htm?../starshipPinafore-03/css/styleRooms.css		starshipPinafore-03/css/styleRooms.css
+../../../story/showfile.htm?../starshipPinafore-03/css/style.css		starshipPinafore-03/css/style.css
+../../../story/showfile.htm?../starshipPinafore-03/css/formStyle.css		starshipPinafore-03/css/formStyle.css
+../../../story/showfile.htm?../starshipPinafore-03/css/base.css		starshipPinafore-03/css/base.css
+../../../story/showfile.htm?../starshipPinafore-03/js/food2.js		starshipPinafore-03/js/food2.js
+php/processReservationForm_src.php 	starshipPinafore-03/php/processReservationForm_src source
+story.txt											The story file for this story 

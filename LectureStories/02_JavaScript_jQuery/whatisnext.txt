@@ -1,0 +1,10 @@
+storyfiles/JavaScript_intro.htm							What is JavaScript?
+storyfiles/JavaScript_howTo.htm							Writing JavaScript
+storyfiles/moreJavaScriptTypes.htm						More JavaScript Types
+storyfiles/JavaScriptObjects.htm					JavaScript Objects
+storyfiles/JavaScriptControls.htm						Controlling the Flow
+storyfiles/JavaScriptFunctions.htm						JavaScript Functions
+storyfiles/jQuery-intro.htm								What is jQuery?
+storyfiles/jQuery-howto.htm								Writing jQuery
+storyfiles/jQuery-tests.htm								jQuery sample code
+story.txt                                        		The story file for this story 

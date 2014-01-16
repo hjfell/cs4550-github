@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Koch Snowflake</title>
+<!-- based on an example from 
+	Flanagan, David (2011-04-25). JavaScript: The Definitive Guide 
+	OReilly Media - A. Kindle Edition. 
+-->
+</head>
+<body>
+<canvas id="koch_snowflake_id" width="700" height="700"></canvas>. 
+<script src="koch.js"> 
+</script>
+<script> 
+var deg = Math.PI/180; // For converting degrees to radians
+
+var canvas = document.getElementById("koch_snowflake_id"); 
+var c = canvas.getContext('2d');
+
+// Start a new path and add polygon subpaths
+c.beginPath();
+// Some transformations to get the snowflakes on a slant
+c.translate(100,0)
+c.rotate(30*deg);
+
+// Set some properties that control how the graphics will look
+c.fillStyle = "#ccc";    // Light gray interiors
+c.strokeStyle = "#99F";  // outlined with light blue lines
+c.lineWidth = 3;         // five pixels wide.
+
+snowflake(c,0,5,115,125);    // A level-0 snowflake is an equilateral triangle
+snowflake(c,1,145,115,125);  // A level-1 snowflake is a 6-sided star
+snowflake(c,2,285,115,125);  // etc.
+snowflake(c,3,425,115,125);
+snowflake(c,4,565,115,125);  // A level-4 snowflake looks like a snowflake!
+c.fill();                    // Stroke this very complicated path
+c.stroke();                  // Stroke this very complicated path
+snowflake(c,4,598,98,60);    // A level-4 snowflake in level-4 snowflake
+c.stroke();                  // Stroke this level-4 snowflake path
+</script> 
+</body>
+</html>
+
+
+
+	
+

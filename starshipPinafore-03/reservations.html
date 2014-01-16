@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Starship Pinafore Event Booking - Reservations</title>
+	<link rel="stylesheet" href="css/starship.css"> 
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/reservation.js"></script>
+  	<style>
+  		span.cal {font-family:Lucida Calligraphy,Comic Sans MS,sans-serif;}
+  	</style>
+</head>
+<body>
+<a id="TOP"></a>
+<div class="navbar">
+<ul class="navbar">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="reservations.html" class="here">Reservations</a></li>
+  <li><a href="rooms.html">Rooms</a></li>
+  <li><a href="locations.html">Locations</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+
+<!-- Titlebar -->
+<div class="titlebar">
+<h1><em>Starship Pinafore Event Booking - Reservations</em></h1> 
+</div>
+
+<!-- Main content --> 
+<div class="main"> 
+
+<div id="wrap">
+      <h2><em>Please complete this form to request a room reservation.</em></h2>
+      <form id="reservationform" action="php/processReservationForm.php" method="post">
+        <table>
+          <tr>
+            <td style="text-align:right;"><label for="name">Name:</label></td>
+            <td><input type="text" id="name" name="name" /></td>
+            <!--<td style="text-align:right;"><label for="idnum">Pinafore Password<br /></label></td>
+            <td><input type="text" id="pass" name="pass" value="guest42" /></td> -->
+          </tr>
+          <tr>
+            <td style="text-align:right;"><label for="email">Email:</label></td>
+            <td><input type="text" id="email" name="email" /></td>
+            <td></td>
+            <td></td>
+         <!--   <td><span style="font-size:80%;">Don't have a Pinafore account?  <a href="php/PinaforeAccountApp.php">apply here</a><br />
+            Not yet active, enter "guest42".</span></td>-->
+          </tr>
+          
+          <tr>
+          <th colspan="4">
+          <h3>Choose your room and days/times.</h3>
+          </th>
+          </tr>
+          <tr>
+          <td colspan="4">
+          We are now taking reservations from stardate 478000 to stardate 479999.
+          </td>
+          </tr>
+          <tr>
+          <td><label for="startdt">Start stardate:</label></td>
+          <td><input type="number" id="startdt" name="startdt" /></td> 
+          <td><label for="enddt">End stardate:</label></td>
+          <td><input type="number" id="enddt" name="enddt" /></td>           
+          </tr>
+          
+          <tr>
+          <td colspan="4" style="vertical-align:bottom;height:50px;"> 
+          	Prices shown are gold-pressed latnium bars per StarDay.</td>
+          </tr>
+          <tr>
+          <td colspan="3" id="room" style="vertical-align:top;"> 
+			<ul>
+				<li> 
+				<input type="radio" name="room" value="QB" checked="checked" />
+				Quark's Bar <span class="cal">L<sub>b</sub></span> 99999.00</li>
+				<li> 
+				<input type="radio" name="room" value="HD" />
+				Holodeck <span class="cal">L<sub>b</sub></span> 999.95 </li>
+				<li> 
+				<input type="radio" name="room" value="BT" />
+				Bajoran Temple <span class="cal">L<sub>b</sub></span> 1500.00 </li>
+			</ul>
+			</td>
+            <td></td>
+          <tr>
+            <td colspan="3"></td>
+            <td><input type="submit" value="Submit Request" id="send" /></td>
+          </tr>
+        </table>
+      </form>
+      <div id="response"></div>
+    </div>
+<hr />
+<p><a href="credits.html" target="_blank">Credits</a>  ------
+		Last Updated:&nbsp; <em>
+		<script type="text/javascript">
+//<![CDATA[
+<!--
+document.write(document.lastModified)
+// -->
+//]]>
+		</script>
+		</em> 
+</p>
+
+</div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

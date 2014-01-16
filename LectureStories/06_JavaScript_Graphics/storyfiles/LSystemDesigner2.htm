@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfilesL/XMLandWebStorage.htm
+    
+    Copyright 2012,
+    Harriet Fell,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    fell@ccs.neu.edu
+    
+    March, 2012
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>  
+</head>
+<body>
+<div class="pad">
+
+<h2 class="center">2D L-System Design Tool</h2>
+<h3 class="center">Using XML and Web Storage</h3>
+
+<p>See <a href="LSystem-tests.htm" target="_blank">L-System Designer</a> on the last page to see how I got started building this tool or the <a href="http://en.wikipedia.org/wiki/L-system" target="_blank">L-System</a> wikipedia page for some background material.</p>
+
+<p>In this version, <a href="http://net4.ccs.neu.edu/home/fell/experiments/LSystems/LSystems.htm" target="_blank">2D L-System Designer</a>, I use a server-side XML file to store the data for some L-Systems.  I can edit this file directly, adding or deleting systems as I see fit but the user can only load the file.  The user can however, create new L-Systems interactively and store the results in local web storage, an HTML5 feature that is implemented in modern browsers.  
+</p>
+
+<p>The relevant files are:</p>
+<ul>
+<li><a href="../JSGraphicsTests/LSystems/LSystems.htm" target="_blank">LSystems.htm</a> - layout for the input fields, buttons, and drawing canvas.<br />
+<span class="inset1"><a href="../JSGraphicsTests/LSystems/LSystems.php" target="_blank">LSystems.htm source</a></span>
+</li>
+<li><a href="../JSGraphicsTests/LSystems/XMLtools.js" target="_blank">XMLtools.js</a> - general functions for loading an XML file or a text string that contains XML information into an XML DOM.<br />
+<span class="inset1">from <a href="http://www.w3schools.com/xml/xml_parser.asp" target="_blank">W3schools XML Parser</a></span>
+</li>
+<li><a href="../JSGraphicsTests/LSystems/LSystemsXML2Array.js" target="_blank">LSystemsXML2Array.js</a>
+<ul>
+<li>init()</li>
+<li>loadLSystemData(xDoc) - gets data from the XML DOM into an array of L-Systems.  Needs rewriting.</li>
+<li>save(), function delValues(el_id), function setValues(el_id) - for saving and deleting user designs</li>
+<li>LSystem2String(title, id, start, rule1, rule2, angle, level, xval, yval, step, lineWidth, color, random, thinning)<br />
+LSystem(title, id, start, rules, angle, level, xval, yval, step, lineWidth, color, random)</li>
+<li>function makeButtons()</li>
+<li>press(), press2()</li>
+<li>getStart(), getRule1(), getRule2(), getXval(), getYval(), getAng(), getStep(), getLevel(), getRandom(), getLineWidth(), getSysName()</li>
+</ul>
+</li>
+<li><a href="../JSGraphicsTests/LSystems/LSystemsDraw.js" target="_blank">LSystemsDraw.js</a> - Draws the shape recursively from the array information</li>
+<li><a href="../JSgraphicsTests/ellipse.js" target="_blank">ellipse.js</a> - JavaScript function to draw and ellipse</li>
+<li><a href="../../../js/print.js" target="_blank">print.js</a> - Professor Rasala's print utility</li>
+<li><a href="../JSGraphicsTests/LSystems/LSystems.xml" target="_blank">LSystems.xml</a> - XML data file</li>
+</ul>
+</div>
+
+<h3>Plans for Future Versions:</h3>
+<ul>
+<li>Use more JQuery instead of old-style JavaScrip</li>
+<li>Try JSON in place of XML</li>
+<li>Develop server-side storage for user designs with either xml or a database</li></ul>
+</body>
+</html>

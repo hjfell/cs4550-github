@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/storyfiles/01_HTML_CSS/JavaScript_howTo.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115  
+    
+    January 19, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Writing JavaScript</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Writing JavaScript</h1>
+<p>JavaScript code can be in separate files or embedded in HTML.<br />
+Scripts in HTML must be inserted between <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags.<br />
+Scripts can be in the document <em>head</em> or <em>body</em>.<br />
+<span style="padding-left:50px;">Functions are usually defined in other files, the head, or just before &lt;/body&gt;.<br />
+Scripts in separate files do not have in the .js file.  The HTML include the .js file with a line like this:</span><br />
+<code>&lt;script type="text/javascript" src="myTools.js"&gt;&lt;/script&gt;</code>
+</p>
+<p>Look at the source of the previous slide for examples of:</p>
+<ul>
+	<li><code>document.getElementById(id)</code></li>
+	<li><code>document.write("&lt;p&gt;some text&lt;/p&gt;");</code><br />
+	<span class="red">Warning:</span> Do not execute <code>document.write</code> after the document has finished loading <button onclick="document.writeln('I warned you.');">DO NOT PRESS</button> </li>
+	<li>JavaScript Statements<br />
+	Ending statements with semicolon is optional <span class="red">but highly recommended</span> in JavaScript.<br />
+	<span style="padding-left:50px;">JavaScript is case sensitive and ignores white space.</span> </li>
+	<li>JavaScript Comments<br />	
+	<code>
+	// This is a comment
+	</code>
+	<pre>
+	/* This is a 
+		multiline comment - DON'T USE these
+		/*     var rm_a = /a*/.match(s); */
+	*/
+	</pre>
+	
+	</li>
+	<li>JavaScript Numbers are just like numbers should be.
+	<br />JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code> object</a> has methods that act on numbers.
+	</li>
+	<li>JavaScript Strings 
+	<ul>
+	<li>can be wrapped in single quotes or double quotes</li>
+	<li>can contain zero or more characters</li>
+	<li>\ (backslash) is the escape character</li>
+	</ul>
+	Characters in JavaScript are 16 bits wide (for Unicode 16).
+	</li>
+	<li>JavaScript Variables 
+	<ul>
+		<li>hold values of expressions</li>
+		<li>names start with letters (or $ or _ but you might avoid these)</li>
+		<li>names are case sensitive</li>
+		<li>don't use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Reserved_Words">reserved words</a></li>
+	</ul>
+	</li>
+	<li>JavaScript Data Types 
+	<ul>
+		<li>are dynamic</li>
+		<li>happen by assignment<br />
+		<code>
+			var name="Jerry", age=30 + 1/2, job='superhero', annual_salary=4300.00;<br />
+			document.write(name + " is a " + age + " year old " + job + " who earns $" + annual_salary + " per year."); 
+		</code><br />
+		<script>
+			var name="Jerry", age=30 + 1/2, job='superhero', annual_salary=4300.00;
+			document.write(name + " is a " + age + " year old " + job + " who earns $" + annual_salary + " per year.");
+		</script>
+		</li>
+		<li>or can be declared with <code>new</code><br />
+		<code> 
+			&lt;script&gt;<br />
+			var dogname=new String; <br />
+			document.write('&lt;br /&gt;');<br />
+			document.write('My dog is ' + dogname + '&lt;br /&gt;');<br />
+			dogname='Tasha';<br />
+			document.write('My dog is ' + dogname + '&lt;br /&gt;');<br />
+			dogname= 6+4;<br />
+			document.writeln('My dog is ' + dogname + '&lt;br /&gt;');<br />&lt;/script&gt; 
+		</code> 
+		<script>
+			var dogname=new String; 
+			document.write('<br />');
+			document.write('My dog is ' + dogname + '<br />');
+			dogname='Tasha';
+			document.write('My dog is ' + dogname + '<br />');
+			dogname= 6+4;
+			document.writeln('My dog is ' + dogname + '<br />');
+		</script>
+		</li>
+	</ul>
+	</li>
+	<li>JavaScript Operators<br />
+	<span style="padding-left:50px;">are pretty much like operators you have seen in other languages.</span>
+	<ul>
+	<li>Arithmetic Operators: 
+	<table style="width:30%;"><tr><td>+</td><td>-</td><td>*</td><td>/</td><td>%</td><td>++</td><td>--</td></tr></table></li>
+	<li>Assignment Operators: 
+	<table style="width:30%;"><tr><td>=</td><td>+=</td><td>-=</td><td>*=</td><td>/=</td><td>%=</td></tr></table></li>
+	<li>Concatenation:  +</li>
+	<li>Comparison Operators: 
+	<table style="width:30%;"><tr><td>==</td><td>===</td><td>!=</td><td>&gt;</td><td>&lt;</td><td>&gt;=</td><td>&lt;=</td></tr></table></li>
+	<li>Logical Operators
+	<table style="width:30%;"><tr><td>&amp;&amp;</td><td>||</td><td>!</td></tr></table></li>
+	<li>Conditional Operator: <code>variablename=(condition)?value1:value2</code></li>
+	</ul>
+	</li>
+</ul>
+
+
+</div>
+
+</body>
+</html>

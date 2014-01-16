@@ -1,0 +1,65 @@
+Some Rules:
+
+Symmetric Tree
+
+45
+S
+S:F[+S]-S
+F:FF
+
+
+Koch Triangle Form
+4
+90
+F
+F:F+F-F-F+F
+
+Gosper C Curve
+2
+45
+F
+F:+F--F+
+
+Dragon
+10
+90
+L
+L:L+R+
+R:-L-R
+
+Sierpinski Gasket
+6
+60
+R
+L:R+L+R
+R:L-R-L
+
+Koch Snowflake 
+5
+60
+S
+S:F++F++F
+F:F-F++F-F
+
+Islands and Lakes
+2
+90
+F+F+F+F
+F:F+f-FF+F+FF+Ff+FF-f+FF-F-FF-Ff-FFF
+f:ffffff
+
+Tree1
+4
+22.5
+F
+F:FF-[-F+F+F]+[+F-F-F]
+
+Tree 2
+5
+22.5
+X
+X:F-[[X]+X]+F[+FX]-X
+F:FF
+
+
+

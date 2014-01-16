@@ -1,0 +1,32 @@
+<html>
+<!-- http://stackoverflow.com/questions/8333021/javascript-sound-start-stop-and-image-change -->
+    <head>
+        <script type="text/javascript">
+            var pos = 0
+            var sId = 'sound';
+
+            function change() {
+                if(pos == 0) {
+                    pos = 1;
+                    document.getElementById('btn').src="http://www.buzzingup.com/wp-content/uploads/2011/07/stop.png";
+
+                    var e = document.createElement('embed');
+                    e.setAttribute('src','../sounds/Squeeze-Horn.mp3');
+                    e.setAttribute('id',sId);
+                    e.setAttribute('hidden','true');
+                    e.setAttribute('autostart','true');
+                    e.setAttribute('loop','true');
+
+                    document.body.appendChild(e);
+                } else {
+                    pos = 0;
+                    document.getElementById('btn').src="http://geekoffices.com/wp-content/uploads/2011/07/start-button-300x299.png";
+                    document.body.removeChild(document.getElementById(sId));
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img src="http://geekoffices.com/wp-content/uploads/2011/07/start-button-300x299.png" onClick="change()" id="btn" />
+    </body>
+</html>

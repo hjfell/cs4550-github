@@ -1,0 +1,17 @@
+﻿CREATE SCHEMA LSystem
+
+CREATE TABLE LSystem.Data
+  (Abbr char(2) NOT NULL PRIMARY KEY,
+   Name varchar(40) NOT NULL,
+   Start varchar(12) NOT NULL,
+   Rule1 varchar(12) NOT NULL,
+   Rule2 varchar(12) NOT NULL,
+   StartX int NOT NULL,
+   StartY int NOT NULL,
+   Ang float NOT NULL,
+   Step int NOT NULL,
+   Level int NOT NULL,
+   Random boolean NOT NULL,
+   LineWidth int NOT NULL,
+   LeafSize int NOT NULL,
+   Thinning boolean NOT NULL)

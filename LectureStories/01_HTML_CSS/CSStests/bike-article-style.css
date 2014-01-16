@@ -1,0 +1,92 @@
+﻿ /*
+    File: bike-article-style.css
+        
+    Copyright 2010,
+    Harriet Fell,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 20 2012
+*/
+        ul.hlist
+        {
+	        text-align:center;
+        }
+        ul.hlist li
+        {
+	        display: inline;
+            padding: 0 1%;
+	        font-weight: bold;
+        }
+        
+        a
+        {
+            color: #08f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        a:visited
+        {
+            color: #88f;
+        }
+        
+        a:hover
+        {
+            color: #f00;
+        }
+        
+        p
+        {
+            text-align: left;
+        }
+        
+        .grid
+        {
+            
+        }
+                     
+        .center 
+        {
+            text-align: center;
+        }
+        
+        #articletitle 
+        {
+	        font-size:300%;
+	        color:red;
+	        text-align:center;
+	        font-weight:bold;
+	        margin-top: 0.5em;
+        }
+
+        #byline
+        {
+	        font-size:200%;
+	        color:black;
+	        text-align:center;
+	        font-weight:bold;
+	        margin-bottom:.3em;
+        }
+        
+        /* GRID TABLE*/
+        table.grid {
+            border: solid 1px black;
+            margin-left:auto;
+            margin-right:auto;
+            margin-bottom:10px;
+            text-align:center;
+        }
+
+        table.grid td{
+            border: solid 1px black;
+            padding: 6px 6px 6px 6px;
+            font-size:100%;
+        }
+
+        table.grid th{
+            border: solid 1px black;
+            padding: 6px 6px 6px 6px;
+            font-size:100%;
+        }           

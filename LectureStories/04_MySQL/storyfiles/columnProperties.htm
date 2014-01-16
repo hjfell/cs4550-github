@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/columnProperties.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 4, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Choosing Other Column Properties</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <!--<script type="text/javascript" src="../../../../js/slideToggle.js"></script>-->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+<div class="pad">
+<h1 class="center">Choosing Other Column Properties</h1>
+
+<p><span class="code"><b>NOT NULL</b></span><br>
+<span style="padding-left:100px;">To force a field to have a value, add the <span class="code"><b>NOT NULL</b></span> description to the column type.</span><br />
+<span  style="padding-left:100px;" class="code"><b>DECIMAL(6,2) NOT NULL</b></span>
+</p>
+
+<h2>Indexes, Keys, and AUTO_INCREMENT</h2>
+<p>An <em>index</em> makes for easy retrieval but slower insertion.</p>
+<p>A <em>key</em> is integral to normalization.  There are <em>primary</em> and <em>foreign</em> keys.  A primary key in one table may be a foreign key in another table.</p>
+
+<p>Each table should have exactly one primary key that must obey:
+<ol>
+<li>It must always have a value.</li>
+<li>The value must never change.</li>
+<li>The value must be unique for each record in the table.</li>
+</ol>
+</p>
+
+<p>In our <em>users</em> table, <em>user_id</em> will be the PRIMARY KEY.<br />
+MySQL will automatically index it.<br />
+AUTO_INCREMENT is also added to the column to to make the values unique.<p>
+
+<h2>Default Values</h2>
+<p>You can specify a default value<br />
+<span class="code">gender ENUM('M', 'F') default 'F'</span><br>
+If no default is specified, MySQL will choose some version of "zero".
+</p>
+
+<h2>Finish Defining Your Columns</h2>
+<ol>
+<li>Identify the primary key.</li>
+<li>Identify <span class="code"><b>NOT NULL</b></span> columns</li>
+<li>Make numeric values UNSIGNED to keep them nonnegative.</li>
+<li>Set default values.</li>
+<li>Confirm the final column definitions.</li>
+</ol>
+
+<table>
+<tr><th>Column Name</th><th>Type</th></tr>
+<tr><td>user_id</td><td>MEDIUMINT UNSIGNED NOT NULL</td></tr>
+<tr><td>first_name</td><td>VARCHAR(20) NOT NULL</td></tr>
+<tr><td>last_name</td><td>VARCHAR(40) NOT NULL</td></tr>
+<tr><td>email</td><td>VARCHAR(60) NOT NULL</td></tr>
+<tr><td>pass</td><td>CHAR(40) NOT NULL</td></tr>
+<tr><td>registration_date</td><td>DATETIME NOT NULL</td></tr>
+</table>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/createDB.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 6, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Building a Database</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Building a Database</h1>
+
+<p>Let's build the database we just described.</p>
+<pre>
+mysql> CREATE DATABASE mysite;
+...
+mysql> USE mysite;
+...
+mysql> CREATE TABLE users (
+    -> user_id MEDIUMINT UNSIGNED NOT NULL
+    -> AUTO_INCREMENT,
+    -> first_name VARCHAR(20) NOT NULL,
+    -> last_name VARCHAR(20) NOT NULL,
+    -> email VARCHAR(60) NOT NULL,
+    -> pass CHAR(40) NOT NULL,
+    -> registration_date DATETIME NOT NULL,
+    -> PRIMARY KEY (user_id)
+    -> );
+...
+mysql> SHOW TABLES;
+...
+mysql> SHOW COLUMNS FROM USERS;
+</pre>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

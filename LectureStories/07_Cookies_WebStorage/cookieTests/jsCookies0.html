@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- from http://www.w3schools.com/js/js_cookies.asp -->
+<html>
+<head>
+<script>
+//The getCookie(c_name) function
+//  makes an array to retrieve cookie names and values,
+//	checks if the specified cookie exists, and
+//	returns the cookie value.
+function getCookie(c_name)
+{
+var i,x,y,ARRcookies=document.cookie.split(";");
+for (i=0;i<ARRcookies.length;i++)
+  {
+  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x==c_name)
+    {
+    return unescape(y);
+    }
+  }
+}
+
+//The parameters of setCookie(c_name,value,exdays) hold 
+//	the name of the cookie, 
+//	the value of the cookie, and 
+//	the number of days until the cookie expires.
+//	The function the date the cookie should expire. 
+//	It stores the cookie name, cookie value and the expiration date in the document.cookie object.
+function setCookie(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+document.cookie=c_name + "=" + c_value;
+}
+
+function checkCookie()
+{
+var username=getCookie("username");
+if (username!=null && username!="")
+  {
+  alert("Welcome again " + username);
+  }
+else 
+  {
+  username=prompt("Please enter your name:","");
+  if (username!=null && username!="")
+    {
+    setCookie("username",username,1);
+    }
+  }
+}
+</script>
+</head>
+<h1>JavaScript cookie Test</h1>
+<body onload="checkCookie()">
+</body>
+</html>

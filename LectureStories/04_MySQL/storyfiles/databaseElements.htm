@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/databaseElements.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 4, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Naming Database Elements</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../js/slideToggle.js"></script> -->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+<div class="pad">
+
+<h1 class="center">Naming Database Elements</h1>
+<h2>
+Identifiers
+</h2>
+<ul>
+<li>Should contain only letters numbers and underscore</li>
+<li>Should not be the same as existing keywords</li>
+<li>Should be treated as case-sensitive (depends on OS but safer this way)</li>
+<li>Should be at most 64 characters long (64 bytes really)</li>
+<li>Should be unique within their realm</li>
+<li>Cannot have two columns with the same name</li>
+</ul>
+<ul>
+<li>Two tables cannot have the same name</li>
+<li>Two different tables can have columns with the same name</li>
+</ul>
+
+<h2>
+Steps to Setting up a Database
+</h2>
+<ol>
+<li>Pick a database name – might be set by your host provider (mysite)</li>
+<li>Determine the tables (users)</li>
+<li>Determine the column names for each table
+<table>
+<tr><th>Column Name</th><th>Example</th></tr>
+<tr><td>user_id</td><td>834</td></tr>
+<tr><td>first_name</td><td>Larry</td></tr>
+<tr><td>last_name</td><td>Davidson</td></tr>
+<tr><td>email</td><td>ls@example.com</td></tr>
+<tr><td>pass</td><td>Emily07</td></tr>
+<tr><td>registration_date</td><td>2013-01-04-07:30:42</td></tr>
+</table>
+</li>
+</ol>
+ 	
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

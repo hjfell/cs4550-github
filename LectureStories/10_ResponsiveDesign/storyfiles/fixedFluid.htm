@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/10_ResponsiveDesign/storyfiles/fixedFluid.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 14, 2013 -- Pie Day
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mixing Fixed and Fluid</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Mixing Fixed and Fluid</h1>
+<p>To keep advertisers happy, we want the aside column fixed at 300px.</p>
+<p>Fixed width for the aside and 63.125% for the main column does not work well if the screen is less than 960 pixels.</p>
+
+<h3>Table-like Layouts</h3>
+<p>Tables let you mix fixed an fluid layouts but they are considered verboten by CSS standards.<br />
+<span class="indent2">Table values for CSS define visual layout not content.</span></p>
+<p>CSS <code>display</code> property gives similar control.</p>
+<p>See <a href="http://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">w3Schools CSS <code>display</code> Property</a></p>
+
+<pre></code>
+.main {
+    display: table-cell;
+    padding-right: 2.5316456%; /* 24px / 948px */
+}
+
+aside {
+    display: table-cell;
+    width: 300px;
+}
+</code></pre>
+
+<p><a href="../responsiveDesign_Kadlec/ch2/ch2.4.html" target="_blank">Kadlec ch2.4.html</a> is almost the same as <a href="../responsiveDesign_Kadlec/ch2/ch2-start.html" target="_blank">Kadlecch2-start.html</a> but it uses the css file on the next slide.</p>
+
+<p>Old versions of IE and don't support the CSS <code>display</code> property so There is one difference in the header of ch2.4.html.</p>
+<pre></code>
+&lt;!--[if (lt IE 8) &amp; (!IEMobile)]&gt;
+	&lt;link rel="stylesheet" href=""/css/ie.css" media="all"&gt;
+	&lt;![endif]--&gt;
+</code></pre>
+
+<p>This loads the file ie.css (below) for IE 7 and less but avoids loading it for Windows Phone 7.</p>
+<pre></code>
+.main {
+  float: left;
+  width: 65.8227848%; /* 624/948 */
+}
+
+aside {
+  float: right;
+  width: 31.6455696%; /* 300/948 */
+}
+</code></pre>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

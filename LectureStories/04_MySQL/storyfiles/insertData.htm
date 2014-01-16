@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/insertData.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 6, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Insert Data into a Table</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Insert Data into a Table</h1>
+
+<pre>
+mysql> INSERT into users
+    -> (first_name, last_name, email, pass, registration_date)
+    -> VALUES ('Harriet', 'Fell', 'me@universe.com', SHA1('mypass'),
+    -> NOW());
+Query OK, 1 row affected (0.24 sec)
+</pre>
+
+<p><b>SHA1( )</b> creates an encrypted string that is 40 characters long.<br />
+This is one-way encryption, not meant to be reversed.</p>
+
+<p><b>NOW( )</b> returns the current time and date - on the server.</p>
+
+<p><b>Inserting with just values and NULL for user_id.</b></p>
+<pre>
+mysql> INSERT INTO users VALUES
+    -> (NULL, 'Doe', 'Jane', 'her@universe.com', SHA1('fido'), NOW());
+Query OK, 1 row affected (0.55 sec)
+</pre>
+
+<p><b>Inserting several rows at once</b></p>
+<pre>
+mysql> INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES 
+    -> ('John', 'Lennon', 'john@beatles.com', SHA1('Happin3ss'), NOW( )), 
+    -> ('Paul', 'McCartney', 'paul@beatles.com', SHA1('letITbe'), NOW( )), 
+    -> ('George', 'Harrison', 'george@beatles.com ', SHA1('something'), NOW( )), 
+    -> ('Ringo', 'Starr', 'ringo@beatles.com', SHA1('thisboy'), NOW( ));
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+</pre>
+<p>This is allowed in MySQL but not in other database applications.</p>
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

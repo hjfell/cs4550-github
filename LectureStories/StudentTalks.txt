@@ -1,0 +1,89 @@
+Matthew Coleman
+Scott A Conway
+David S Crozier	-	Contentent Management Systems
+Patrick Cunniff	-	Preventing XSS Attacks
+Jorge L Delgado	-	Functional Programming in PHP
+Pranav Gandhi
+Corey A Hanson
+Nathan Heaps	-	AJAX  and PayPal
+Nathan D Holmes	-	Analytics
+Tangqian Hong	-	WebSockets
+Devin Hurd	-	Search Engine Optimization
+Peter Hurlburt
+William Jackson	-	REST
+Zachary E Kniebel
+Brandon Lerner	-	AJAX  and PayPal
+Christopher H McConnell	-	JSON
+Esther Michel	-	HCI - Designing good pages/sites
+Nguyen Nguyen
+Thang D. Nguyen	-	Regular Expressions
+Brian Ninni	-	URL rewriting
+Conor Odell	- Responsive Design
+Kyle Oestreich
+Dan Perruzzi	-	Accessibility
+Tyler Rosini	-	HTML5 Drag and Drop
+Alexander Seeto	-	HTML5 Drag and Drop
+Kelsey Simmons
+Christopher Souvey
+Robert J Steinbach	-	PYTHON Frameworks for the Web
+Joshua Tsuji
+Allison Ventura	-	Preventing SQL Injection Attacks
+Zhenyu Wang	-	WebKit
+
+Matthew Coleman <coleman.mat@husky.neu.edu>
+Scott A Conway <conway.sc@husky.neu.edu>
+Pranav Gandhi <pranavrulz@gmail.com>
+Corey A Hanson <hanson.co@husky.neu.edu>
+Peter D Hurlburt <hurlburt.p@husky.neu.edu>
+Zachary E Kniebel <kniebel.z@husky.neu.edu>
+Nguyen Nguyen <nguyen.ngu@husky.neu.edu>
+kyle oestreich <oestreich.k@husky.neu.edu>
+Kelsey Simmons <kelseysimmons52@gmail.com>
+Christopher Souvey <christopher@souvey.com>
+Joshua Tsuji <joshuatsuji@gmail.com>
+
+presented reservation system
+"Allison D. Ventura" <allivent@ccs.neu.edu>
+Joshua Tsuji <joshuatsuji@gmail.com>
+
+
+Security Methods 
+Preventing Spam 
+Validating Data by Type 
+Validating Files by Type 
+Using the (PHP) Filter Extension
+
+More:
+JavaScript
+jQuery
+PHP Data Objects (PDO)
+
+Accessing other Data (e.g. Google, eBay)
+
+HTML5 extras:
+GeoLocation
+Messaging
+WebWorkers
+
+Commercial Issues
+Shopping Carts
+
+	Ads
+	Site Maps
+
+PHP Frameworks
+	CakePHP
+	Zend
+
+Other tools:
+	JotForm
+	
+Other Languages PHP vs
+	Ruby-on-Rails
+
+
+
+
+
+
+

@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>2D L-System Designer</title>
+<!-- 
+	drawStringRec.htm
+	Harriet Fell February 2012
+-->
+
+  <!--  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+
+   <script type="text/javascript" src="../../../../JQuery/jquery-1.7.1.min.js"></script>
+
+   <script type="text/javascript" src="../../../../JQuery/modernizr.js"></script>
+
+   <script type="text/javascript" src="../../../../js/print.js"></script>             <!--  Professor Rasala's tools - especially useful for debugging -->
+
+   <script type="text/javascript" src="XMLtools.js"></script>                           <!--  Functions to load XML from a file or text string -->
+
+   <script type="text/javascript" src="LSystemsXML2Array.js"></script>                  <!--  Functions to load the XML DOM into an array structure -->
+
+   <script type="text/javascript" src="LSystemsDraw.js"></script>                       <!--  Functions to draw an L-system -->
+
+   <script type="text/javascript" src="../ellipse.js"></script>              <!--   an ellipse to use for drawing leaves on trees -->
+
+</head>
+
+
+<body>
+
+<!-- This form places input boxes, submit and save buttons, the drawing canvas, and some explanatory text on the page.  -->
+
+<form action="" id="getStr">
+
+<table>
+
+<tr><th>Start</th><th>Rules</th><th>Start Point</th><th>Angle</th><th>Step Size</th><th>Level</th><th>Random</th><th>Line Width</th></tr>
+
+<tr>
+
+<td><input type="text" id="start1" value ="F" /></td>
+
+<td><input type="text" id="rule1" value ="F:F+F-F-F+F" /><br />
+
+    <input type="text" id="rule2" value ="" /></td>
+
+<td>x <input type="number" id="xval" value ="250" maxlength="3" style="width:50px" /><br />
+
+    y <input type="number" id="yval" value ="350" maxlength="3" style="width:50px" /></td>
+
+<td><input type="number" id="ang1" value ="90" maxlength="3" style="width:50px" /></td>
+
+<td><input type="number" id="step1" value ="10" maxlength="3" style="width:50px" /></td>
+
+<td><input type="number" id="level1" value ="4" maxlength="2" style="width:50px" /></td>
+
+<td><input type="number" id="random1" value ="0" maxlength="2" style="width:50px" min="0" max="60" />%</td>
+
+<td><input type="number" id="lineWidth1" value ="1" maxlength="2" style="width:50px" min="0" max="20" />%</td>
+
+</tr>
+
+</table>
+
+<button type="button" id="submit">submit</button><br />
+
+<button type="button" id="save">save</button>
+
+<input type="text" id="sysName" value ="LSystem Name" /><br />
+
+</form>
+
+
+
+<table>
+
+<tr>
+
+<th>
+
+<canvas id="my_canvas_id" width="500" height="500"  style="border: 1px solid black;"></canvas>
+</th>
+<td style="vertical-align:top;width:20%">
+<ul id="myList" style="list-style: none;"><li><b>Some L-Systems</b></li></ul>
+
+</td>
+
+<td style="vertical-align:top;">
+
+This is an interactive viewer and designer for 2-dimensional Lindenmayer systems.<br />
+
+When you first load it, the fields at the top have the information necessary to generate a Koch Triagle form.  Click on "submit" to see the system rendered in the drawing area.<br />
+
+
+
+If you click on one of the eight buttons to the right of the drawing area, the information for that system will be entered into the fields and a click on "submit" will draw the new shape.<br />
+
+
+
+You can modify the entries in the fields to generate your own shapes.  This version of the program does not have error checking so try to enter appropriate information.  
+
+<ul>
+
+<li><b>Start</b> can be a string of (at least one) upper or lowercase letters and the symbols '+' and '-'.</li>
+
+<li><b>Rules</b> start with a letter (upper or lower case) followed by a colon followed by a string of upper and lowercase letters, the symbols '+' and '-' and matched pairs of the symbols '[' and ']'.</li>
+
+<li>Try <a href="http://en.wikipedia.org/wiki/L-system">Wikipedia: L-system</a> for more information.</li>
+
+</ul>
+
+If you like a system you have designed, give it a name and click on the "save" button.  When you reload the page, you should see a new button for each system that you saved.<br />
+
+A "delete" button will appear next to each of your creations so you can delete any you don't like.  Deleted items will not show up when you reload.
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+

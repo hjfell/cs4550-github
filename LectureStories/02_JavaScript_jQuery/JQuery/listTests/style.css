@@ -1,0 +1,23 @@
+#fruits .ui-selecting { 
+  background: #FEFF9F; 
+}
+
+#fruits .ui-selected { 
+  background-color:#cEcF6F; 
+}
+
+#fruits { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+#fruits li { 
+	border: 1px solid #ccc;
+	//float: left; 
+	width: 100px; 
+	height: 20px; 
+	font-size:1.1em;
+	margin:3px;
+	padding:0.4em;
+	text-align:center;
+}

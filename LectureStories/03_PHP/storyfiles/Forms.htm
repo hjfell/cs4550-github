@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/03_PHP/storyfiles/introduction.htm/Forms.htm
+    
+    Copyright 2012
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    December 30, 2012
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Forms</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+          
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+
+<body>
+<div class="pad">
+
+<h1 class="center">Forms</h1>
+
+<pre class="code">
+&lt;form action="script.php" method="post"&gt;
+&lt;/form&gt;  
+</pre>
+
+<p><strong>action</strong> dictates to which page the form data will be sent</p>
+<p><strong>method</strong> dictates how the data is sent to the handling page,<br />
+		the HTTP (HyperText Transfer Protocol) method to be used</p>
+<p><strong>get</strong> sends the submitted data to the receiving page as a series of name-value pairs appended to the URL. For example,<br />
+<span style="padding-left:50px;">http://www.example.com/script.php?name=Homer&amp;gender=M&amp;age=35</span>
+</p> 
+
+<p>
+•	resulting page can be bookmarked in the user’s Web browser (since it’s a complete URL)<br />
+•	can click Back in your Web browser to return to a GET page, or reload it without problems <br />
+•	there is a limit in how much data can be transmitted via GET<br />
+•	this method is less secure (since the data is visible)<br />
+•	used for requesting information, like a particular record from a database<br />
+•	or the results of a search 
+</p>
+
+<p><strong>post</strong> is used when an action is expected<br />
+•	the updating of a database record<br />
+•	the sending of an email
+</p>
+<p>
+All different kinds of input can be in the form.
+</p>
+
+</div>
+
+</body>
+</html>

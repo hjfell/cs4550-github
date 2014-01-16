@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>JQuery Form</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form").submit(function (e) {
+            e.preventDefault();
+            alert("Submit prevented");
+        });
+    });
+</script>
+</head>
+<body>
+<form name="input" action="" method="get">
+First name: 
+<input type="text" name="FirstName" value="Mickey" size="20">
+<br />Last name: 
+<input type="text" name="LastName" value="Mouse" size="20">
+<br />
+<input type="submit" value="Submit">
+</form> 
+</body>

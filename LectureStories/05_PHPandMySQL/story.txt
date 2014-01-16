@@ -1,0 +1,22 @@
+storyfiles/PHPandMySQLtitle.htm 	title slide
+../../../story/whatisnext.htm?../LectureStories/05_PHPandMySQL/whatisnext.txt   What is Next?
+storyfiles/connection.htm			Connection to MySQL from PHP - local
+storyfiles/createDB_iPage.htm		Create a MySQL Database- iPage
+storyfiles/connection_iPage.htm		Connection to MySQL from PHP - iPage
+storyfiles/simple_queries.htm		Simple Queries
+storyfiles/returnData.htm			Fetching Data
+storyfiles/simple_samples.htm		Simple Samples
+storyfiles/add_mouse_source.php 	add_mouse.php source
+storyfiles/delete_mouse_source.php 	delete_mouse.php source
+storyfiles/get_users_source.php 	get_users.php source
+storyfiles/security.htm				SQL Security Measures
+storyfiles/some_functions.htm		Some PHP --> MySQL Functions
+storyfiles/UllmanTemplate2.htm		Ullman Template 2
+storyfiles/register_source.php 		register.php source
+storyfiles/view_users_source.php 	view_users.php source
+storyfiles/password_source.php 		password.php source
+storyfiles/view_file_improved.htm	improved view_users
+storyfiles/view_users3_source.php	view_users3.php	source
+storyfiles/edit_user_source.php		edit_user.php source
+storyfiles/delete_user_source.php	delete_user.php source
+story.txt                   		The story file for this story

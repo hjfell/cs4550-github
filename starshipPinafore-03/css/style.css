@@ -1,0 +1,7 @@
+#rooms img {
+  display: none;
+}
+
+#rooms .show {
+  display: inline;
+}

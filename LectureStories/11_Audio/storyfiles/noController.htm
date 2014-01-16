@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/11_Audio/storyfiles/noController.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 20, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Playing Sounds on Click and Mouseover</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>	
+	<!-- adapted from http://webdesign.about.com/od/sound/a/play_sound_oncl.htm-->  
+	<script language="javascript" type="text/javascript">
+		var playing = false;
+ 		function playSound(spanname, soundfile, loopval, msg) {
+ 		// spanname:	span where the embed goes
+ 		// soundfile:	url of the sound
+ 		// loopval:		true for looping, false for once
+ 		// msg:	a message that shows when the sound plays
+ 			document.getElementById(spanname).innerHTML=
+ 			"<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\""+loopval+"\" />"+msg;
+ 		}
+	</script>
+	
+	<!-- from http://stackoverflow.com/questions/8333021/javascript-sound-start-stop-and-image-change -->
+        <script type="text/javascript">
+            var pos = 0
+            var sId = 'sound';
+
+            function change() {
+                if(pos == 0) {
+                    pos = 1;
+                    document.getElementById('btn').src="http://www.buzzingup.com/wp-content/uploads/2011/07/stop.png";
+
+                    var e = document.createElement('embed');
+                    e.setAttribute('src','../sounds/Squeeze-Horn.mp3');
+                    e.setAttribute('id',sId);
+                    e.setAttribute('hidden','true');
+                    e.setAttribute('autostart','true');
+                    e.setAttribute('loop','true');
+
+                    document.body.appendChild(e);
+                } else {
+                    pos = 0;
+                    document.getElementById('btn').src="http://geekoffices.com/wp-content/uploads/2011/07/start-button-300x299.png";
+                    document.body.removeChild(document.getElementById(sId));
+                }
+            }
+        </script>
+</head>
+<body>
+
+<div class="pad">
+
+<h2 class="center">Playing Sounds on Click and Mouseover</h2>
+
+<p>Plays once:
+<a onclick="if (!playing) { 
+	playSound('once','../sounds/Squeeze-Horn.mp3','false','click to stop'); 
+	playing = true;
+} else {
+	playSound('once','','false',''); 
+	playing = false;
+}"><img src="../../../images/lectures/soundclip.gif" width="47" height="47" alt="play sound gif"></a>
+	<span id="once"></span>
+</p>
+<p>Looping: 
+<a onclick="if (!playing) { 
+	playSound('looping','../sounds/Squeeze-Horn.mp3','true','click to stop'); 
+	playing = true;
+} else {
+	playSound('looping','','false',''); 
+	playing = false;
+}"><img src="../../../images/lectures/soundclip.gif" width="47" height="47" alt="play sound gif"></a>
+	<span id="looping"></span>
+</p>
+
+<p>On Mouse Over</p>
+<div style="width:400px; height:50px; background-color:pink;"  onmouseover="playSound('mousing','../sounds/Squeeze-Horn.mp3','true','   Mouse out to stop');" onmouseout="playSound('mousing','','false','');">Mouse over this box to hear a sound
+	<span id="mousing"></span>
+</div>
+
+<p>
+ <img src="http://geekoffices.com/wp-content/uploads/2011/07/start-button-300x299.png" width=75px; onClick="change()" id="btn" />
+</p>
+
+<p>The sample below has a controller that shows the waveform and has a cursor that moves along it as the sound is played.  It uses the <a href="https://soundcloud.com/pages/widgets">SoundCloud player</a>.</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F84054144&show_artwork=true"></iframe>
+
+<p>Let's look at the source for this page.</p>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

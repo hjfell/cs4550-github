@@ -1,0 +1,6 @@
+storyfiles/JSgraphicsStarter.htm				Getting started with JavaScript graphics
+storyfiles/KochSnowFlakes.php					Koch Snowflakes
+storyfiles/moreJSgraphics.htm					More Simple JavaScript Graphics
+storyfiles/LSystem-tests.htm                    Building an L-System Viewer/Designer
+storyfiles/LSystemDesigner2.htm                 L-System Designer with XML input &amp; localStoarge
+story.txt                                       The story file for this story 

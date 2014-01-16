@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/jquery-howto.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    January 24, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Writing jQuery</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+</head>
+<body>
+<div class="pad">
+<h1 class="center">Writing jQuery</h1>
+
+<h3>jQuery Syntax</h3>
+<p>Basic syntax is: <code>$(selector).action()</code></p>
+<ul>
+<li>A $ sign to define/access jQuery</li>
+<li>A (selector) to "query (or find)" HTML elements</li>
+<li>A jQuery action() to be performed on the element(s)</li>
+</ul>
+
+<h3>Examples (from w3schools):</h3>
+<ul>
+<li>$(this).hide() - hides the current element.</li>
+<li>$("p").hide() - hides all &lt;p&gt; elements</li>
+<li>$(".test").hide() - hides all elements with class="test"</li>
+<li>$("#test").hide() - hides the element with id="test"</li>
+</ul>
+
+<p><a href="http://www.w3.org/TR/css3-selectors/#selectors">CSS3 Selectors</a></p>
+
+<p>jQuery actions are most often responses to DOM events.<br />
+See <a href="http://www.w3schools.com/jquery/jquery_events.asp">jQuery Event Methods</a></p>
+
+<h3>The Document Ready Event</h3>
+<p>jQuery methods should go inside a document ready event so they do not execute before the document is ready.</p>
+<pre><code>
+$(document).ready(function(){
+
+   // jQuery methods go here...
+
+});</code></pre>
+
+</div>
+
+</body>
+</html>

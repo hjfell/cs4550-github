@@ -1,0 +1,9 @@
+../starshipPinafore-01/sourceCodeTitleSlide.html	starshipPinafore-01 Source Code
+../../../story/showfile.htm?../starshipPinafore-01/index.html		starshipPinafore-01/index.html
+../../../story/showfile.htm?../starshipPinafore-01/reservations.html		starshipPinafore-01/reservations.html
+../../../story/showfile.htm?../starshipPinafore-01/rooms.html		starshipPinafore-01/rooms.html
+../../../story/showfile.htm?../starshipPinafore-01/locations.html		starshipPinafore-01/locations.html
+../../../story/showfile.htm?../starshipPinafore-01/services.html		starshipPinafore-01/services.html
+../../../story/showfile.htm?../starshipPinafore-01/contact.html		starshipPinafore-01/contact.html
+../../../story/showfile.htm?../starshipPinafore-01/css/starship.css		starshipPinafore-01/css/starship.css
+story.txt											The story file for this story 

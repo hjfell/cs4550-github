@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--
+    File: experiments/JSfunctions2.htm
+    
+    Copyright 2011,
+    Harriet Fell,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    fell@ccs.neu.edu
+    
+    January 23, 2012
+-->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Java Script: The Good Part by Douglas Crockford</title>
+	<style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  .result {
+	  	font-size: 130%;
+	  }
+	  .result:hover {
+    	background-color: #ffcccc;
+	  }
+	</style>
+</head>
+<body>
+<h1 id="title">Sample Code from <i>Java Script: The Good Part</i>  by Douglas Crockford</h1>
+(This title had <span class="code">id="title"</span>.)
+<h2 id="hi">Hello, world!</h2>
+(This title had <span class="code">id="hi"</span>.)
+<pre class="code">
+document.writeln("Hello, world! I'm back.");
+</pre>
+<pre class="result">
+<script type="text/javascript">
+document.writeln("Hello, world! I'm back.");
+</script>
+</pre>
+
+<h2>More Functions</h2>
+<h3>Accessing the Inner HTML of a document element by id</h3>
+<pre class="code">
+txt=document.getElementById("title").innerHTML;
+document.write("&lt;p&gt;The text from the first header: " + txt + "&lt/p&gt");
+</pre>
+<pre class="result">
+<script type="text/javascript">
+txt=document.getElementById("title").innerHTML;
+document.write("<p>The text from the first header: " + txt + "</p>");
+</script>
+</pre>
+<pre class="code">
+txt=document.getElementById("hi").innerHTML;
+document.write("&lt;p&gt;The text from the second header: " + txt + &lt/p&gt");
+</pre>
+<pre class="result">
+<script type="text/javascript">
+txt=document.getElementById("hi").innerHTML;
+document.write("<p>The text from the second header: " + txt + "</p>");
+</script>
+</pre>
+
+<h3>Accessing the document nodes by click and number</h3>
+<pre class="code">
+// Make a function that assigns event handler functions to an array of nodes. 
+// When you click on a node, an alert box will display the ordinal of the node
+// and the inner HTML.
+var add_the_handlers = function (nodes) { 
+	var helper = function (i) { 
+		return function (e) { 
+			alert("innerHTML at node " + i + ": " + nodes[i].innerHTML);
+			var j; 
+		}; 
+	}; 
+	var i; 
+	for (i = 0; i < nodes.length; i += 1) { 
+		nodes[i].onclick = helper(i); 	
+	} 
+};
+</pre>
+<pre class="result">
+<script type="text/javascript">
+Function.prototype.method = function (name, func) {
+    this.prototype[name] = func;
+    return this;
+};
+
+// Make a function that assigns event handler functions to an array of nodes. 
+// When you click on a node, an alert box will display the ordinal of the node
+// and the inner HTML.
+var add_the_handlers = function (nodes) { 
+	var helper = function (i) { 
+		return function (e) { 
+			alert("innerHTML at node " + i + ": " + nodes[i].innerHTML);
+			var j; 
+		}; 
+	}; 
+	var i; 
+	for (i = 0; i < nodes.length; i += 1) { 
+		nodes[i].onclick = helper(i); 	
+	} 
+};
+</script>
+</pre>
+<hr />
+<pre class="code">
+document.writeln("This document has " + document.body.childNodes.length + " child nodes.");
+</pre>
+<pre class="result">
+<script type="text/javascript">
+document.writeln("This document has " + document.body.childNodes.length + " child nodes.");
+</script>
+Check the bottom of this document.
+</pre>
+
+<h3>This list has <span class="code">id="testList"</span>.</h3>
+<ul id="testList">
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ul>
+
+<script type="text/javascript">
+var somenodes=document.getElementById("hi").childNodes;
+document.writeln("<p>The 'title' node has " + somenodes.length + " child node.</p>");
+somenodes=document.getElementById("testList").childNodes;
+document.writeln("<p>The 'testList' node has " + somenodes.length + " child nodes.</p>");
+</script>
+<hr />
+
+<h3>Module</h3> 
+<p>A module is a function or object with an interface but that hides its state and implementationso we can almost completely eliminate global variables.</p>
+
+<h3>Remember to add <span class="code">method</span> to the prototype Function object before you define a member function.</h3>
+<pre class="code">
+Function.prototype.method = function (name, func) {
+    this.prototype[name] = func;
+    return this;
+};
+String.method('deentityify', function (  ) {
+// The entity table. It maps entity names to
+// characters.
+    var entity = {
+        quot: '"',
+        lt:   '<',
+        gt:   '>'
+    };
+
+// Return the deentityify method.
+    return function (  ) {
+	// This is the deentityify method. It calls the string
+	// replace method, looking for substrings that start
+	// with '&' and end with ';'. If the characters in
+	// between are in the entity table, then replace the
+	// entity with the character from the table. It uses
+	// a regular expression (Chapter 7).
+        return this.replace(/&([^&;]+);/g,
+            function (a, b) {
+                var r = entity[b];
+                return typeof r === 'string' ? r : a;
+            }
+        );
+    };
+}(  ));
+document.writeln('&amp;lt;&amp;quot;&amp;gt; becomes ' + '&amp;lt;&amp;quot;&amp;gt;'.deentityify( )); 
+</pre>
+<pre class="result">
+<script type="text/javascript">
+Function.prototype.method = function (name, func) {
+    this.prototype[name] = func;
+    return this;
+};
+String.method('deentityify', function (  ) {
+// The entity table. It maps entity names to
+// characters.
+    var entity = {
+        quot: '"',
+        lt:   '<',
+        gt:   '>'
+    };
+
+// Return the deentityify method.
+    return function (  ) {
+	// This is the deentityify method. It calls the string
+	// replace method, looking for substrings that start
+	// with '&' and end with ';'. If the characters in
+	// between are in the entity table, then replace the
+	// entity with the character from the table. It uses
+	// a regular expression (Chapter 7).
+        return this.replace(/&([^&;]+);/g,
+            function (a, b) {
+                var r = entity[b];
+                return typeof r === 'string' ? r : a;
+            }
+        );
+    };
+}(  ));
+document.writeln('&amp;lt;&amp;quot;&amp;gt; becomes ' + '&lt;&quot;&gt;'.deentityify( )); // <">
+</script>
+</pre>
+<pre class="code">
+add_the_handlers(document.body.childNodes);
+</pre>
+<pre class="result">
+<script type="text/javascript">
+add_the_handlers(document.body.childNodes);
+</script>
+</pre>
+
+<pre class="result">
+<script type="text/javascript">
+document.writeln("This document has " + document.body.childNodes.length + " child nodes.");
+</script>
+</pre>
+
+<button onclick="document.writeln('I warned you.');">DO NOT PRESS</button>
+</body>
+</html>

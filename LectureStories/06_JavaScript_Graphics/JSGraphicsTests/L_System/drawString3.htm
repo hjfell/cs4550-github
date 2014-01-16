@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Draw from String</title>
+<!-- 
+	drawString.htm
+	Harriet Fell February 2012
+-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script  type="text/javascript" src="../../../javascript/modernizr.min.js"></script>
+    <script type="text/javascript" src="drawString3.js"></script>
+</head>
+
+<body>
+
+<form action="" id="getStr">
+<table>
+<tr><th>Start</th><th>Rules</th><th>Start</th><th>Angle</th><th>Step Size</th><th>Level</th></tr>
+<tr>
+<td><input type="text" id="start1" value ="F" /></td>
+<td><input type="text" id="rule1" value ="F:F+F-F-F+F" /><br />
+    <input type="text" id="rule2" value ="" /></td>
+<td>x <input type="number" id="xval" value ="250" maxlength="3" style="width:50px" /><br />
+    y <input type="number" id="yval" value ="350" maxlength="3" style="width:50px" /></td>
+<td><input type="number" id="ang1" value ="90" maxlength="3" style="width:50px" /></td>
+<td><input type="number" id="step1" value ="10" maxlength="3" style="width:50px" /></td>
+<td><input type="number" id="level1" value ="4" maxlength="2" style="width:50px" /></td>
+</tr>
+</table>
+<button type="button" id="submit">submit</button><br />
+</form>
+<table><tr><th>
+<canvas id="my_canvas_id" width="500" height="500"  style="border: 1px solid black;"></canvas>
+</th>
+<td>
+<b>Some Rules to Try:</b>
+
+<p><button type="button" id="kochtriangle">Koch Triangle Form</button><br />
+4 (level)<br />
+90 (angle)<br />
+F (start)<br />
+F:F+F-F-F+F (rule)
+</p>
+
+<p><button type="button" id="gosperC">Gosper C Curve</button><br />
+11<br />
+45<br />
+F<br />
+F:+F--F+
+</p>
+
+<p><button type="button" id="kochsnowflake">Koch Snowflake</button><br />
+5<br />
+60<br />
+F++F++F<br />
+F:F-F++F-F
+</p>
+
+<p><button type="button" id="dragon">Dragon</button><br />
+12<br />
+90<br />
+L<br />
+L:L+R+<br />
+R:-L-R
+</p>
+</td>
+
+<td>
+<p><button type="button" id="sierpinskigasket">Sierpinski Gasket</button><br />
+8<br />
+60<br />
+R<br />
+L:R+L+R<br />
+R:L-R-L
+</p>
+
+<p><button type="button" id="islandsandlakes">Islands and Lakes</button><br />
+3<br />
+90<br />
+F+F+F+F<br />
+F:F+f-FF+F+FF+Ff+FF-f+FF-F-FF-Ff-FFF<br />
+f:ffffff
+</p>
+
+<p><button type="button" id="tree1">Tree 1</button><br />
+4<br />
+22.5<br />
+F<br />
+F:FF-[-F+F+F]+[+F-F-F]
+</p>
+
+<p><button type="button" id="tree2">Tree 2</button><br />
+5<br />
+22.5<br />
+X<br />
+X:F-[[X]+X]+F[+FX]-X<br />
+F:FF
+</p>
+</td>
+</tr></table>
+
+</body>
+</html>

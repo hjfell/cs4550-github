@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/10_ResponsiveDesign/storyfiles/elastic.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 13, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Elastic Layouts</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Elastic Layouts</h1>
+
+<p>Constraints are determined by type size using the <b>em</b>.</p>
+<p>One <b>em</b> is approximately the font size in pizels, e.g. ~24px for a 24px font.</p>
+<p>Elastic layouts provide strong typographic control.</p>
+<p>A good line length is between 45 and 70 characters.  You can make a container that is 55em wide.</p>
+<p>If a viewer changes the font size, elements will be scaled in proportion to the new font size.</p>
+<p>55em at 16px font size is 880px and won't fit on a tablet. -- The horizontal scrollbar appears.</p>
+<p>Can be really unpredictable if the viewer makes the font a larger size.</p>
+
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/storyfiles/01_HTML_CSS/JavaScript_intro.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115  
+    
+    January 19, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>What is JavaScript?</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">What is JavaScript?</h1>
+
+<p><b>JavaScript</b>
+<ul>
+<li>is a Scripting Language<br />
+<span style="padding-left:50px;">i.e. a lightweight programming language</span>
+</li>
+<li>can be inserted into HTML pages</li>
+<li>can be executed by all modern web browsers</li>
+<li>is executed line by line while the browser reads it</li>
+<li>came from many languages:
+<ul>
+<li>Syntax from Java</li>
+<li>Functions from Scheme</li>
+<li>Prototypal Inheritance from Self</li>
+<li>Regular Expression feature from Perl</li>
+</ul>
+</li>
+</ul>
+
+<p>JavaScript Tutorials
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">Mozilla JavaScript Guide</a></li>
+<li><a href="http://www.w3schools.com/js/">w3Schools JavaScript Tutorial</a></li>
+</ul>
+</p>
+
+<p>It is is easy to get started with JavaScript and easy to learn enough to do neat things.</p>
+<ul>
+<li>Write HTML Output<br />
+<code>&lt;script&gt;document.write("&lt;p id='boring'&gt;This is a boring paragraph&lt;/p&gt;");&lt;/script&gt;</code><br />
+
+<script> document.write("<p>This is a boring paragraph</p>"); </script>
+
+</li>
+<li>React to Events<br />
+<button type="button" onclick="alert('That tickles!')">Hi!  I'm Button<br />Go ahead and click me.</button>
+</li>
+
+<li>Change HTML Content<br />
+<p id="demo">
+I want vanilla ice cream
+</p>
+<p>I know I shouldn't.</p>
+
+<script>
+function myFunction()
+{
+x=document.getElementById("demo");  		// Find the element
+x.innerHTML="No, make that chocolate";    	// Change the content
+}
+</script>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+</li>
+
+<li>Change Images<br />
+<script>
+function changeImage()
+{
+/* Toggles between two Images
+   but one of the images must have 'missing' in its name.
+*/
+element=document.getElementById('animage')
+if (element.src.match("missing"))
+  {
+  element.src="../../../images/personal/quiltThumb.jpg";
+  }
+else
+  {
+  element.src="../../../images/cs4550/missing_photo.jpg";
+  }
+}
+</script>
+
+<img id="animage" onclick="changeImage()"
+src="../../../images/cs4550/missing_photo.jpg" width="100" height="100" alt="missing photo" />
+</li>
+<li>Change HTML Styles<br />
+<script>
+function restyle()
+{
+x = document.getElementById("demo") // Find the element
+x.style.fontWeight="bold";        // Change to bold
+x.innerHTML=x.innerHTML+" with whipped cream";    // Change the content
+x.style.color="#ff0000";          // Change the color
+}
+</script>
+
+<button type="button" onclick="restyle()">Click Me!</button>
+</li>
+
+<li>Get and Validate HTML Input<br />
+Please input a number.<br />
+<input id="numCheck" type="text">
+
+<script>
+function checkNum()
+{
+var x = document.getElementById("numCheck").value;
+if(x==""||isNaN(x))
+	{
+	alert("Not Numeric");
+	}
+else
+	{
+	alert(x + " is a cool number!");
+	}
+}
+</script>
+
+<button type="button" onclick="checkNum()">ENTER</button>
+
+</li>
+</ul>
+
+</div>
+
+</body>
+</html>

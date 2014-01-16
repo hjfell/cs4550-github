@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Draw from String</title>
+<!-- 
+	drawString.htm
+	Harriet Fell February 2012
+-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script  type="text/javascript" src="../../../javascript/modernizr.min.js"></script>
+    <script type="text/javascript" src="drawString.js"></script>
+</head>
+
+<body>
+
+<form action="" id="getStr">
+<table>
+<tr><th>Start</th><th>Rule</th><th>Angle</th><th>Step Size</th><th>Level</th></tr>
+<tr>
+<td><input type="text" id="start1" value ="F" /></td>
+<td><input type="text" id="rule1" value ="F:F+F-F-F+F" /></td>
+<td><input type="number" id="ang1" value ="90" maxlength="3" style="width:50px" /></td>
+<td><input type="number" id="step1" value ="10" maxlength="3" style="width:50px" /></td>
+<td><input type="number" id="level1" value ="4" maxlength="2" style="width:50px" /></td>
+</tr>
+</table>
+<button type="button" id="submit">submit</button><br />
+</form>
+
+
+<canvas id="my_canvas_id" width="500" height="500"  style="border: 1px solid black;"></canvas>
+
+</body>
+</html>

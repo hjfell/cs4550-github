@@ -1,0 +1,11 @@
+﻿storyfiles/MySQL.htm        	What is MySQL
+storyfiles/databaseElements.htm Naming Database Elements
+storyfiles/columnTypes.htm 		Choosing Column Types
+storyfiles/columnProperties.htm Choosing Column Properties
+storyfiles/accessingMySQL.htm 	Accessing MySQL
+storyfiles/createDB.htm 		Create a Database
+storyfiles/insertDATA.htm 		Inserting Data
+storyfiles/selectDATA.htm 		Selecting Data from Tables
+storyfiles/moreSelecting.htm 	Selecting Data from Tables - continued
+storyfiles/moreSelecting2.htm 	MySQL - things to try
+story.txt                   	The story file for this story

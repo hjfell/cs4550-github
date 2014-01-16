@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Colors</title>
+<!-- 
+	colors.html
+	Harriet Fell January 2012
+-->
+<link rel="Stylesheet" type="text/css" href="../../../css/document.css" />
+<link rel="Stylesheet" type="text/css" href="../../../css/style_screen.css" />
+</head>
+<body style="width:900px;">
+<h4>A grid of RGB colors with B = 0 while R and G ranging from 0 to 255</h4>
+<h4 class="right">Three shapes drawn with ellipses with different aspect ratios</h4>
+<canvas id="my_canvas_id" width="900" height="500"></canvas>
+<script src="ellipse.js"> </script>  
+
+<script> 
+var deg = Math.PI/180; // For converting degrees to radians
+
+var canvas = document.getElementById("my_canvas_id"); 
+var c = canvas.getContext('2d');
+
+
+// Start a new path and add shape subpath
+
+for (var i = 0; i < 6; i++) {
+
+    for (var j = 0; j < 6; j++) {
+
+        c.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
+
+                       Math.floor(255 - 42.5 * j) + ',0)';
+
+        c.fillRect(j * 25, i * 25, 25, 25);
+
+    }
+
+}
+
+
+
+// Start a new path for these ellipses
+
+c.beginPath();
+
+for (ang = 0; ang <= 165; ang = ang + 15) {
+
+    ellipse(c, 300, 100, 75, 25, ang);
+
+}
+
+// Set some properties that control how the graphics will look
+
+c.fillStyle = "#fcc";    // Light pink interiors
+
+c.strokeStyle = "#833";  // outlined with red lines
+
+c.lineWidth = 3;         // five pixels wide.
+
+
+
+// Now draw all the path (ellipses) with these calls
+
+c.fill();                // Fill the shapes
+
+c.stroke();              // And stroke their outlines
+
+
+
+// Start a new path for these ellipses
+
+c.beginPath();
+
+for (ang = 0; ang <= 165; ang = ang + 15) {
+
+    ellipse(c, 500, 100, 75, 10, ang);
+
+}
+
+// Set some properties that control how the graphics will look
+
+c.fillStyle = "#fcc";    // Light pink interiors
+
+c.strokeStyle = "#833";  // outlined with red lines
+
+c.lineWidth = 3;         // three pixels wide.
+
+
+
+// Now draw all the path (ellipses) with these calls
+
+c.fill();                // Fill the shapes
+
+c.stroke();              // And stroke their outlines
+
+
+
+// Start a new path for these ellipses
+
+c.beginPath();
+
+for (ang = 0; ang <= 165; ang = ang + 15) {
+
+    ellipse(c, 700, 100, 75, 50, ang);
+
+}
+
+// Set some properties that control how the graphics will look
+
+c.fillStyle = "#fcc";    // Light pink interiors
+
+c.strokeStyle = "#833";  // outlined with red lines
+
+c.lineWidth = 3;         // five pixels wide.
+
+
+
+// Now draw all the path (ellipses) with these calls
+
+c.fill();                // Fill the shapes
+
+c.stroke();              // And stroke their outlines
+
+
+
+// Start a new path for each disk (filled ellipse) in the shapes below
+
+for (ang = 0; ang <= 345; ang = ang + 15) {
+
+    c.beginPath();
+
+    ellipse(c, 150 + Math.floor(100 * Math.cos(ang * deg)), 350 + Math.floor(100 * Math.sin(ang * deg)), 50, 50, 0);
+
+    c.fillStyle = 'rgba(' + Math.floor(255 * ang / 360) + ',' + Math.floor(255 - 255 * ang / 360) + ',' + '0,' + ang / 360 + ')';
+
+    c.fill();                // Fill the shapes
+
+    c.stroke();              // And stroke their outlines
+
+}
+
+
+
+for (ang = 0; ang <= 345; ang = ang + 15) {
+
+    c.beginPath();
+
+    ellipse(c, 450 + Math.floor(100 * Math.cos(ang * deg)), 350 + Math.floor(100 * Math.sin(ang * deg)), 50, 50, 0);
+
+    c.fillStyle = 'hsla(' + ang + ',100%,50%, 0.5)';
+
+    c.fill();                // Fill the shapes
+
+    c.stroke();              // And stroke their outlines
+
+}
+
+
+
+for (ang = 0; ang <= 345; ang = ang + 15) {
+
+    c.beginPath();
+
+    ellipse(c, 750 + Math.floor(100 * Math.cos(ang * deg)), 350 + Math.floor(100 * Math.sin(ang * deg)), 50, 50, 0);
+
+    c.fillStyle = 'hsla(' + ang + ',100%,50%,' + (1 - ang / 360) + ')';
+
+    c.fill();                // Fill the shapes
+
+    c.stroke();              // And stroke their outlines
+
+}
+</script> 
+<h4>Three color wheels:</h4>
+<h4>rgba(255*angle/360, 255 - 255*angle/360, 0, angle/360)</h4>
+<h4 class="center">hsla(angle, 100%, 50%, 0.5)</h4>
+<h4 class="right">hsla(angle, 100%, 50%, 1 - angle/360)</h4>
+<a href="colors.php" target="_blank">View Source</a>
+
+
+</body>
+</html>

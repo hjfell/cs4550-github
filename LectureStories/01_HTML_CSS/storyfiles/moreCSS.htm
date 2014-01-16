@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/storyfiles/01_HTML_CSS/moreCSS.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    January 6, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Basics and Syntax</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">CSS Basics and Syntax</h1>
+
+<p>A couple of good w3schools samples</p>
+<p><a href="http://www.w3schools.com/css/tryit.asp?filename=trycss_default" target="_blank">Try CSS</a></p>
+<p><a href="http://www.w3schools.com/css/demo_default.htm" target="_blank">Styles Demo</a></p>
+
+<h3>CSS Syntax</h3>
+<p>A CSS rule has two main parts: a <em>selector</em>, and one or more <em>declarations</em>.
+<br />A selector is usually the HTML element you want to style.
+<br />Each declaration consists of a <em>property</em> and a <em>value</em>.</p>
+<pre>
+/*This is a css rule.*/
+p
+{
+/*It has two declarations.*/
+color:red;
+text-align:center;
+}
+</pre>
+
+<h3>The id Selector<br />
+is used to specify a style for a single, unique element.
+</h3>
+<pre>
+#articletitle 
+{
+	font-size:300%;
+	color:red;
+	text-align:center;
+	font-weight:bold;
+	margin-top: 0.5em;
+}
+</pre>
+<h3>The class Selector<br />
+is used to specify a style for a group of elements.
+</h3>
+<pre>
+.inset1 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+</pre>
+
+<h3>A class defined only for images</h3>
+<pre>
+img.floatRight { 
+    float: right; 
+    margin: 4px; 
+}
+</pre>
+
+<p>Look at<br />
+<a href="http://www.ccs.neu.edu/home/fell/CS4300/CS4300F2012.html" target="_blank">CS4300F2012.html</a><br />
+<a href="http://cs4550.com/cs4550/css/cs4550.css" target="_blank">cs4550.css</a><br />
+<a href="http://cs4550.com/starshipPinafore-01/css/starship.css" target="_blank">starship.css</a></p>
+</div>
+
+</body>
+</html>

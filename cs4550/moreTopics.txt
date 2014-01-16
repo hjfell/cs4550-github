@@ -1,0 +1,70 @@
+Name:________________________________________________
+
+Security Methods 
+	Preventing Spam 
+	Validating Data by Type 
+	Validating Files by Type 
+	Preventing XSS Attacks 
+	Using the (PHP) Filter Extension 
+	Preventing SQL Injection Attacks 
+
+More:
+	JavaScript
+	jQuery
+	Using Ajax
+	Functional Programming in PHP - http://usrportage.de/archives/941-Functional-programming-in-PHP.html
+	Particular things e.g.: HTML iframes vs. PHP readfile(), 
+
+Storage
+    JSON
+    
+Regular Expressions - http://nikic.github.com/2012/06/15/The-true-power-of-regular-expressions.html
+
+Accessing other Data (e.g. Google, eBay)
+    What is available?
+    How do you use it?  
+    
+HTML5 extras
+    Drag and Drop
+    GeoLocation
+    Messaging
+    WebWorkers
+    WebSockets
+    
+WebKit - http://paulirish.com/2013/webkit-for-developers/
+
+Responsive Pages - http://en.wikipedia.org/wiki/Responsive_web_design
+
+RSS feeds - http://www.w3schools.com/rss/default.asp
+
+HCI Issues 
+	Accessibility - http://blog.silktide.com/2013/01/things-learned-pretending-to-be-blind-for-a-week/
+
+Commercial Issues
+	Shopping Carts
+	PayPal and Charge Cards
+	Ads
+	Search Engine Optimization - http://en.wikipedia.org/wiki/Search_engine_optimization
+	Analytics
+	Site Maps
+    
+REST - http://ajaxpatterns.org/RESTful_Service#Technical_Story
+or not - http://wekeroad.com/2012/02/28/someone-save-us-from-rest/
+
+PHP Frameworks: What, When, Why and Which? - http://www.noupe.com/php/discussing-php-frameworks.html
+	CakePHP
+	Zend
+Other tools:
+	JotForm - http://www.jotform.com
+	Contentent Management Systems
+
+Other Languages
+	PHP vs ASP.net http://www.codeproject.com/Articles/102854/PHP-and-ASP-NET-A-Feature-List
+	PYTHON
+	Ruby-on-Rails  
+
+
+
+
+
+

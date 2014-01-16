@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/moreSelecting.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 6, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selecting Data from a Table - continued</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Selecting Data from a Table - continued</h1>
+
+<h2>LIKE and NOT LIKE</h2>
+<pre>
+mysql> SELECT * FROM users WHERE last_name = 'Simpson';                         +---------+------------+-----------+--------------------+------------------------------------------+---------------------+
+| user_id | first_name | last_name | email              | pass                                     | registration_date   |
++---------+------------+-----------+--------------------+------------------------------------------+---------------------+
+|       8 | Homer      | Simpson   | homer@simpson.com  | 54a0b2dcbc5a944907d29304405f0552344b3847 | 2013-01-12 10:35:20 |
+|       9 | Marge      | Simpson   | marge@simpson.com  | cea9be7b57e183dea0e4cf000489fe073908c0ca | 2013-01-12 10:35:20 |
+|      10 | Bart       | Simpson   | bart@simpson.com   | 73265774abd1028ed8ef06afc5fa0f9a7ccbb6aa | 2013-01-12 10:35:20 |
+|      11 | Lisa       | Simpson   | lisa@simpson.com   | a09bb16971ec0759dfff75c088f004e205c9e27b | 2013-01-12 10:35:20 |
+|      12 | Maggie     | Simpson   | maggie@simpson.com | 0e87350b393ceced1d4751b828d18102be123edb | 2013-01-12 10:35:20 |
+|      13 | Abe        | Simpson   | abe@simpson.com    | 6591827c8e3d4624e8fc1ee324f31fa389fdafb4 | 2013-01-12 10:35:20 |
++---------+------------+-----------+--------------------+------------------------------------------+---------------------+
+</pre>
+
+<pre>
+mysql> SELECT * FROM users 
+    -> WHERE last_name LIKE 'Harri%' OR first_name LIKE 'Harri%';
++---------+------------+-----------+---------------------+------------------------------------------+---------------------+
+| user_id | first_name | last_name | email               | pass                                     | registration_date   |
++---------+------------+-----------+---------------------+------------------------------------------+---------------------+
+|       1 | Harriet    | Fell      | me@universe.com     | e727d1464ae12436e899a726da5b2f11d8381b26 | 2013-01-06 15:16:10 |
+|       5 | George     | Harrison  | george@beatles.com  | 1af17e73721dbe0c40011b82ed4bb1a7dbe3ce29 | 2013-01-06 15:41:39 |
++---------+------------+-----------+---------------------+------------------------------------------+---------------------+
+</pre>
+
+<pre>
+mysql> SELECT first_name, last_name
+    -> FROM users WHERE
+    -> email NOT LIKE '%@beatles.com';
++---------+-----------+
+| last_n  | last_name |
++---------+-----------+
+| Harriet | Fell      |
+| Doe     | Jane      |
+| George  | Harrison  |
+| George  | Brown     |
+| Homer   | Simpson   |
+| Marge   | Simpson   |
+| Bart    | Simpson   |
+| Lisa    | Simpson   |
+| Maggie  | Simpson   |
+| Abe     | Simpson   |
++---------+-----------+
+10 rows in set (0.00 sec)
+</pre>
+
+<p><b>Wildcards:</b> '_' for a single character '%' for 0 or more characters</p>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

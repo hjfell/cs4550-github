@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/selectData.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 6, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selecting Data from a Table</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Selecting Data from a Table</h1>
+
+<pre>
+mysql> SELECT * FROM users;
++---------+------------+-----------+---------------------+------------------------------------------+---------------------+
+| user_id | first_name | last_name | email               | pass                                     | registration_date   |
++---------+------------+-----------+---------------------+------------------------------------------+---------------------+
+|       1 | Harriet    | Fell      | me@universe.com     | e727d1464ae12436e899a726da5b2f11d8381b26 | 2013-01-06 15:16:10 |
+|       2 | Doe        | Jane      | her@universe.com    | cc22a138b5b04eb06600eabb1a1cd19ccf50e930 | 2013-01-06 15:35:55 |
+|       3 | John       | Lennon    | john@beatles.com    | 2a50435b0f512f60988db719106a258fb7e338ff | 2013-01-06 15:41:39 |
+|       4 | Paul       | McCartney | paul@beatles.com    | 6ae16792c502a5b47da180ce8456e5ae7d65e262 | 2013-01-06 15:41:39 |
+|       5 | George     | Harrison  | george@beatles.com  | 1af17e73721dbe0c40011b82ed4bb1a7dbe3ce29 | 2013-01-06 15:41:39 |
+|       6 | Ringo      | Starr     | ringo@beatles.com   | 520f73691bcf89d508d923a2dbc8e6fa58efb522 | 2013-01-06 15:41:39 |
+|       7 | George     | Brown     | gb@universe.com     | 07bc90840cb78555b74e42e95c08b33633551791 | 2013-01-06 16:09:35 |
++---------+------------+-----------+---------------------+------------------------------------------+---------------------+
+</pre>
+
+<pre>
+mysql> SELECT first_name, last_name FROM users;
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| Harriet    | Fell      |
+| Doe        | Jane      |
+| John       | Lennon    |
+| Paul       | McCartney |
+| George     | Harrison  |
+| Ringo      | Starr     |
+| George     | Brown     |
++------------+-----------+
+</pre>
+
+<pre>
+mysql> SELECT * FROM users WHERE
+    -> (last_name >= 'M');
++---------+------------+-----------+-------------------+------------------------------------------+---------------------+
+| user_id | first_name | last_name | email             | pass                                     | registration_date   |
++---------+------------+-----------+-------------------+------------------------------------------+---------------------+
+|       4 | Paul       | McCartney | paul@beatles.com  | 6ae16792c502a5b47da180ce8456e5ae7d65e262 | 2013-01-06 15:41:39 |
+|       6 | Ringo      | Starr     | ringo@beatles.com | 520f73691bcf89d508d923a2dbc8e6fa58efb522 | 2013-01-06 15:41:39 |
++---------+------------+-----------+-------------------+------------------------------------------+---------------------+
+</pre>
+
+<pre>
+mysql> SELECT user_id, first_name, last_name
+    -> FROM users
+    -> WHERE pass = SHA1('mypass');
++---------+------------+-----------+
+| user_id | first_name | last_name |
++---------+------------+-----------+
+|       1 | Harriet    | Fell      |
++---------+------------+-----------+
+</pre>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿// Uppercase Letter for draw forward - distance theStep
+// Lowercase Letter for move forward  - distance theStep
+// +, - for turn by ang degrees
+// [ and ] for save and restore
+function drawStringPath(c, str, xval, yval, ang, theStep, lineWidth, rndm, lev, start, rule1, rule2) {
+    c.save();           // Save current transformation
+
+    c.beginPath();      // Start a new path 
+    c.translate(xval, yval);
+    c.moveTo(0, 0);
+    c.lineWidth = lineWidth;
+    drawStringRec(c, str, lev, start, rule1, rule2);
+    //document.write(str + ' ' + xval + ' ' + yval + ' ' + ang + ' ' + theStep + ' ' + lineWidth + ' ' + rndm + ' ' + lev + ' ' + start + ' ' + rule1 + ' ' + rule2);
+    function drawStringRec(c, str, lev) {
+        //document.write(str + ' ' + xval + ' ' + yval + ' ' + ang + ' ' + theStep + ' ' + lineWidth + ' ' + rndm + ' ' + lev + ' ' + start + ' ' + rule1 + ' ' + rule2);
+        var rrr; // for randon factor
+        var drawleaf = false;
+        var letter = new RegExp("[A-Z]");
+        var letr = new RegExp("[a-z]");
+        var lhs1 = rule1.charAt(0); // symbol on the left side of the rule
+        var rhs1 = rule1.substring(2);
+        document.write(rhs1);
+        var lhs2;
+        var rhs2;
+        if (rule2.length > 0) {
+            lhs2 = rule2.charAt(0); // symbol on the left side of the rule
+            rhs2 = rule2.substring(2);
+        }
+
+        var ch = str.charAt(0);
+        //document.write(ch + ' ' + (letter.test(ch) || letr.test(ch)) + " " + (ch == lhs1) + " " + (lev > 1));
+        if (letter.test(ch) || letr.test(ch)) {
+        if ((lev > 1) && (ch === lhs1)) {
+                   document.write(rhs1);
+                    drawStringRec(c, rhs1 + str.substring(2), lev - 1);
+                }
+        }
+switch (ch) {
+    case (letter.test(ch) || letr.test(ch)):  // uppercase or lowercase letter       
+        if ((lev > 1) && (ch === lhs1)) {
+            document.write(rhs1 + str.substring(2));
+            drawStringRec(c, rhs1 + str.substring(2), lev - 1);
+        }
+        else if ((lev > 1) && (rule2.length > 0) && (ch === lhs2)) {
+            drawStringRec(c, rhs2 + str.substring(2), lev - 1);
+            lev -= 1;
+        }
+        else {
+            rrr = (1 + Math.random() * rndm / 100);
+            if (letter.test(ch))    // draw on uppercase
+                c.lineTo(0, theStep * rrr);
+            else                    // move on lowercase
+                c.moveTo(0, theStep * rrr);
+            c.translate(0, theStep * rrr);
+            drawStringRec(c, str.substring(2), lev);
+        }
+        break;
+    case ch = "+":
+        rrr = (1 + Math.random() * rndm / 100);
+        c.rotate(ang * deg * rrr);
+        drawStringRec(c, str.substring(2), lev);
+        break;
+    case ch = "-":
+        rrr = (1 + Math.random() * rndm / 100);
+        c.rotate(-ang * deg * rrr);
+        drawStringRec(c, str.substring(2), lev);
+        break;
+    case ch = "[":
+        c.save();
+        drawStringRec(c, str.substring(2), lev);
+        break;
+    case ch = "]":
+        c.restore();
+        c.moveTo(0, 0);
+        drawStringRec(c, str.substring(2), lev);
+        break;
+    default:
+} // end switch
+  
+        c.stroke();
+
+        //    c.restore();           // Restore the former transformation
+    } // end rec function
+}

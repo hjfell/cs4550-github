@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/columnTypes.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 4, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Choosing Column Types</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <!--<script type="text/javascript" src="../../../../js/slideToggle.js"></script>-->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+<div class="pad">
+<h1 class="center">Choosing Column Types</h1>
+<h2>
+Primary Types
+</h2>
+<ul>
+<li>Text</li>
+<li>Numbers</li>
+<li>Dates and Times</li>
+</ul>
+
+<p>Common variants: <a href="http://www.w3schools.com/sql/sql_datatypes.asp" target="_blank">http://www.w3schools.com/sql/sql_datatypes.asp</a><br />
+Many types take an optional <em>Length</em> attribute.</p>
+
+<h2>To select column types</h2>
+<ol>
+<li>Identify the primary type
+<table>
+<tr><th>Column Name</th><th>Type</th></tr>
+<tr><td>user_id</td><td>number</td></tr>
+<tr><td>first_name</td><td>text</td></tr>
+<tr><td>last_name</td><td>text</td></tr>
+<tr><td>email</td><td>text</td></tr>
+<tr><td>pass</td><td>text</td></tr>
+<tr><td>registration_date</td><td>date/time</td></tr>
+</table>
+<br />
+</li>
+
+<li>Choose the best subtypes
+<table>
+<tr><th>Column Name</th><th>Type</th></tr>
+<tr><td>user_id</td><td>MEDIUMINT</td></tr>
+<tr><td>first_name</td><td>VARCHAR</td></tr>
+<tr><td>last_name</td><td>VARCHAR</td></tr>
+<tr><td>email</td><td>VARCHAR</td></tr>
+<tr><td>pass</td><td>CHAR</td></tr>
+<tr><td>registration_date</td><td>DATETIME</td></tr>
+</table>
+<br />
+</li>
+
+<li>Set the maximum length for the columns
+<table>
+<tr><th>Column Name</th><th>Type</th></tr>
+<tr><td>user_id</td><td>MEDIUMINT</td></tr>
+<tr><td>first_name</td><td>VARCHAR(20)</td></tr>
+<tr><td>last_name</td><td>VARCHAR(40)</td></tr>
+<tr><td>email</td><td>VARCHAR(60)</td></tr>
+<tr><td>pass</td><td>CHAR(40)</td></tr>
+<tr><td>registration_date</td><td>DATETIME</td></tr>
+</table>
+</li>
+</ol>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Colors</title>
+<!-- 
+	colors.html
+	Harriet Fell January 2012
+-->
+<link rel="Stylesheet" type="text/css" href="../../css/style.css" />
+<link rel="Stylesheet" type="text/css" href="../../css/style_screen.css" />
+<script src="ellipse.js"> </script> 
+</head>
+
+<body>
+<h4>A grid of RGB colors with B = 0 while R and G ranging from 0 to 255</h4>
+<h4 class="right">Three shapes drawn with ellipses with different aspect ratios</h4>
+<canvas id="my_canvas_id" width="255" height="255"></canvas>
+
+<!-- hacks.mozilla.org/2009/06/pushing-pixels-with-canvas/ -->
+<!-- You can’t directly manipulate pixels in a canvas. To make changes to the data in a canvas, 
+    first copy the data out, 
+    make changes, and 
+    copy the changed data back to the target canvas.
+
+getImageData lets you copy a rectangle of pixels out of a canvas. -->
+
+<script> 
+var deg = Math.PI/180; // For converting degrees to radians
+
+var canvas = document.getElementById('myCanvasElt');
+var ctx = canvas.getContext('2d');
+//var canvasData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+var canvasData = ctx.createImageData(canvas.width, canvas.height);
+
+for (var x = 0; x < canvasData.width; x++)  {
+    for (var y = 0; y < canvasData.height; y++)  {
+ 
+        // Index of the pixel in the array
+        var idx = (x + y * width) * 4;
+ 
+        // If you want to know the values of the pixel
+//        var r = canvasData.data[idx + 0];
+//        var g = canvasData.data[idx + 1];
+//        var b = canvasData.data[idx + 2];
+//        var a = canvasData.data[idx + 3];
+ 
+        //[...] do what you want with these values
+ 
+        // If you want to update the values of the pixel
+        canvasData.data[idx + 0] = x; // Red channel
+        canvasData.data[idx + 1] = y; // Green channel
+        canvasData.data[idx + 2] = (x+y)/2; // Blue channel
+        canvasData.data[idx + 3] = 1; // Alpha channel
+    }
+}
+ctx.putImageData(canvasData, 0, 0);
+</script>
+
+</body>
+</html>

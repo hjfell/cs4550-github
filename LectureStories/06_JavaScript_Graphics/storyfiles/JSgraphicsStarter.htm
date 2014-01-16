@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/06_JavaScript_Graphics/storyfiles/JSgraphicsStarter.php
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    February 21, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Getting Started with JavaScript Graphics</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+	<script>
+	function drawIt()
+	{
+		var canvas = document.getElementById("my_canvas_id"); 
+		var c = canvas.getContext('2d');
+		c.beginPath(); // Start a new path 
+		c.moveTo(100, 100); // Begin a path at (100,100) 
+		c.lineTo(200, 200); // Add a line from (100,100) to (200,200) 
+		c.lineTo(100, 200); // Add a line from (200,200) to (100,200)
+
+		c.fillStyle = "#f00"; // Set fill color to red
+		c.fill(); // Fill a triangular area 
+		c.stroke(); // Stroke two sides of the triangle
+
+		//c.closePath();
+		//c.stroke(); // Stroke third side of the triangle
+	}
+	</script>
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Getting Started with JavaScript Graphics</h1>
+
+<p>Create a drawing <code>canvas</code> on your html page.</p>
+<pre><code>&lt;canvas id="my_canvas_id" width=300 height=300 style="border: 1px solid black;"&gt;&lt;/canvas&gt;</code></pre>
+<canvas id="my_canvas_id" width=300 height=300 style="border: 1px solid black;"></canvas>
+<button onclick="drawIt()"><big><b>drawIt</b></big></button>
+
+<p>Name the canvas and create a <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-state" target="_blank">2d context</a> for it.</p>
+<pre><code>
+		var canvas = document.getElementById("my_canvas_id"); 
+		var c = canvas.getContext('2d');
+</code></pre>
+<p>Then do some simple drawing</p>
+<pre><code>
+		c.beginPath(); 	// Start a new path 
+		c.moveTo(100, 100); 	// Begin a path at (100,100) 
+		c.lineTo(200, 200); 	// Add a line from (100,100) to (200,200) 
+		c.lineTo(100, 200); 	// Add a line from (200,200) to (100,200)
+
+		c.fillStyle = "#f00"; 	// Set fill color to red
+		c.fill(); 	// Fill a triangular area 
+		c.stroke(); 	// Stroke two sides of the triangle
+</code></pre>
+
+<p>
+<a href="../JSGraphicsTests/canvas2D-starter.html" target="_blank">canvas2D-starter.html</a>
+</p>
+<p>
+<a href="../JSGraphicsTests/canvas2D-starter.php" target="_blank">canvas2D-starter.html source</a>
+</p>
+</div>
+</body>
+</html>

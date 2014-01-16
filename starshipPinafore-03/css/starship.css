@@ -1,0 +1,124 @@
+body {
+	padding-left: 0px;
+	font-family: Arial, Helvetica, sans;
+	line-height: 1;
+	background-image:url('../../images/starshipRentals/locations/carina_nebula_pillar-ps49_8x10.jpg');
+	background-repeat:no-repeat;
+  }
+  div.titlebar {
+	color: white;
+	padding: 5px;
+	//background: #37be68;
+	width: 920px;
+	position: absolute;
+	top: 17px;
+	left: 127px;
+	padding-left: 15px;
+	height: 60px;
+	font-size: 14pt;
+	text-decoration: none;
+}
+  div.titlebar a {
+    text-decoration: none;
+    color: white;
+}
+  div.titlebar a:visited {
+	color: white;
+	text-decoration: none;
+}
+  div.main {
+    width: 660px;
+	text-align: justify;
+	position: absolute;
+	margin: 15px;
+	top: 120px;
+	left: 150px;
+	color: #DDDDDD;
+}
+div.main a {
+	color: white; //#993366;
+	text-decoration: none;
+}
+div.main a:visited {
+	color: white; //#993366;
+	text-decoration: none;
+}
+div.main a:hover {
+	color: #9999FF;
+	text-decoration: none;
+}
+div.main a:active {
+	color: white; //#993366;
+	text-decoration: none;
+}
+h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif 
+}
+  div.navbar {
+	width: 920px; //119px;
+	//background: #37be68;
+	position: absolute;
+	top: 90px;
+	left: 127px;
+	height: 100px;
+  }
+  ul.navbar {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+  }  
+  ul.navbar li {
+    display: inline;
+	padding-right: 20px;
+	font-weight: bold;
+	text-align:center;
+	font-size: 100%;
+	line-height: 110%;
+  }
+  ul.navbar a {
+	//display: block;
+	//display: inline;
+	//background: #202020;
+	margin: 7px 0;
+	padding: 5px 10px;
+	//padding-right: 10px;
+	text-align: right;
+	border: 1px solid;
+	border-radius:25px;
+	width: 125px;
+	text-decoration: none;
+	border-left-color: #606060;
+	border-top-color: #606060;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	font-size: 12pt;
+	box-shadow: 3px 3px 2px #88AABB;
+}
+  ul.navbar a.here {
+    background: #909090;
+    box-shadow: 6px 6px 3px #778899;
+  }
+  ul.navbar a:hover {
+    background: #707070 }
+  a:link {
+    color: white }
+  a:visited {
+    color: white }
+// for 2 columns
+#wrap {
+   width:660px;
+   margin:0 auto;
+}
+#left_col {
+   float:left;
+   width:330px;
+}
+#right_col {
+   float:right;
+   text-align:right;
+   width:330px;
+}

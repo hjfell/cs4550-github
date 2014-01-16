@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/05_PHPandMySQL/storyfiles/connection.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    February 8, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Connecting to MySQL - Local</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../js/slideToggle.js"></script> -->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Connecting to MySQL - Local</h1>
+<h2>On localhost</h2>
+<code>
+&lt;?php # Script 9.2 - mysqli_connect.php<br />
+<br />
+// This file contains the database access information.<br />
+// This file also establishes a connection to MySQL,<br /> 
+// selects the database, and sets the encoding.<br />
+<br />
+// Set the database access information as constants:<br />
+DEFINE ('DB_USER', 'your_local_username');<br />
+DEFINE ('DB_PASSWORD', 'your_local_password');<br />
+DEFINE ('DB_HOST', 'localhost');<br />
+// DEFINE ('DB_NAME', 'mysite'); // or connect without specifying a database<br />
+<br />
+// Make the connection:<br />
+// $dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)<br /> 
+$dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD)<br /> 
+	OR die ('Could not connect to MySQL: ' . mysqli_connect_error() );<br />
+<br />
+// Set the encoding...<br />
+mysqli_set_charset($dbc, 'utf8');<br />
+</code>
+<p><code>@</code> in <code>@mysqli_connect</code> suppresses error messages.</p>
+
+<p>If this runs properly, you should see a blank window.</p>
+
+<p>Where should you put mysqli_connect.php?</p>
+<p class="center">
+<img src="../../../images/lectures/mysqli_connect_php.png" alt="where mysqli_connect.php should go" />
+</p>
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+storyfiles/aboutHTML.htm                                             	What is HTML?
+storyfiles/HTML.htm                                             		Getting Started in HTML
+storyfiles/DOM.htm														Introduction to the HTML DOM
+storyfiles/simpleHTML-tests.htm                                         Simple HTML
+../../../story/showfile.htm?../LectureStories/01_HTML_CSS/HTMLtests/tire-sizing-01.htm       tire-sizing-01.htm source
+../../../story/showfile.htm?../LectureStories/01_HTML_CSS/HTMLtests/tire-sizing-02.htm       tire-sizing-02.htm source
+storyfiles/css-tests.htm       	                                        HTML with CSS
+../../../story/showfile.htm?../LectureStories/01_HTML_CSS/CSStests/tire-sizing-03.htm        tire-sizing-03.htm source
+../../../story/showfile.htm?../LectureStories/01_HTML_CSS/CSStests/tire-sizing-04.htm        tire-sizing-04.htm source
+../../../story/showfile.htm?../LectureStories/01_HTML_CSS/CSStests/bike-article-style.css	 bike-article-style.css source
+../../../story/showfile.htm?../LectureStories/01_HTML_CSS/CSStests/RR-style-css-tests.htm    Rasala-style-css-tests.htm source
+../../../story/showfile.htm?../LectureStories/01_HTML_CSS/CSStests/style.css    			 Rasala-style.css
+storyfiles/block_inline.htm												Layout with div
+storyfiles/moreCSS.htm													More CSS
+story.txt                                                               The story file for this story 

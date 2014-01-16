@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/11_Audio/storyfiles/HTML5audio.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 20, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5 Audio</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>	
+</head>
+<body>
+
+<div class="pad">
+
+<h2 class="center">HTML5 Audio <code>&lt;audio&gt;</code></h2>
+<h3>Provide Alternate Sources and Fall Back for Older Browsers</h3>
+<audio controls autoplay id="player1">
+    <source src="../sounds/Bach_ Invention_10_in_G_Major.mp3">
+    <source src="../sounds/Bach_ Invention_10_in_G_Major.ogg">
+    <!-- fallback -->
+       <p>Your browser does not support HTML5 video.</p>
+</audio>
+<pre><code>
+&lt;audio controls autoplay&gt;
+    &lt;source src="../sounds/Bach_ Invention_10_in_G_Major.mp3"&gt;
+    &lt;source src="../sounds/Bach_ Invention_10_in_G_Major.ogg"&gt;
+    &lt;!-- fallback --&gt;
+       &lt;p&gt;Your browser does not support HTML5 video.&lt;/p&gt;
+&lt;/audio&gt;
+</code></pre>
+<p>The &lt;source&gt; tag accepts attributes for MIME type and codecs as well.</p>
+
+<h3>Control the volume with JavaScript</h3>
+<button onclick="getVolume()" type="button">What is the volume?</button>
+<button onclick="setHalfVolume()" type="button">Set volume to 0.2</button>
+<button onclick="setFullVolume()" type="button">Set volume to 1.0</button>
+
+<script>
+myVid=document.getElementById("player1");
+function getVolume()
+  { 
+  alert(myVid.volume);
+  } 
+function setHalfVolume()
+  { 
+  myVid.volume=0.2;
+  } 
+function setFullVolume()
+  { 
+  myVid.volume=1.0;
+  } 
+</script> 
+
+<pre><code>
+&lt;script&gt;
+myVid=document.getElementById("player1");
+function getVolume()
+  { 
+  alert(myVid.volume);
+  } 
+function setHalfVolume()
+  { 
+  myVid.volume=0.2;
+  } 
+function setFullVolume()
+  { 
+  myVid.volume=1.0;
+  } 
+&lt;/script&gt; 
+</pre></code>
+<p>from <a href="http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_av_prop_volume">w3schools</a></p>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+&lt;/script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+All:	Smashing Magazine is a website and blog that offers resources and advice to web developers and web designers.
+http://www.smashingmagazine.com/
+
+The Code Project is a website that contains articles for computer programmers. Articles can be related to general programming, GUI design, algorithms or collaboration. 
+http://www.codeproject.com
+
+User Experience http://uxdesign.smashingmagazine.com/
+
+
+http://www.smashingmagazine.com/2010/03/17/starting-out-organized-website-content-planning-the-right-way/
+
+http://www.smashingmagazine.com/2011/06/09/a-comprehensive-website-planning-guide/
+
+http://www.webcredible.co.uk/user-friendly-resources/web-usability/plan-usable-website.shtml
+
+http://cat.xula.edu/tutorials/planning/   Xavier University of Louisiana
+
+
+forms
+http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/

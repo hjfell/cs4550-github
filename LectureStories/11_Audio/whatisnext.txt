@@ -1,0 +1,6 @@
+storyfiles/sounds.htm				Sound Formats - Browser Support
+storyfiles/playingSounds.htm		Playing Sounds
+storyfiles/noController.htm			Playing Sounds on Click and Mouseover
+storyfiles/HTML5audio.htm			HTML5 Audio
+storyfiles/WEBaudioAPI.htm			Web Audio API
+story.txt                           The story file for this story

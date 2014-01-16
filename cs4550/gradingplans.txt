@@ -1,0 +1,18 @@
+Initial assignments:
+Getting set up - 0 - just do it
+1.	(due last Tuesday)	Static reservation system and accompanying blog:	10
+2.	(due today Friday)	Adding some JavaScript and jQuery goodies:	10
+3.	(due Friday 2/15) Adding an actual PHP/MySQL reservation system 20
+		I would like this to include validation and email feedback
+4.	(due a week after the last assignment)	Adding some extra features (e.g. getting maps of movie info from other sites, loading information with xml or Json	10
+
+Late assignments should be docked 10% per week.
+
+Final Project:	30
+Presentations:	15	(or 15 and 5 for participation)
+Participation:	5 	(this will be mostly in evaluations/feedback on other student's talks
+				 - I would like to set up my own feedback system or a MonkeySurvey form.)
+
+Put something in your blog each week.
+Put a link to your blog in your index.html.
+Add a picture of yourself too.

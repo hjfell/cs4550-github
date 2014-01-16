@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/11_Audio/storyfiles/sounds.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 20, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sound Formats</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h2 class="center">Sound Formats - Browser Compatibility</h2>
+<table border="1">
+<tr><th style="width:20%;">Audio Feature</th><th style="width:15%;">Chrome</th><th>Firefox (Gecko)</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr>
+<tr><th>Basic support</th><td>3.0</td><td>3.5 (1.9.1</td><td>9.0</td><td>10.50</td><td>3.1</td></tr>
+<tr><th>WAVE, PCM</th><td>(Yes)</td><td>3.5 (1.9.1)</td><td>Not supported</td><td>Not supported</td><td>3.1</td></tr>
+<tr><th>WebM, Vorbis</th><td>(Yes)</td><td>4.0 (2.0)</td><td>Not supported</td><td>10.60</td><td style="text-align:left;">3.1 (must be installed separately)</td></tr>
+<tr><th>Ogg, Vorbis</th><td>(Yes)</td><td>3.5 (1.9.1)</td><td>Not supported</td><td>10.50</td><td style="text-align:left;">3.1 (must be installed separately,<br />e.g. XiphQT)</td></tr>
+<tr><th>MPEG 4, MP3</th><td style="text-align:left;">(Yes)<br />(Not in Chromium)</td><td style="text-align:left;">Not supported<br />(coming soon, if third-party decoder is installed)</td><td>9.0</td><td> Not supported</td><td>3.1</td></tr>
+<tr><th>MPEG 4, AAC</th><td style="text-align:left;">(Yes)<br />(Main only)<br />(Not in Chromium)</td><td style="text-align:left;">Not supported<br />(coming soon, if third-party decoder is installed)</td><td>9.0</td><td> Not supported</td><td>3.1</td></tr>
+</table>
+<p>from <a href="https://developer.mozilla.org/en-US/docs/HTML/Supported_media_formats" target="_blank">Mozilla - HTML Supported Media Formats</a></p>
+
+<h2 class="center">Converting Sound Formats</h2>
+<p>Mac: <a href="http://www.macupdate.com/app/mac/40326/mediahuman-audio-converter" target="_blank">MediaHuman Audio Converter</a></p>
+<p>PC: <a href="http://pcsupport.about.com/od/fileextensions/tp/free-audio-converter.htm" target="_blank">About.com PC Support - 4 Free Audio Converter Software Programs</a></p>
+<p>Linux: <a href="http://www.makeuseof.com/tag/10-applications-to-convert-audio-and-video-files-in-linux/" target="_blank">makeuseof - 10 Great Apps to Convert Audio & Video Files in Linux</a></p>
+
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

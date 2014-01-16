@@ -1,0 +1,14 @@
+storyfiles/Cookies_LocalStoragetitle.htm
+../../../story/whatisnext.htm?../LectureStories/07_Cookies_WebStorage/whatisnext.txt        What is Next?
+storyfiles/HTTPcookie.htm						What are HTTP cookies?
+storyfiles/uses_warnings.htm					HTTP Cookies - Uses and Warnings
+storyfiles/sampleCookies.php					Cookies - with JavaScript Code
+storyfiles/webStorage.htm						What is Web Storage
+storyfiles/localStorageSample.php				Local Storage Sample Code
+storyfiles/sessionStorageSample.php				Session Storage Sample Code
+storyfiles/phpCookies.htm						PHP Cookies in a Login Page
+storyfiles/phpLogin.php							Login File Structure and login.php Source
+storyfiles/login_page_inc.php					Login Page Layout: login_page.inc.php Source
+storyfiles/login_functions_inc.php				Login and Logout Functions: login_functions.inc.php Source
+storyfiles/cookies_vs_sessions.php				PHP Cookies vs. Sessions
+story.txt                                       The story file for this story 

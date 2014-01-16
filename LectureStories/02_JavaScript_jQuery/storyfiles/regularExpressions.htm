@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Regular Expressions</title>
+	<style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  .result {
+	  	font-size: 130%;
+	  }
+	  .result:hover {
+    	background-color: #ffcccc;
+	  }
+/*
+    Settings to enable highlight with:
+        light orange background color
+        2px dotted outline
+    
+    Used for all span elements.
+    
+    Used for elements with class special.
+*/
+
+span:hover, .special:hover {
+    background-color: #ffe000;
+    outline: 2px dotted black;
+}
+	</style>
+</head>
+<body>
+<h1>Regular Expressions</h1>
+<pre class="code">
+var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+var url = "http://www.ora.com:80/goodparts?q#fragment";
+var url2 = "www.ccs.neu.edu/home/fell/#Courses";
+var result = parse_url.exec(url);
+var result2 = parse_url.exec(url2);
+
+var names = ['url', 'scheme', 'slash', 'host', 'port',
+    'path', 'query', 'hash'];
+
+var blanks = '       ';
+var i;
+
+for (i = 0; i < names.length; i += 1) {
+    document.writeln(names[i] + ':' +
+        blanks.substring(names[i].length), result[i]);
+}
+document.writeln("");
+for (i = 0; i < names.length; i += 1) {
+    document.writeln(names[i] + ':' +
+        blanks.substring(names[i].length), result2[i]);
+}
+</pre>
+<pre class="result">
+<script type="text/javascript">
+    var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    var url = "http://www.ora.com:80/goodparts?q#fragment";
+    var url2 = "www.ccs.neu.edu/home/fell/#Courses";
+    var result = parse_url.exec(url);
+    var result2 = parse_url.exec(url2);
+
+    var names = ['url', 'scheme', 'slash', 'host', 'port',
+    'path', 'query', 'hash'];
+
+    var blanks = '       ';
+    var i;
+
+    for (i = 0; i < names.length; i += 1) {
+        document.writeln(names[i] + ':' +
+        blanks.substring(names[i].length), result[i]);
+    }
+    document.writeln("");
+    for (i = 0; i < names.length; i += 1) {
+        document.writeln(names[i] + ':' +
+        blanks.substring(names[i].length), result2[i]);
+    }
+</script>
+</pre>
+<pre class="code">
+/^<span>(?:([A-Za-z]+):)?</span><span>(\/{0,3})</span><span>([0-9.\-A-Za-z]+)</span><span>(?::(\d+))?</span><span>(?:\/([^?#]*))?</span><span>(?:\?([^#]*))?</span><span>(?:#(.*))?</span><span>$</span>/
+
+(?:([A-Za-z]+):)?
+Matches a scheme name, but only if it is followed by a : (colon). 
+The (?: . . . ) indicates a noncapturing group. 
+The suffix ? indicates that the group is optional. It means repeat zero or one time. 
+The ( . . . ) indicates a capturing group that will appear in result[1]. 
+The [ . . . ] indicates a character class; A-Za-z, contains 26 uppercase letters and 26 lowercase letters. 
+The suffix + indicates that the character class will be matched one or more times. 
+The group is followed by the : character, which will be matched literally.
+
+</pre>
+
+<pre class="result">
+<script type="text/javascript">
+    var parse_number = /^-?\d+(?:\.\d*)?(?:e[+\-]?\d+)?$/i;
+    var test = function (num) {
+        document.writeln(parse_number.test(num));
+    };
+    test('1'); // true 
+    test('number'); // false 
+    test('98.6'); // true 
+    test('132.21.86.100'); // false 
+    test('123.45E-67'); // true 
+    test('123.45D-67'); // false
+</script>
+</pre>
+</body>
+</html>

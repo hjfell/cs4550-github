@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Session Storage</title>
+<script>
+function clickCounter()
+{
+if(typeof(Storage)!=="undefined")
+{
+	if (sessionStorage.clickcount)
+	{
+	sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+	}
+	else
+	{
+	sessionStorage.clickcount=1;
+	}
+document.getElementById("result").innerHTML="Name: " + sessionStorage.firstname + " " + sessionStorage.lastname + "<br />" +
+"You have clicked the button " + sessionStorage.clickcount + " time(s).";
+}
+else
+{
+document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+}
+}
+</script>
+</head>
+<body>
+<h1>HTML5 Session Storage</h1>
+
+<div id="result"></div>
+<script>
+if(typeof(Storage)!=="undefined")
+{
+sessionStorage.lastname="Smith";
+sessionStorage.firstname="John";
+
+var y = 0;
+if (sessionStorage.clickcount)
+{
+	y = sessionStorage.clickcount;
+}
+document.getElementById("result").innerHTML="Name: " + sessionStorage.firstname + " " + sessionStorage.lastname + "<br />" +
+"You have clicked the button " + y + " time(s).";
+}
+else
+{
+document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+}
+</script>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+</body>
+</html>
+

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--
+
+    File: experiments/JSfunctions.htm
+
+    
+
+    Copyright 2011,
+
+    Harriet Fell,
+
+    College of Computer and Information Science
+
+    Northeastern University, Boston, MA 02115
+
+    fell@ccs.neu.edu
+
+    
+
+    January 21, 2012
+
+-->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Java Script: The Good Part by Douglas Crockford</title>
+	<style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  .result {
+	  	font-size: 130%;
+	  }
+	  .result:hover {
+    	background-color: #ffcccc;
+	  }
+	</style>
+</head>
+<body>
+<h1>Sample Code from <i>Java Script: The Good Part</i>  by Douglas Crockford</h1>
+
+<h2>Hello, world!</h2>
+<pre class="code">
+document.writeln('Hello, world!');
+</pre>
+<pre class="result">
+<script type="text/javascript">
+document.writeln('Hello, world!');
+</script>
+</pre>
+
+<h2>Functions</h2>
+<p>Functions are objects, they can be:
+<ul>
+	<li>stored in variables, objects, and arrays</li>
+	<li>passed as arguments to functions</li>
+	<li>returned from functions</li>
+	<li>have methods</li>
+</ul>
+Functions can also be invoked.
+</p>
+<h3>Function Literal</h3>
+<p>A function literal has four parts:
+<ul>
+	<li>reserved word <span class="code">function</span></li>
+	<li>function name (optional)</li>
+	<li>zero or more parameters, wrapped in parentheses</li>
+	<li>body: set of statements wrapped in curly braces</li>
+</ul>
+</p>
+<pre class="code">
+// Create a variable called add and store a function 
+// in it that adds two numbers. 
+var add = function (a, b) { 
+  return a + b; 
+};
+document.writeln('3 + 5 = ' + add(3,5));
+</pre>
+<pre class="result">
+<script type="text/javascript">
+// Create a variable called add and store a function 
+// in it that adds two numbers. 
+var add = function (a, b) { 
+  return a + b; 
+};
+document.writeln('3 + 5 = ' + add(3,5));
+</script>
+</pre>
+
+<h3>The Method Invocation Pattern</h3>
+<pre class="code">
+// Create myObject with a value and an increment method. 
+// The increment method takes an optional parameter. 
+//    If the argument is not a number, then 1 is used as the default.
+var myObject = { 
+  value: 0, 
+  increment: function (inc) { 
+    this.value += typeof inc === 'number' ? inc : 1; 
+  } 
+}; 
+
+document.writeln(myObject.value); 
+myObject.increment( ); document.writeln(myObject.value); // 1 
+myObject.increment(2); document.writeln(myObject.value); // 3
+</pre>
+<pre class="result">
+<script type="text/javascript">
+// Create myObject with a value and an increment method. 
+// The increment method takes an optional parameter. 
+//    If the argument is not a number, then 1 is used as the default.
+var myObject = { 
+  value: 0, 
+  increment: function (inc) { 
+    this.value += typeof inc === 'number' ? inc : 1; 
+  } 
+}; 
+
+document.writeln(myObject.value); 
+myObject.increment( ); document.writeln(myObject.value); // 1 
+myObject.increment(2); document.writeln(myObject.value); // 3
+</script>
+</pre>
+
+<h3>The Function Invocation Pattern </h3>
+<p>When a function is invoked with this pattern, <span class="code">this</span> is bound to the global object.  An inner function will not have access to <span class="code">this</span>.  Define a variable and assign it the value of <span class="code">this</span>. By convention, the name of that variable is <span class="code">that</span>
+</p>
+
+<pre class="code">
+// Augment myObject with a double method. 
+myObject.double = function ( ) { 
+  var that = this; // Workaround. 
+  document.writeln(this.value); 
+  var helper = function ( ) { 
+    document.writeln(this.value); 
+    document.writeln(that.value); 
+    that.value = add(that.value, that.value); 
+  }; 
+  helper( ); // Invoke helper as a function. 
+}; 
+
+// Invoke double as a method. 
+myObject.double( ); 
+document.writeln(myObject.value); // 6
+</pre>
+<pre class="result">
+<script type="text/javascript">
+// Augment myObject with a double method. 
+myObject.double = function ( ) { 
+  var that = this; // Workaround. 
+  document.writeln(this.value); 
+  var helper = function ( ) { 
+    document.writeln(this.value); 
+    document.writeln(that.value); 
+    that.value = add(that.value, that.value); 
+  }; 
+  helper( ); // Invoke helper as a function. 
+}; 
+
+// Invoke double as a method. 
+myObject.double( );
+
+document.writeln(myObject.value); // 6
+</script>
+</pre>
+
+<h3>The Constructor Invocation Pattern </h3>
+<p>Functions intended to be used with the <span class="code">new</span> prefix are <em>constructors</em>. By convention they are kept in variables with a capitalized name. 
+They should NOT be called without the <span class="code">new</span> prefix so the capitalization convention serves as an important reminder. 
+Use of this style of constructor function is <b>NOT</b> recommended. 
+</p>
+<pre class="code">
+// Create a constructor function called Quo. 
+// It makes an object with a status property. 
+var Quo = function (string) { 
+	this.status = string; 
+}; 
+// Give all instances of Quo a public method 
+// called get_status. 
+Quo.prototype.get_status = function ( ) { 
+	return this.status; 
+}; 
+// Make an instance of Quo. 
+var myQuo = new Quo("confused"); 
+var yourQuo = new Quo("clear"); 
+document.writeln(myQuo.get_status( )); // confused
+document.writeln(yourQuo.get_status( )); // clear
+</pre>
+<pre class="result">
+<script type="text/javascript">
+// Create a constructor function called Quo. 
+// It makes an object with a status property. 
+var Quo = function (string) { 
+	this.status = string; 
+}; 
+// Give all instances of Quo a public method 
+// called get_status. 
+Quo.prototype.get_status = function ( ) { 
+	return this.status; 
+}; 
+// Make an instance of Quo. 
+var myQuo = new Quo("confused"); 
+var yourQuo = new Quo("clear"); 
+document.writeln(myQuo.get_status( )); // confused
+document.writeln(yourQuo.get_status( )); // clear
+</script>
+</pre>
+
+<h3>The Apply Invocation Pattern</h3>
+<p>JavaScript is a functional object-oriented language so functions can have methods.<br /> 
+The <em>apply method</em> takes two parameters, 
+<ul>
+<li>the value that should be bound to <span class="code">this</span></li>
+<li>and an array of parameters.</li>
+</ul>
+</p>
+<pre class="code">
+// Make an array of 2 numbers and add them.
+var array = [3, 4];
+var sum = add.apply(null, array);    // sum is 7
+document.writeln(sum);
+
+// Make an object with a status member.
+var statusObject = {
+    status: 'A-OK'
+};
+document.writeln(statusObject.status);
+
+// statusObject does not inherit from Quo.prototype,
+// but we can invoke the get_status method on
+// statusObject even though statusObject does not have
+// a get_status method.
+
+var status = Quo.prototype.get_status.apply(statusObject);
+    // status is 'A-OK'
+document.writeln(status);
+</pre>
+<pre class="result">
+<script type="text/javascript">
+// Make an array of 2 numbers and add them.
+var array = [3, 4];
+var sum = add.apply(null, array);    // sum is 7
+document.writeln(sum);
+
+// Make an object with a status member.
+var statusObject = {
+    status: 'A-OK'
+};
+document.writeln(statusObject.status);
+
+// statusObject does not inherit from Quo.prototype,
+// but we can invoke the get_status method on
+// statusObject even though statusObject does not have
+// a get_status method.
+
+var status = Quo.prototype.get_status.apply(statusObject);
+    // status is 'A-OK'
+document.writeln(status);
+</script>
+</pre>
+
+<h3>Arguments</h3>
+<p><span class="code">arguments</span> is an array-like object that has a <span class="code">length</span> property, but lacks other array methods.
+</p>
+<pre class="code">
+// Make a function that adds a lot of stuff.
+// Note that defining the variable sum inside of
+// the function does not interfere with the sum
+// defined outside of the function. The function
+// only sees the inner one.
+var sum = function (  ) {
+    var i, sum = 0;
+    for (i = 0; i < arguments.length; i += 1) {
+        sum += arguments[i];
+    }
+    return sum;
+};
+document.writeln(sum(4, 8, 15, 16, 23, 42)); // 108
+</pre>
+<pre class="result">
+<script type="text/javascript">
+// Make a function that adds a lot of stuff.
+// Note that defining the variable sum inside of
+// the function does not interfere with the sum
+// defined outside of the function. The function
+// only sees the inner one.
+var sum = function (  ) {
+    var i, sum = 0;
+    for (i = 0; i < arguments.length; i += 1) {
+        sum += arguments[i];
+    }
+    return sum;
+};
+document.writeln(sum(4, 8, 15, 16, 23, 42)); // 108
+</script>
+</pre>
+
+<h3>Exceptions</h3>
+<pre class="code">
+var add = function (a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        throw {
+            name: 'TypeError',
+            message: 'add needs numbers'
+        }
+    }
+    return a + b;
+}
+    
+// Make a try_it function that calls the new add
+// function incorrectly.
+var try_it = function (  ) {
+    try {
+        add("seven",2);
+    } catch (e) {
+        document.writeln(e.name + ': ' + e.message);
+    }
+}
+try_it(  );
+</pre>
+<pre class="result">
+<script type="text/javascript">
+var add = function (a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        throw {
+            name: 'TypeError',
+            message: 'add needs numbers'
+        }
+    }
+    return a + b;
+}
+    
+// Make a try_it function that calls the new add
+// function incorrectly.
+var try_it = function (  ) {
+    try {
+        add("seven",2);
+    } catch (e) {
+        document.writeln(e.name + ': ' + e.message);
+    }
+}
+try_it(  );
+</script>
+</pre>
+
+<h3>Augmenting Types</h3>
+<p>By augmenting Function.prototype, we can make a method available to all functions
+</p>
+<pre class="code">
+Function.prototype.method = function (name, func) {
+    this.prototype[name] = func;
+    return this;
+};
+
+Number.method('integer', function (  ) {
+    return Math[this < 0 ? 'ceil' : 'floor'](this);
+});
+
+document.writeln((-10 / 3));
+document.writeln((-10 / 3).integer(  ));  // −3
+document.writeln((10 / 3).integer(  ));  // 3
+document.writeln((10 / 3).integer().toExponential(4));  // 3.0000e+0
+</pre>
+<pre class="result">
+<script type="text/javascript">
+Function.prototype.method = function (name, func) {
+    this.prototype[name] = func;
+    return this;
+};
+
+Number.method('integer', function (  ) {
+    return Math[this < 0 ? 'ceil' : 'floor'](this);
+});
+
+document.writeln((-10 / 3));
+document.writeln((-10 / 3).integer(  ));  // −3
+
+document.writeln((10 / 3).integer());  // 3
+
+document.writeln((10 / 3).integer().toExponential(4));  // 3.0000e+0
+</script>
+</pre>
+
+<pre class="code">
+String.method('trim', function (  ) {
+    return this.replace(/^\s+|\s+$/g, '');
+});
+document.writeln('"' + "   neat   " + '"');
+document.writeln('"' + "   neat   ".trim(  ) + '"');
+document.writeln('"' + "   try this   " + '"');
+document.writeln('"' + "   try this   ".trim(  ) + '"');
+document.writeln('"' + "   neat  \n   neater \n   neatest   " + '"');
+document.writeln('"' + "   neat  \n   neater \n   neatest   ".trim(  ) + '"');
+</pre>
+<pre class="result">
+<script type="text/javascript">
+String.method('trim', function (  ) {
+    return this.replace(/^\s+|\s+$/g, '');
+});
+document.writeln('"' + "   neat   " + '"');
+document.writeln('"' + "   neat   ".trim(  ) + '"');
+document.writeln('"' + "   try this   " + '"');
+document.writeln('"' + "   try this   ".trim(  ) + '"');
+document.writeln('"' + "   neat  \n   neater \n   neatest   " + '"');
+document.writeln('"' + "   neat  \n   neater \n   neatest   ".trim(  ) + '"');
+</script>
+</pre>
+
+<h3>Recursion</h3>
+<pre class="code">
+var hanoi = function (disc, src, aux, dst) {
+	if (disc > 0) {
+        hanoi(disc - 1, src, dst, aux);
+        document.writeln('Move disc ' + disc + ' from ' + src + ' to ' + dst);
+        hanoi(disc - 1, aux, src, dst);
+    }
+}
+hanoi(3, 'Src', 'Aux', 'Dst');
+
+</pre>
+<pre class="result">
+<script type="text/javascript">
+var hanoi = function (disc, src, aux, dst) {
+	if (disc > 0) {
+        hanoi(disc - 1, src, dst, aux);
+        document.writeln('Move disc ' + disc + ' from ' + src + ' to ' + dst);
+        hanoi(disc - 1, aux, src, dst);
+    }
+}
+hanoi(3, 'Src', 'Aux', 'Dst');
+</script>
+</pre>
+
+<h3>Scope</h3>
+<pre class="code">
+var foo = function (  ) {
+    var a = 3, b = 5;
+    document.writeln('before bar def:  a = ' + a + '  b = ' + b);
+    var bar = function (  ) {
+        var b = 7, c = 11;
+	// At this point, a is 3, b is 7, and c is 11
+		document.writeln('in bar:  a = ' + a + '  b = ' + b + '  c = ' + c);
+        a += b + c;
+	// At this point, a is 21, b is 7, and c is 11
+		document.writeln('in bar:  a = ' + a + '  b = ' + b + '  c = ' + c);
+    };    
+// At this point, a is 3, b is 5, and c is not defined
+	document.writeln('before bar call:  a = ' + a + '  b = ' + b);	
+    bar(  );
+// At this point, a is 21, b is 5
+	document.writeln('after bar:  a = ' + a + '  b = ' + b);
+}
+foo();
+</pre>
+<pre class="result">
+<script type="text/javascript">
+var foo = function (  ) {
+    var a = 3, b = 5;
+    document.writeln('before bar def:  a = ' + a + '  b = ' + b);
+    var bar = function (  ) {
+        var b = 7, c = 11;
+	// At this point, a is 3, b is 7, and c is 11
+		document.writeln('in bar:  a = ' + a + '  b = ' + b + '  c = ' + c);
+        a += b + c;
+	// At this point, a is 21, b is 7, and c is 11
+		document.writeln('in bar:  a = ' + a + '  b = ' + b + '  c = ' + c);
+    };    
+// At this point, a is 3, b is 5, and c is not defined
+	document.writeln('before bar call:  a = ' + a + '  b = ' + b);	
+    bar(  );
+// At this point, a is 21, b is 5
+	document.writeln('after bar:  a = ' + a + '  b = ' + b);
+}
+foo();
+</script>
+</pre>
+
+<h3>Closure</h3>
+<p>Functions can be defined inside of other functions. An inner function has access to its own parameters and variables and access to the parameters and variables of the functions it is nested within. 
+</p>
+<pre class="code">
+// Define a function that sets a DOM node's color
+// to cyan and then fades it to white.
+var fade = function (node) {
+    var level = 1;
+    var step = function (  ) {
+        var hex = level.toString(16);
+        node.style.backgroundColor = '#' + hex + hex + 'FFFF';
+        if (level < 15) {
+            level += 1;
+            setTimeout(step, 100);
+        }
+    };
+    setTimeout(step, 100);
+};
+fade(document.body);
+</pre>
+<pre class="result">
+<script type="text/javascript">
+// Define a function that sets a DOM node's color
+// to yellow and then fades it to white.
+var fade = function (node) {
+    var level = 1;
+    var step = function (  ) {
+        var hex = level.toString(16);
+        node.style.backgroundColor = '#' + hex + hex + 'FFFF';
+        if (level < 15) {
+            level += 1;
+            setTimeout(step, 100);
+        }
+    };
+    setTimeout(step, 100);
+};
+fade(document.body);
+</script>
+<button onclick="fade(document.body);">Fade again</button>
+</pre>
+
+<h3>Output from a single file "JSfunction.js" that has all the code above</h3>
+
+<pre><script src="JSfunction.js"> 
+</script></pre>
+</body>
+</html>

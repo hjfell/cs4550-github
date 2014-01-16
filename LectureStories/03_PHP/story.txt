@@ -1,0 +1,10 @@
+storyfiles/PHPtitle.htm 	title slide
+../../../story/whatisnext.htm?../LectureStories/03_PHP/whatisnext.txt   What is Next?
+storyfiles/PHP.htm          What is PHP
+storyfiles/MySQL.htm        What is SQL
+storyfiles/WritingPHP.htm   Writing PHP
+storyfiles/PHP2Browser.htm  Sending Data to the Web Browser
+storyfiles/PHPcode.htm   	Simple PHP Code Samples
+storyfiles/Forms.htm     	Forms
+storyfiles/PHPcode2.htm   	PHP Code Samples - Forms and Arrays
+story.txt                   The story file for this story

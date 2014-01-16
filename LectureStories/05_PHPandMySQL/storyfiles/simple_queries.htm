@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/05_PHPandMySQL/storyfiles/simple_queries.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    February 8, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Simple Queries</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../js/slideToggle.js"></script> -->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Simple Queries</h1>
+<h3>Simple Queries: INSERT, DELETE, UPDATE, or ALTER</h3>
+<p class="indent1">These do not return data.  They do return a success value.</p>
+
+<p>Connect to MySQL</p>
+<code>
+// Connect to MySQL.<br />	
+	require ('../../../../../mysqli_connect.php');
+</code>
+
+<p>Connect to the Database</p>
+<code>
+// Connect to the Database<br />
+	$q = "USE mysite";	<br />
+	$r = @mysqli_query ($dbc, $q); // Run the query.
+</code>
+
+<p>Make the Query</P>
+<code>
+// Make the query:<br />
+	$q = "INSERT INTO users (first_name, last_name, email, pass, registration_date)<br /> 
+	<span class="indent2">VALUES ('$fn', '$ln', '$e', SHA1('$p'), NOW() )";</span><br />		
+	$r = @mysqli_query ($dbc, $q); // Run the query.
+</code>
+
+<p>Note the missing ";"s.</p>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

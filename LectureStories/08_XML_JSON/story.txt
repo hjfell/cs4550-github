@@ -1,0 +1,6 @@
+storyfiles/XML_JSONtitle.htm
+../../../story/whatisnext.htm?../LectureStories/07_Cookies_LocalStorage/whatisnext.txt	What is Next?
+storyfiles/XML_intro.htm					What is XML?
+storyfiles/XML_attributes.htm				XML attributes - more syntax
+storyfiles/XML_JS_DOM.htm					JavaScript and the XML DOM
+story.txt                                   The story file for this story 

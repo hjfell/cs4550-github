@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Tire Sizing Systems</title>
+</head>
+<body>
+
+<!-- Search Google -->
+<p style="text-align:center">
+<a href="http://sheldonbrown.com/newsearch.html" target="_blank"><b>Search sheldonbrown.com and sheldonbrown.org</b></a> 
+</p>
+
+<!-- /Search Google -->
+<!-- Title -->
+<h1 style="text-align:center;color:red;">
+	Tire Sizing Systems
+</h1>
+
+<!-- Author Photo -->
+<p style="text-align:center;">
+<a href="http://sheldonbrown.com/eagle.html"><img alt="Sheldon Brown photo" src="http://sheldonbrown.com/images/scb_eagle_contact.jpeg" height="108" width="72" /></a> 
+</p>
+<!-- Byline -->
+
+<h2 style="text-align:center;">
+by <a href="http://sheldonbrown.com/home.html">Sheldon "ISO/E.T.R.T.O." Brown</a> 
+</h2>

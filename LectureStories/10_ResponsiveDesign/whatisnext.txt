@@ -1,0 +1,22 @@
+storyfiles/layoutStyles.htm						Layout Styles
+storyfiles/fixedWidth.htm						Fixed Width
+storyfiles/fluid.htm							Fluid Layout
+storyfiles/elastic.htm							Elastic Layout
+storyfiles/hybrid.htm							Hybrid Layout
+storyfiles/fontSizes.php						Font Sizes
+storyfiles/gridLayouts.htm						Grid Layouts
+storyfiles/starterFile_source.php				Kadlec's Starter File Source
+storyfiles/style-start_css_source.php			Kadlec's style-start.css Source
+storyfiles/gridDesign.htm						Designing the Grid
+storyfiles/style-2.2_css_source.php				Kadlec's style-2.2.css
+storyfiles/gridContinued.htm					Grid Design Continued
+storyfiles/style-2.3_css_source.php				Kadlec's style-2.3.css
+storyfiles/fixedFluid.htm						Mixing Fixed and Fluid
+storyfiles/style-2.4_css_source.php				Kadlec's style-2.4.cssMedia QueriesMixing Fixed and Fluid
+storyfiles/mediaQueries.htm						Media Queries
+storyfiles/viewports.htm						Viewports
+storyfiles/mediaQuerySyntax.htm					Media Query Syntax
+storyfiles/mediaExpressions.htm					Media Features and Expressions
+storyfiles/breakpoints.htm						Setting Breakpoints
+storyfiles/style-3.2-old_css_source.php			Kadlec's style-3.2-old.css source
+story.txt                                       The story file for this story 

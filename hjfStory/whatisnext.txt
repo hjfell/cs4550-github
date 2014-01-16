@@ -1,0 +1,8 @@
+﻿storyfiles/education.htm        My education
+storyfiles/family.htm       	My family
+storyfiles/places.htm    	Places where I have lived
+storyfiles/pets.htm  		My Pets
+storyfiles/research.htm       	Research
+storyfiles/hobbies-cycling.htm  Hobbies - Cycling
+storyfiles/hobbies-painting.htm Hobbies - Painting
+story.txt                       The story file for this story

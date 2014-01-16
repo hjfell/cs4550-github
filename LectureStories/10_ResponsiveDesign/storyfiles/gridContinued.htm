@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/10_ResponsiveDesign/storyfiles/gridContinued.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 13, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Grid Design Continued</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Grid Design Continued</h1>
+
+
+<h3>Box-sizing</h3>
+<pre><code>
+  -mox-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;	// tells the browser to put the padding within the element.
+  				// so a 300px box is really a 300px box
+</code></pre>
+
+<h3>Make it Flexible</h3>
+<p><a href="../responsiveDesign_Kadlec/ch2/ch2.3.html" target="_blank">Kadlec ch2.3.html</a> is the same as <a href="../responsiveDesign_Kadlec/ch2/ch2-start.html" target="_blank">Kadlecch2-start.html</a> but it uses the css file on the next slide.</p>
+
+<pre><code>
+aside {
+    float: right;
+    width: 31.6455696%; /* 300/948 */
+}
+.main {
+    float: left;
+    width: 65.8227848%; /* 624/948 */
+}
+</code></pre>
+
+<h3>Now remove the container fixed width.</h3>
+<pre><code>
+#container {
+    margin: auto 0;
+    overflow: hidden;
+    width: 95%;			// because it works
+    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
+    		// ems for the top and bottom (determined by font size)
+    		// and percentages for the left and right
+}
+</code></pre>
+
+<h3>Images</h3>
+<p>Fixed-width images are too small on a large display and too wide on small displays.</p>
+<p>Tell the image to fill the width, e.g. of the aside.</p>
+<pre><code>
+    aside img,
+    .main img,
+    .slats img{
+        width: 100%;
+        	// If you set both width and height, the image will not adjust proportionately.        
+        max-width: 100%;
+			// This keeps the image from spilling over or getting cut off.
+    }
+</code></pre>
+
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

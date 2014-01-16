@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/LSystem-tests.htm
+    
+    Copyright 2012,
+    Harriet Fell,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    fell@ccs.neu.edu
+    
+    February 21, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Building a 2D L-System Viewer and Design Tool</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>    
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Building a 2D L-System Viewer and Design Tool</h1>
+
+<p>
+This tool is intended for viewing and designing 2D L-Systems and I plan to use it next time I teach CS4310 <em>Computer Graphic</em>s or CS5310 <em>Graduate Computer Graphics</em>. </p>
+<p> <em>L-Systems</em> were inventeed and developed by the Hungarian botanist Aristid Lindenmayer (1925–1989).  If you want to read more about them, you can get started at the <a href="http://en.wikipedia.org/wiki/L-system" target="_blank">L-System</a> wikipedia page.</p>
+<p>An <em>L-System</em> is a grammar that is used to generate images.  It consists of:</p>
+<p>
+G = {V, S, ω, P}, where
+</p>
+<ul>
+<li>V (the alphabet) is a set of variables</li>
+<li>
+S is a set of constant symbols</li>
+<li>
+ω (start, axiom or initiator) is a string of symbols from V defining the initial state of the system</li>
+<li>
+P is a set of rules or productions defining the way variables can be replaced with combinations of constants and other variables. 
+A production consists of two strings - the predecessor and the successor</li>
+</ul>
+<p>Here is a simple L-System:</p>
+<ul>
+<li>V = {F}</li>
+<li>S = {+, -}</li>
+<li>F is the start axiom</li>
+<li>F:F+F-F-F+F is the only rule</li>
+</ul>
+<p>At each iteration, every occurrence of F is replaced by F+F-F-F+F to create a new string.  The string is turned into a drawing by interpreting F as move forward a fixed distance, + turn clockwise 90 degrees, - turn counterclockwise 90 degrees.</p>
+
+<p>Here are the first three strings that arise and their corresponding pictures.</p>
+<table>
+<tr><th>F</th><th>F+F-F-F+F</th><th>F+F-F-F+F+F+F-F-F+F-F+F-F-F+F-F+F-F-F+F+F+F-F-F+FF</th></tr>
+<tr><th><img src="../../../images/lectures/L-System_images/kochTri1.png" alt="Koch Triangle 1" /></th><th><img src="../../../images/lectures/L-System_images/kochTri2.png" alt="Koch Triangle 2" /></th><th><img src="../../../images/lectures/L-System_images/kochTri3.png" alt="Koch Triangle 3" /></th></tr>
+</table>
+<p>
+Bulding my L-System was a good exercise in learning and using JavaScript and JQuery so here are some of the things I did along the way.    
+</p>
+<ul>
+<li><a href="../JSGraphicsTests/drawStringTests/drawString.htm" target="_blank"">drawString.htm</a> and <a href="../JSGraphicsTests/drawStringTests/drawStringPath.js" target="_blank">drawStringPath.js</a> allows the user to enter a string made of the characters {F, +, -} and interprets them as above to draw a path.</li>
+<li><a href="../JSGraphicsTests/drawStringTests/drawString2.htm" target="_blank">drawString2.htm</a> and <a href="../JSGraphicsTests/drawStringTests/drawStringPath2.js" target="_blank">drawStringPath2.js</a> allows the user to enter a string made of the characters<br />{F, +, -}, an angle to use in place of 90 degrees, and a step size. and then interprets them as above to draw a path.  It straight JavaScript both imbedded and in an external file.</li>
+<li><a href="../JSGraphicsTests/drawStringTests/drawString3.htm" target="_blank">drawString3.htm</a> and <a href="../JSGraphicsTests/drawStringTests/drawStringPath3.js" target="_blank">drawStringPath3.js</a> has the same functionality as the last example but uses JQuery and is organized with all the JavaScript in the js file.</li>
+<li><a href="../JSGraphicsTests/L_System/drawString.htm" target="_blank">L_System/drawString.htm</a> and <a href="../JSGraphicsTests/L_System/drawString.js" target="_blank">L_System/drawString.js</a> is my  first JavaScript L-System builder.  It only allows <code>F</code> as a variable and only one rule but the user can set the start string, the rule, the angle, the step size, and the number of itertions (level).  From here I could start adding features.</li>
+<li>In the next few versions I made these changes:
+<ul>
+<li>L_System/drawString2.htm: V = {A..Z,a..z} all uppercase letters draw one step forward, all lowercase letters move one step forward.  The user can set the starting poiint.  One or two riles are allowed.  I added a list of rules to try next to the drawing window so the user could cut and paste the values.</li>
+<li>L_System/drawString3.htm: Has the same drawing functionality as L_System/drawString2.htm but there are buttons for the sample Lsystem so that the information canbe entered automatically.</li>
+</ul>
+</li>
+<li><img src="../../../images/lectures/L-System_images/LSystem2.png" alt="L-System flake" /> <a href="../JSGraphicsTests/L_System/drawString4.htm" target="_blank">L_System/drawString4.htm</a> and <a href="../JSGraphicsTests/L_System/drawString4.js" target="_blank">L_System/drawString4.js</a> let the user add random perturbations to the angl and step length.  It also introduces some color and puts leaves on the trees.  I realized that I could not control the leaves or branch thicknesses as I wished.  This was because I first iterated the string substitutions and then drew the from the final string.</li>
+<li><img src="../../../images/lectures/L-System_images/LSystem1.jpg" alt="L-System islands" />  <a href="../JSGraphicsTests/L_System/drawStringRec.htm" target="_blank">L_System/drawStringRec.htm</a> uses <a href="../JSGraphicsTests/L_System/drawStringRec.js" target="_blank">L_System/drawStringRec.js</a> which contains a function that recursively draws the shape.  It lets the user set the line width.  It does not have leaves.  In the next version I plan add leaves and to vary the line width with the recursion level to make the trees more tree-like.</li> 
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/05_PHPandMySQL/storyfiles/returnData.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    February 9, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Queries that Return Data</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../js/slideToggle.js"></script> -->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">Queries that Return Data</h1>
+
+<p>Connect to MySQL and Select the Database as before.</p>
+
+<p>Make the Query</p>
+<code>		
+// Make the query:<br />
+$q = "SELECT CONCAT(last_name, ', ', first_name) AS name,<br />
+<span class="indent1">DATE_FORMAT(registration_date, '%M %d, %Y') AS dr</span><br />
+<span class="indent1">FROM users ORDER BY registration_date ASC";</span><br />		
+$r = @mysqli_query ($dbc, $q); // Run the query.
+</code>
+
+<p>Extract the fields from $r and lay them out in an HTML table.</p>
+<code>
+if ($r) { // If it ran OK, display the records.<br />	
+<br />	
+	// Table header.<br />	
+	echo '&lt;table align="center" cellspacing="3" cellpadding="3" width="75%"&gt;<br />	
+	&lt;tr>&lt;th align="left"&gt;Name&lt;/th&gt;&lt;th align="left"&gt;Date Registered&lt;/th&gt;&lt;/tr&gt;';<br />
+<br />	
+	// Fetch and print all the records:<br />
+	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {<br />
+<span class="indent1">echo</span><br />
+<span class="indent1">'&lt;tr>&lt;td align="left"&gt;'.$row['name'].'&lt;/td>&lt;td align="left"&gt;'.$row['dr'].'&lt;/td&gt;&lt;/tr&gt;';</span><br />
+	}<br />
+<br />
+// Close the table.<br />
+	echo '&lt;/table&gt;';<br /> 
+<br />	
+// Free up the resources.<br />
+	mysqli_free_result ($r);<br /> 	
+} else<br /> 
+...
+</code>
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

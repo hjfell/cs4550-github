@@ -1,0 +1,500 @@
+﻿body
+{
+    background: white;
+    line-height: 1.2;
+}
+
+#googlesearch
+{
+	color:black;
+	text-align:center;
+	margin-bottom:3em;
+}
+
+#byline
+{
+	font-size:200%;
+	color:black;
+	text-align:center;
+	font-weight:bold;
+	margin-bottom:.3em;
+}
+
+#subbyline
+{
+	font-size:150%;
+	color:black;
+	text-align:center;
+	font-weight:bold;
+	margin-bottom:.3em;
+}
+
+#translations
+{
+	font-size:100%;
+	color:black;
+	text-align:right;
+	font-weight:bold;
+	margin-bottom: 0.5em;
+}
+
+#articletitle 
+{
+	font-size:300%;
+	color:red;
+	text-align:center;
+	font-weight:bold;
+	margin-top: 0.5em;
+}
+
+#pagetitle 
+{
+	font-size:200%;
+	color:black;
+	text-align:center;
+	font-weight:bold;
+	margin-top: 0.5em;
+}
+
+/*
+    Default for: p, .p, .p1, .p2, .p3, .p4, .p5, td, dd, li
+     
+    font-size: 100%;
+    text-align: justify;
+*/
+
+p, .p, .p1, .p2, .p3, .p4, .p5, td, dd
+{
+	font-size: 100%;
+	text-align: justify; 
+}
+
+li
+{
+	font-size: 100%;
+	text-align: justify; 
+	margin: 0em;
+	line-height: 100%;
+	padding-bottom: .1em;
+}
+
+ul{
+	list-style-position: outside;
+}
+
+ol{
+	list-style-position: outside;
+}
+
+
+/*
+    Default for: p, .p, .p1, .p2, .p3, .p4, .p5
+     
+    margin-top: 0.5em
+*/
+
+p, .p, .p1, .p2, .p3, .p4, .p5
+{
+    margin-top: 0.5em
+}
+
+.clist ul
+{
+	text-align:center;
+	list-style-type:none;
+}
+
+.clist li
+{
+	font-weight: bold;
+	text-align:center;
+	font-size: 100%;
+	line-height: 110%;
+}
+
+.hlist ul
+{
+	text-align:center;
+	list-style-type:none;
+}
+.hlist li
+{
+	display: inline;
+	padding-right: 20px;
+	font-weight: bold;
+	text-align:left;
+	font-size: 100%;
+	line-height: 110%;
+}
+
+/* tight list
+*/
+.tlist ul
+{
+	list-style-type:none;
+}
+
+.tlist li
+{
+	font-size: 90%;
+	line-height: 90%;
+}
+
+/*
+    Entities with indent in 5% increments.
+    
+    .indent* only sets indentation and adjusts nothing else.
+*/
+
+.p1, .indent1 {
+    margin-left: 5%;
+}
+
+.p2, .indent2 {
+    margin-left: 10%;
+}
+
+.p3, .indent3 {
+    margin-left: 15%;
+}
+
+.p4, .indent4 {
+    margin-left: 20%;
+}
+
+.p5, .indent5 {
+    margin-left: 25%;
+}
+
+
+/*
+    Entities with indent 2%.
+    
+    Only sets indentation and adjusts nothing else.
+*/
+
+.indent {
+    margin-left: 2%;
+}
+
+
+/*
+    Entities with insets on both sides in 5% increments.
+*/
+
+.inset1 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.inset2 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.inset3 {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.inset4 {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.inset5 {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+/*
+    Entities with inset on both sides of 2%.
+*/
+
+.inset {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+
+
+/*
+    Style to center a block element such as a table
+    whose width is not 100%.
+*/
+
+.centerblock
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+    General classes to set text-align:
+        .center, .left, .right, .justify
+*/
+
+.center  { text-align: center; }
+
+.left    { text-align: left; }
+
+.right   { text-align: right; }
+
+.justify { text-align: justify; }
+
+
+/*
+    Default for:
+    
+    h1, h2, h3, h4, h5, h6, .h
+    
+    font-weight: bold
+    text-align: justify;
+	margin-top: .5em;
+	margin-bottom: 0.3em;
+*/
+
+h1, h2, h3, h4, h5, h6, .h {
+	font-weight: bold;
+	text-align: justify;
+	margin-top: .5em;
+	margin-bottom: 0.3em;
+}
+
+
+/*
+    Anchor, visited, hover settings.
+    
+    Anchor:         #blue no text decoration
+    
+    Anchor visited: #purple.
+    
+    Anchor hover:   #teal.
+*/
+
+a {
+    color: blue;
+    text-decoration: underline: color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover, a:visited:hover {
+    color: teal;
+}
+
+img, .box {
+    border: none;
+}
+
+img.floatLeft { 
+    float: left; 
+    margin: 4px; 
+}
+img.floatRight { 
+    float: right; 
+    margin: 4px; 
+}
+
+.pad {
+    padding:0.5em;
+}
+
+/* Document specific classes. */
+
+.title, .titlebold, .subtitle, .subtitlebold {
+	text-align:center;
+    font-family:Sans-Serif;
+}
+
+
+.title, .titlebold {
+    font-size:140%;
+}
+
+
+.subtitle, .subtitlebold {
+    font-size:110%;
+    font-style:italic;
+}
+
+
+.titlebold, .subtitlebold {
+	font-weight:bold;
+}
+
+
+.heading, .subheading {
+	text-align:justify;
+	margin-top:1em;
+}
+
+.heading {
+    font-size:120%;
+	font-weight:bold;
+}
+
+.subheading {
+    font-size:110%;
+    font-style:italic;
+}
+
+.highlight {
+    background-color:#FFFF77;
+}
+
+.black {
+    font-weight:bold;
+    font-style:italic;
+}
+
+.red {
+    color:Red;
+    font-weight:bold;
+    font-style:italic;
+}
+
+.small {
+    font-size:80%;
+    font-style:italic;
+	margin-top:2em;
+}
+
+.mono {
+    font-family:Monospace;
+    font-weight:bold;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.italic {
+	font-style:italic;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+/* ---------------------------------------------------------- */
+/* for sheldonbrown.com */
+
+/* GRID TABLE*/
+table.grid {
+  border: solid 1px black;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+  text-align:center;
+  width:60%;
+}
+
+table.grid td{
+ border: solid 1px black;
+ padding: 6px 6px 6px 6px;
+ width:14%;
+ font-size:100%;
+}
+
+table.grid th{
+ border: solid 1px black;
+ padding: 6px 6px 6px 6px;
+ width:14%;
+ font-size:100%;
+}
+
+/* TIGHT GRID TABLE*/
+table.tgrid {
+  border: solid 1px black;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+  text-align:center;
+}
+table.tgrid td{
+ border: solid 1px black;
+ padding: 1px;
+ font-size:100%;
+}
+table.tgrid th{
+ border: solid 1px black;
+ padding: 1px;
+ font-size:100%;
+}
+
+/* PLAIN TABLE*/
+table.plain {
+  border-style: none;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+  text-align:center;
+  width:60%;
+}
+
+table.plain td{
+ border-style: none;
+ padding: 6px 6px 6px 6px;
+ width:14%;
+ font-size:100%;
+}
+
+table.plain th{
+ border-style: none;
+ padding: 6px 6px 6px 6px;
+ width:14%;
+ font-size:100%;
+}
+
+/*Harris Logo*/
+.harrislogo
+{
+  background-image:url(../scb-images/harris-logo.gif;
+  background-repeat:no-repeat;
+  height:62px;
+  width:472px;
+  cursor:pointer;
+}
+.harrislogo-h
+{
+  background-image:url(../scb-images/harris-logo-h.gif);
+  background-repeat:no-repeat;
+  height:62px;
+  width:472px;
+  cursor:pointer;
+}
+
+table.tight-table { width:60%; }
+
+/*Highlight Colors*/
+span.highlt-r
+{
+  color:red;
+}
+
+span.highlt-y
+{
+  color:yellow;
+}
+
+span.bigger
+{
+ font-size:120%;
+}
+
+span.smaller
+{
+  font-size:80%;
+}
+
+body.personal
+{
+	background:#FAFFCA;
+	color:#5E0000;
+}

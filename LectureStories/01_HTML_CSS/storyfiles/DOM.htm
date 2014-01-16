@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/storyfiles/DOM.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 6, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>The HTML DOM</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h2 class="center">The HTML DOM</h2>
+
+<p>See the <a href="http://www.w3schools.com/htmldom/dom_nodes.asp" target="_blank">w3schools.com DOM tutorial</a></p>
+
+<h2 class="Center">Document Object Model</h2>
+<p>The HTML DOM is a W3C (<b>W</b>orld <b>W</b>ide <b>W</b>eb <b>C</b>onsortium) standard object model for accessing and manipulating HTML documents.  It defines the objects and properties of all HTML elements, and the methods to access (get, change, add, or delete) them.</p>
+
+<h2 class="Center">HTML DOM Nodes</h2>
+<ul>
+<li>The entire document is a document node</li>
+<li>Every HTML element is an element node</li>
+<li>The text inside HTML elements are text nodes</li>
+<li>Every HTML attribute is an attribute node</li>
+<li>Comments are comment nodes</li>
+<li>See the <a href="http://vinaytech.files.wordpress.com/2008/11/domimage.png" target="_blank">DOM image</a> from Vinay's Blog</li>
+</ul>
+
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;DOM Tutorial&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1>DOM Lesson one&lt;/h1&gt;
+    &lt;p&gt;Hello world!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>From the HTML above:
+<ul>
+<li>The &lt;html&gt; node has no <em>parent node</em>; it is the <em>root node</em></li>
+<li>The parent node of the &lt;head&gt; and &lt;body&gt; nodes is the &lt;html&gt; node</li>
+<li>The parent node of the "Hello world!" <em>text node</em> is the &lt;p&gt; node</li>
+</ul>
+
+<ul>
+<li>The &lt;html&gt; node has two <em>child nodes</em>: &lt;head&gt; and &lt;body&gt;</li>
+<li>The &lt;head&gt; node has one child node: the &lt;title> node</li>
+<li>The &lt;title&gt; node also has one child node: the text node "DOM Tutorial"</li>
+<li>The &lt;h1&gt; and &lt;p&gt; nodes are <em>siblings</em> and child nodes of &lt;body&gt;</li>
+</ul>
+
+<ul>
+<li>The &lt;head&gt; element is the <em>first child</em> of the &lt;html&gt; element</li>
+<li>The &lt;body&gt; element is the <em>last child</em> of the &lt;html&gt; element</li>
+<li>The &lt;h1&gt; element is the first child of the &lt;body&gt; element</li>
+<li>The &lt;p&gt; element is the last child of the &lt;body&gt; element</li>
+</p>
+</div>
+
+</body>
+</html>

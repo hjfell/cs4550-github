@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/11_Audio/storyfiles/playingSounds.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    March 20, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Playing Sounds</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h2 class="center">Playing Sounds</h2>
+
+<p>Using href to play a sound <a href="../sounds/jd_3921.mp3">jd_3921.mp3</a>
+<pre><code>
+	&lt;a href="../sounds/jd_3921.mp3"&gt;jd_3921.mp3&lt;/a&gt;
+</code></pre>
+</p><br />
+
+<p>Using <code>embed</code> to play a sound <embed height="15" width="300"  src="../sounds/jd_3921.mp3" />
+<pre><code>
+	&lt;embed height="15" width="300"  src="../sounds/jd_3921.mp3" /&gt;
+</code></pre>
+</p>
+
+<p>With <code>autostart = "false"</code> <embed height="50" width="250"  style="background-color:pink;" src="../sounds/jd_3921.mp3" autostart="false" />
+<pre><code>
+	&lt;embed height="50" width="250"  style="background-color:pink;"  
+		src="../sounds/jd_3921.mp3" autostart="false"  /&gt;
+</code></pre>
+</p>
+
+<p>Using the HTML5 <code>audio</code> tag
+<audio controls>
+  <source src="../sounds/jd_3921.ogg" type="audio/ogg">
+  <source src="../sounds/jd_3921.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<pre><code>
+&lt;audio controls&gt;
+  &lt;source src="../sounds/jd_3921.ogg" type="audio/ogg"&gt;
+  &lt;source src="../sounds/jjd_3921.mp3" type="audio/mpeg"&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;
+</code></pre>
+</p>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+storyfiles/Extrastitle.htm						Assorted Web Topics
+../../../story/whatisnext.htm?../LectureStories/09_Extras/whatisnext.txt        What is Next?
+storyfiles/uploadingFiles.htm					Uploading Files
+storyfiles/upload_image_source.php				upload_image.php Source
+storyfiles/images_source.php					images.php Source
+storyfiles/function_js_source.php				function.js Source
+storyfiles/show_image_source.php				show_image.php Source
+story.txt                                       The story file for this story 

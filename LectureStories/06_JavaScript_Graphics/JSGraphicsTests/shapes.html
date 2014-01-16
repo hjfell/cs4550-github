@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Shapes</title>
+<!-- 
+	shapes.html
+	Harriet Fell January 2012
+	based on an example from 
+	Flanagan, David (2011-04-25). JavaScript: The Definitive Guide 
+	OReilly Media - A. Kindle Edition. 
+-->
+</head>
+<body>
+<canvas id="my_canvas_id" width="700" height="500"></canvas>
+<script src="polygon.js"> </script> 
+<script src="ellipse.js"> </script>  
+
+<script> 
+var deg = Math.PI/180; // For converting degrees to radians
+
+var canvas = document.getElementById("my_canvas_id"); 
+var c = canvas.getContext('2d');
+
+// Start a new path and add shape subpaths
+c.beginPath();
+
+// Draw a circle. Scale and rotate if you want an ellipse instead. 
+// There is no current point, so draw just the circle with no straight 
+// line from the current point to the start of the circle. 
+c.arc(75,100,50,0,360*deg,false); // Center at (75,100), radius 50 
+								  // Go clockwise from 0 to 360 degrees
+
+// c.lineTo(200, 200);		// To see the current point
+// Put a rectangle in the path
+c.rect(200,200,150,100);
+c.clearRect(220,220,60,10); // Not in the path
+c.fillStyle = "#f00";    	// Red		
+c.fillRect(220,240,100,20); // Not in the path
+
+c.lineTo(200, 150);		// To see the current point
+// Add a Bezier cubic to the path
+c.moveTo(200, 150); 	// Start at (200,150) 
+c.bezierCurveTo(220,20,280,120,300,50); // Curve to (300,50) 
+c.fillRect(200-5,150-5,10,10); // Mark control points 
+c.fillRect(220-5,20-5,10,10);
+c.fillRect(280-5,120-5,10,10);
+c.fillRect(300-5,50-5,10,10);
+//c.closePath();
+
+//Add an ellipse
+// Note that arc() adds a line from the current point to the arc start.
+var xScale = 1/4;
+var yScale = 1;
+var xCenter = 400;
+var yCenter = 80;
+var Width = 50;
+//ellipse2(c, xCenter,yCenter,xWidth,yWidth,ang)
+ellipse(c,xCenter,yCenter,xScale*Width,yScale*Width,30);
+ellipse(c,500,150,75,25,-45);
+ellipse(c,500,300,75,25,45);
+
+// Set some properties that control how the graphics will look
+c.fillStyle = "#ccc";    // Light gray interiors
+c.strokeStyle = "#008";  // outlined with dark blue lines
+c.lineWidth = 5;         // five pixels wide.
+
+// Now draw all the path (only the circle) with these calls
+c.fill();                // Fill the shapes
+c.stroke();              // And stroke their outlines
+
+// Add a rectangle (outside the path)
+c.fillStyle = "#0f0";    		// Green
+c.fillRect(220,240,100,20);		// Does not affect the current path or current point
+c.clearRect(220,270,60,10);
+</script> 
+</body>
+</html>

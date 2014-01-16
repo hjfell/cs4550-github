@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Cookies</title>
+	<script>
+function saveIt(name) {
+	var x = document.forms['cookieform'].cookievalue.value;
+	if (!x)
+		alert('Please fill in a value in the input box.');
+	else {
+		Cookies.create(name,x,7);
+		alert('Cookie created');
+	}
+}
+
+function readIt(name) {
+	alert('The value of the cookie is ' + Cookies[name]);
+}
+
+function eraseIt(name) {
+	Cookies.erase(name);
+	alert('Cookie erased');
+}
+
+function init() {
+	for (var i=1;i<3;i++) {
+		var x = Cookies['ppkcookie' + i];
+		if (x) alert('Cookie ppkcookie' + i + '\nthat you set on a previous visit, is still active.\nIts value is ' + x);
+	}
+}
+</script>
+</head>
+<body>
+<h1>JavaScript cookie Test</h1>
+<body onload="checkCookie()">
+
+
+<form name="cookieform" action="#"><p>
+The value of the cookie should be <input name="cookievalue" />
+</p></form>
+
+<button onclick="saveIt('ppkcookie1')">Create cookie 1</button>
+<button onclick="readIt('ppkcookie1')">Read cookie 1</button>
+<button onclick="eraseIt('ppkcookie1')">Erase cookie 1</button>
+<button onclick="saveIt('ppkcookie2')">Create cookie 2</button>
+<button onclick="readIt('ppkcookie2')">Read cookie 2</button>
+<button onclick="eraseIt('ppkcookie2')">Erase cookie 2</button>
+
+<p><a href="javascript:saveIt('ppkcookie1')" class="page">Create cookie 1</a><br />
+<a href="javascript:readIt('ppkcookie1')" class="page">Read cookie 1</a><br />
+<a href="javascript:eraseIt('ppkcookie1')" class="page">Erase cookie 1</a>.</p>
+
+<p><a href="javascript:saveIt('ppkcookie2')" class="page">Create cookie 2</a><br />
+<a href="javascript:readIt('ppkcookie2')" class="page">Read cookie 2</a><br />
+<a href="javascript:eraseIt('ppkcookie2')" class="page">Erase cookie 2</a>.</p>
+
+<p>For comparision, read out
+<a class="page" href="javascript:alert('document.cookie is now\n' + document.cookie);">document.cookie</a>.</p>
+
+<button onclick="alert('document.cookie is now\n' + document.cookie);">document.cookie</button>
+</body>
+</html>

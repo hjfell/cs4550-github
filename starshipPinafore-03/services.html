@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Starship Pinafore Event Booking - Services</title>
+	<link rel="stylesheet" href="css/starship.css"> 
+	
+	<!--<script src="../jQuery/jquery-1.7.1.min.js"></script>-->
+	<script src="js/food2.js"></script>
+<style>
+  	span.cal {font-family:Lucida Calligraphy,Comic Sans MS,sans-serif;}
+</style>
+
+<style>
+ul.fI
+	{
+		list-style-type:none;
+		padding:0px;
+		margin:0px;
+	}
+
+li.fI
+	{
+		font-size: 100%;
+		line-height: 90%;
+		padding-left:12px;
+		text-align:left;
+	}
+th.fList
+	{
+		color:#bff;
+		width:45%;
+	}
+</style>
+
+</head>
+
+<body>
+<a id="TOP"></a>
+<div class="navbar">
+<ul class="navbar">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="reservations.html">Reservations</a></li>
+  <li><a href="rooms.html">Rooms</a></li>
+  <li><a href="locations.html">Locations</a></li>
+  <li><a href="services.html" class="here">Services</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+
+<!-- Titlebar -->
+<div class="titlebar">
+<h1><em>Starship Pinafore Event Booking - Services</em></h1> 
+</div>
+
+<!-- Main content --> 
+<div class="main"> 
+<h3>Catering</h3>
+<p>Plan your event menu here and get an immediate estimate of the cost per person.</p>
+
+<form action="" name="menu"> 
+<h3>Food</h3>   
+<p>Prices shown are gold-pressed latnium strips.</p>
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<th colspan='3' style="padding:10px;text-align:center;"> Select at most one item from each course. </th>
+		</tr>
+		<tr>
+			<th class="fList"><strong>Appetizers</strong></th>
+			<td></td>
+			<th class="fList"">Soups</th>
+		</tr>
+		<tr>
+			<td id="appetizers" style="vertical-align:top;"> 
+			<ul class="fI">
+				<li> 
+				<input type="radio" name="food_ap" value="111.11" />
+				Gramilian sand peas <span class="cal">L<sub>s</sub></span> 111.11 </li>
+				<li> 
+				<input type="radio" name="food_ap" value="122.95" />
+				Bajoran shrimp <span class="cal">L<sub>s</sub></span> 122.95 </li>
+				<li> 
+				<input type="radio" name="food_ap" value="260.95" />
+				Jumbo Vulcan mollusks <span class="cal">L<sub>s</sub></span> 260.95 </li>
+			</ul>
+			</td>
+			<td></td>
+			<td id="soups" style="vertical-align:top;"> 
+			<ul class="fI">
+				<li> 
+				<input type="radio" name="food_sp" value="77.95" />
+				Alterian chowder <span class="cal">L<sub>s</sub></span> 77.95 </li>
+				<li> 
+				<input type="radio" name="food_sp" value="50.00" />
+				Vak clover soup <span class="cal">L<sub>s</sub></span> 50.00 </li>
+			</ul>
+			</td>
+			</tr>
+			<tr>
+				<th class="fList">Entrees</th>
+				<td></td>				
+				<th class="fList">Deserts</th>
+			</tr>
+			<tr>
+			<td id="entrees" style="vertical-align:top;"> 
+			<ul class="fI">
+				<li> 
+				<input type="radio" name="food_en" value="66.66" />
+				Gagh <span class="cal">L<sub>s</sub></span> 66.66 </li>
+				<li> 
+				<input type="radio" name="food_en" value="10.95" />
+				Kohlanese stew <span class="cal">L<sub>s</sub></span> 10.95 </li>
+				<input type="radio" name="food_en" value="40.00" />
+				Steak <span class="cal">L<sub>s</sub></span> 40.00 
+			</ul>
+			</td>
+			<td></td>
+			<td id="desserts" style="vertical-align:top;"> 
+			<ul class="fI">
+				<li> 
+				<input type="radio" name="food_de" value="62.95" />
+				I'danian spice pudding <span class="cal">L<sub>s</sub></span> 62.95 </li>
+				<li> 
+				<input type="radio" name="food_de" value="40.00" />
+				Mapa bread <span class="cal">L<sub>s</sub></span> 40.00 </li>
+				<li> 
+				<input type="radio" name="food_de" value="96.95" />
+				Uttaberry crêpes <span class="cal">L<sub>s</sub></span> 96.95 </li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<h3>
+Drink
+</h3>
+				<table id="drink">
+					<tbody>
+						<tr>
+						<th colspan='11' style="padding:10px;text-align:center;"> Select as many different drinks ar you like. </th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="drink" value=72.95 /></td>
+							<td>Aldebaran whiskey</td>
+							<td><span class="cal">L<sub>s</sub></span>72.95</td>
+							<td style="width:10%;"></td>
+							<td><input type="checkbox" name="drink" value=75.95 /></td>
+							<td>Andolian brandy</td>
+							<td><span class="cal">L<sub>s</sub></span>75.95</td>
+							<td style="width:10%;"></td>
+							<td><input type="checkbox" name="drink" value=11.95 /></td>
+							<td>Prune juice</td>
+							<td><span class="cal">L<sub>s</sub></span>11.95</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="drink" value=54.95 /></td>
+							<td>Bajoran ale</td>
+							<td><span class="cal">L<sub>s</sub></span>54.95</td>
+							<td></td>
+							<td><input type="checkbox" name="drink" value=171.95 /></td>
+							<td>Beer</td>
+							<td><span class="cal">L<sub>s</sub></span>171.95</td>
+							<td></td>
+							<td><input type="checkbox" name="drink" value=250.00 /></td>
+							<td>Stardrifter</td>
+							<td><span class="cal">L<sub>s</sub></span>250.00</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="drink" value=79.95 /></td>
+							<td>Cardassian ale</td>
+							<td><span class="cal">L<sub>s</sub></span>79.95</td>
+							<td></td>
+							<td><input type="checkbox" name="drink" value=29.95 /></td>
+							<td>Deka tea</td>
+							<td><span class="cal">L<sub>s</sub></span>29.95</td>
+							<td></td>
+							<td><input type="checkbox" name="drink" value=70.95 /></td>
+							<td>Takarian mead</td>
+							<td><span class="cal">L<sub>s</sub></span>70.95</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="drink" value=21.50 /></td>
+							<td>Enyak's milk</td>
+							<td><span class="cal">L<sub>s</sub></span>21:50</td>
+							<td></td>
+							<td><input type="checkbox" name="drink" value=85.50 /></td>
+							<td>Gamzian wine</td>
+							<td><span class="cal">L<sub>s</sub></span>85.50</td>
+							<td></td>
+							<td><input type="checkbox" name="drink" value=1.50 /></td>
+							<td>Trixian bubble juice</td>
+							<td><span class="cal">L<sub>s</sub></span> 1.50</td>
+						</tr>
+<!--			
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>Vulcan port</td>
+							<td><span class="cal">L<sub>s</sub></span>7.95</td>
+						</tr>
+-->
+</tbody>
+</table>
+
+<input type="submit" value="Get Price" onClick=showPrices(this.form)>
+
+</form>
+
+<hr />
+<p><a href="credits.html" target="_blank">Credits</a>  ------
+		Last Updated:&nbsp; <em>
+		<script type="text/javascript">
+//<![CDATA[
+<!--
+document.write(document.lastModified)
+// -->
+//]]>
+		</script>
+		</em> 
+</p>
+
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

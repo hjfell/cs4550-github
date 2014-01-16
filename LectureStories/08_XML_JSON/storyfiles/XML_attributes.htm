@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/08_XML_JSON/storyfiles/XML_attributes.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+       
+    February 22, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>XML Entities and Attributes</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">XML Entities and Attributes</h1>
+
+<p>XML elements can have <em>attributes</em> in name/value pairs just like in HTML.</p>
+<p>In XML, the attribute values must always be quoted.</p>
+
+<p>There are 5 predefined entity references in XML:</p>
+<table>
+<tr><td><code>&amp;lt;</code></td><td>&lt;</td><td>less than</td></tr>
+<tr><td><code>&amp;gt;</code></td><td>&gt;</td><td>greater than</td></tr>
+<tr><td><code>&amp;amp;</code></td><td>&amp;</td><td>ampersand</td></tr>
+<tr><td><code>&amp;apos;</code></td><td>&apos;</td><td>apostrophe</td></tr>
+<tr><td><code>&amp;quot;</code></td><td>&quot;</td><td>quotation mark</td></tr>
+</table>
+
+<p>&lt;!-- This is a comment --&gt;</p>
+<p>White-space is Preserved in XML</p>
+<p>XML stores a new line as LF.</p>
+
+<p>An XML <em>element</em> is everything from (including) the element's start tag to (including) the element's end tag.</p>
+<p>An element can contain:</p>
+<ul>
+<li>other elements</li>
+<li>text</li>
+<li>attributes</li>
+<li>or a mix of all of the above...</li>
+</ul>
+
+<p>XML Naming Rules</p>
+<ul>
+<li>Names can contain letters, numbers, and other characters</li>
+<li>Names cannot start with a number or punctuation character</li>
+<li>Names cannot start with the letters xml (or XML, or Xml, etc)</li>
+<li>Names cannot contain spaces</li>
+</ul>
+
+<p>Best Naming Practices</p>
+<ul>
+<li>Make names descriptive. <code>&lt;first_name>, &lt;last_name&gt;</code>.</li>
+<li>Names should be short and simple, <code>&lt;book_title&gt;</code> </li>
+<li>Avoid "-" characters..</li>
+<li>Avoid "." characters.</li>
+<li>Avoid ":" characters.</li> 
+</ul>
+<p>XML documents often have a corresponding database. A good practice is to use the naming rules of your database for the elements in the XML documents.</p>
+<p>Non-English letters like éòá are perfectly legal in XML, but watch out for problems if your software vendor doesn't support them.</p>
+
+<p>XML Elements are Extensible</p>
+<p>The application should still be able to find the <code>&lt;to&gt;</code>, <code>&lt;from&gt;</code>, and <code>&lt;body&gt;</code> elements in the XML document and produce the same output even if there are other tagged fields.</p>
+
+<p>XML Elements vs. Attributes</p>
+<pre><code>
+&lt;person sex="female"&gt;
+  &lt;firstname&gt;Anna&lt;/firstname&gt;
+  &lt;lastname&gt;Smith&lt;/lastname&gt;
+&lt;/person&gt;
+</code></pre>
+
+<pre><code>
+&lt;person&gt;
+  &lt;sex&gt;female&lt;/sex&gt;
+  &lt;firstname>&gt;Anna&lt;/firstname&gt;
+  &lt;lastname&gt;Smith&lt;/lastname&gt;
+&lt;/person>
+</code></pre>
+
+<p>There are no rules about when to use attributes or when to use elements. Attributes are handy in HTML. You may want to avoid them and use elements instead.</p> 
+<ul>
+<li>attributes cannot contain multiple values (elements can)</li> 
+<li>attributes cannot contain tree structures (elements can)</li> 
+<li>attributes are not easily expandable (for future changes)</li> 
+</ul>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

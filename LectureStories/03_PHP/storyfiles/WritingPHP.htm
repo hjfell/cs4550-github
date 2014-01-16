@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/03_PHP/storyfiles/introduction.htm/WritingPHP.htm
+    
+    Copyright 2012
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    December 30, 2012
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Writing PHP</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+          
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+
+<body>
+<div class="pad">
+
+<h1 class="center">Writing PHP</h1>
+<p>Create a file first.php. <strong>← You must have the php extension.</strong></p>
+
+
+<pre class="code">
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8" /&gt;
+	&lt;title&gt;Basic PHP Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!-- Script 1.2 - first.php --&gt;
+	&lt;p>This is standard HTML.&lt;/p&gt;
+	
+&lt;?php
+echo "This is PHP.
+So is this.";
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>You can go in and out of PHP.</p>
+
+<p><b>You must access your file through a server:</b><br />
+http://localhost:8888/experiments/PHP/first.php<br />
+or<br />
+http://cs4550.com/experiments/PHP/first.php<br />
+<span style="color:red;">NOT</span><br />
+file://localhost/Applications/MAMP/htdocs/experiments/PHP/first.php<br />
+</p>
+
+</div>
+
+</body>
+</html>

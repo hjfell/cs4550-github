@@ -1,0 +1,11 @@
+storyfiles/introduction.htm     Harriet Fell's First Story
+../story/whatisnext.htm?../hjfStory/whatisnext.txt   What is Next?
+storyfiles/education.htm        My education
+storyfiles/family.htm       	My family
+storyfiles/places.htm    		Places where I have lived
+storyfiles/pets.htm  			My Pets
+storyfiles/research.htm       	Research
+storyfiles/hobbies-cycling.htm  Hobbies - Cycling
+storyfiles/hobbies-painting.htm Hobbies - Painting
+http://www.ccs.neu.edu/home/fell	My real home page
+story.txt                       The story file for this story

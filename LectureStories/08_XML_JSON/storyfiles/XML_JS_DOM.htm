@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/08_XML_JSON/storyfiles/XML_JS_DOM.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+       
+    February 22, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript and the XML DOM</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">JAVASCRIPT AND THE XML DOM</h1>
+
+<h3>The JavaScript <code>XMLHttpRequest</code> Object</h3>
+<p>The XMLHttpRequest object lets you:</p>
+<ul>
+<li>Update a web page without reloading the page</li>
+<li>Request data from a server after the page has loaded</li>
+<li>Receive data from a server after the page has loaded</li>
+<li>Send data to a server in the background</li>
+</ul>
+<p>The following code fragment parses an XML document into an XML DOM object:</p>
+<pre><code>
+function loadXMLDoc(dname)
+{
+if (window.XMLHttpRequest)
+  {
+  xhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xhttp.open("GET",dname,false);
+xhttp.send();
+return xhttp.responseXML;
+}
+
+<h3>The XML DOM model</h3>
+
+<table>
+<tr><th>NodeType</th><th>Named Constant</th></tr>
+<tr><td>1</td><td>ELEMENT_NODE</td></tr>
+<tr><td>2</td><td>ATTRIBUTE_NODE</td></tr>
+<tr><td>3</td><td>TEXT_NODE</td></tr>
+<tr><td>4</td><td>CDATA_SECTION_NODE</td></tr>
+<tr><td>5</td><td>ENTITY_REFERENCE_NODE</td></tr>
+<tr><td>6</td><td>ENTITY_NODE</td></tr>
+<tr><td>7</td><td>PROCESSING_INSTRUCTION_NODE</td></tr>
+<tr><td>8</td><td>COMMENT_NODE</td></tr>
+<tr><td>9</td><td>DOCUMENT_NODE</td></tr>
+<tr><td>10</td><td>DOCUMENT_TYPE_NODE</td></tr>
+<tr><td>11</td><td>DOCUMENT_FRAGMENT_NODE</td></tr>
+<tr><td>12</td><td>NOTATION_NODE</td></tr>
+</table>
+<!--Look at 
+	loadXMLbooks.htm
+and
+	LSystemsFromXML.js
+-->
+</code></pre>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36140223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

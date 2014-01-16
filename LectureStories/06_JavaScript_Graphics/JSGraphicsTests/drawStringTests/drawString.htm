@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    function getString() {
+        return document.getElementById("string1").value
+    }
+</script> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Draw from String</title>
+<!-- 
+	drawString.htm
+	Harriet Fell February 2012
+-->
+     <script type="text/javascript" src="drawStringPath.js"></script>
+</head>
+
+<body>
+
+<form action="" id="getStr">
+<p><input type="text" id="string1" value ="F+F-F" /></p>
+<button type="button" onclick="drawStringPath(c,getString());">submit</button><br />
+</form>
+
+
+<canvas id="my_canvas_id" width="500" height="500"  style="border: 1px solid black;"></canvas>
+<script>
+ var canvas = document.getElementById("my_canvas_id");
+ var c = canvas.getContext('2d');
+ var str = "F+F-F";
+</script>
+
+</body>
+</html>

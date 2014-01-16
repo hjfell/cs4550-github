@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CS4550 Web Development - Spring 2014 - Assignments</title>
+	<link rel="stylesheet" href="css/cs4550.css">
+	<script src="js/email.js">	
+	</script>
+	<link rel="stylesheet" type="text/css" href="../expandable/expandable.css" />
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'>
+	</script>
+	<script type='text/javascript' src='../expandable/expandable.js'>
+	<script async>
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript async src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script async>
+		try {
+			var pageTracker = _gat._getTracker("UA-36140223-1");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+	<style>
+		table
+		{
+		border-collapse:collapse;
+		width:100%;
+		}
+		table,th,td
+		{
+		border:1px solid black;
+		}
+		th, td
+		{
+		padding:10px;
+		}
+		th
+		{
+		text-align:center;
+		}
+		.bigBlue {
+			font-size:120%;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<a id="TOP"></a> 
+<div class="navbar">
+	<ul class="navbar">
+		<li><a href="index.html">Home</a> 
+		<li><a href="contact.html">Contact Info</a> 
+		<li><a href="syllabus.html">Syllabus</a> 
+		<li><a href="schedule.html">Schedule</a> 
+		<li><a href="assignments.html" class="here">Assignments</a> 
+		<li><a href="announcements.html">Announcements</a> 
+		<li><a href="tools.html">Tools</a> 
+		<li><a href="howto.html">Instructional Materials</a> 
+		<li><a href="mysites.html">My Sites</a> 
+	</ul>
+</div>
+
+<!-- Titlebar -->
+<div class="titlebar">
+	<h2>
+		CS4550 Web Development - Spring 2014 - Assignments 
+	</h2>
+	<h3>
+		<a href="http://www.ccs.neu.edu" target="_blank"> College of Computer and Information Science</a> <br />
+		<a href="http://www.neu.edu/" target="_blank">Northeastern University</a> 
+	</h3>
+</div>
+
+<!-- Main content -->
+<div class="main">
+	<table>
+		<tr>
+			<th>Due</th>
+			<th>Assignment<br />
+			click on + for more information</th>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			January 10, 2014<br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>Getting Set Up</strong></span> 
+			<div>
+				<ul>
+					<li>Set up <a href="http://www.mamp.info/en/index.html" target="_blank">MAMP</a>, <a href="http://www.apachefriends.org/en/xampp.html" target="_blank">XAMPP</a>, or some other Apache, MySQL, PHP server on your own machine.</li>
+					<li>Get a domain name and an account with a private hosting company of your choice. I am using <a href="http://www.ipage.com/join/index.bml?AffID=708727" target="_blank">iPage</a> for this course. <span style="color:blue;">Disclosure: I may be compensated if you sign up via this iPage link.  If that happens, I will donate the profits to a charity chosen by the class.</span>  You should make sure to get hosting for at least the length of this course (4 months). This should cost under $50. You may not use your own dorm room server that is only up for a few hours a day. The TA and I must be able to access you site at our convenience. </li>
+					<li>Set up an (S)FTP server so you can upload pages.</li>
+					<li>Get an editor for writing your HTML and other files. Notepad (PC) or TextEdit (Mac) will do but you will probably want an editor that does syntax highlighting and possibly checking. I use bbEdit on my MAC and textastic.app on my iPad but there are free alternatives, e.g. 
+					<ul>
+						<li><a href="http://www.coffeecup.com/free-editor/" target="_blank">CoffeeCup</a></li>
+						<li><a href="http://www.activestate.com/komodo-edit" target="_blank">Komodo Edit</a></li>
+						<li><a href="http://panic.com/coda/" target="_blank">Coda 2</a> does (S)FTP and has a code editor and a mySQL editor</li>
+					</ul>
+					</li>
+					<li> Find the directory where the Web server begins looking for files. Put a file there named "index.html" and fill it with text identifying this as your server. I suggest that you don't put your email address on the page for now to avoid spam. 
+					<p>
+						Connect to your server from a Web browser, using only the host name, "yoursite.com". (For the class site, this is cs4550.com but my index page is a forwarding page that takes you to a subdirectory so you actually end up at http://cs4550.com/cs4550/index.html.) 
+					</p>
+					<p>
+						Verify that http://yoursite.com shows your index page. 
+					</p>
+					</li>
+					<li> Use an HTML validator, e.g. http://validator.w3.org/, to make sure that your HTML is legal. </li>
+					<li> Set up a blog on a site of your choosing, e.g. wordpress.com, blogger.com, tumblr.com (or install wordpress on your own site but that is really not necessary). Write in your blog about your experiences in getting started. </li>
+					<li> Send me the urls so I can find your site and your blog.<br />
+					<strong>NOTE:</strong> These will be public so that the whole class can view them. </li>
+					<li>Your index.html will be your home page for the course. At a minimum, it should have: 
+					<ul>
+						<li>your name,
+						<li> 
+						<li>your picture,
+						<li> 
+						<li>links to your work for this course - start with a link to your blog.
+						<li> 
+					</ul>
+					<li>You can keep this page simple for now and improve it as the term goes on.</li>
+				</ul>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"> For the next few weeks, you will each design and build a reservation/rental system. Your system should provide a way for you to learn and use a variety of web development tools. 
+			<p>
+				Here are some samples for inspiration: 
+			<ul>
+				<li><a href="http://www.northeastern.edu/events/planning_resources/venue_guide.html" target="_blank">conference rooms at Northeastern University</a></li>
+				<li><a href="http://www.ritzcarlton.com/en/Properties/KeyBiscayne/Events/Weddings/Venues.htm" target="_blank">ballrooms at the Ritz Carlton in Key Biscayne, Florida</a></li>
+				<li><a href="http://is1500profs.weebly.com/" target="_blank">Boat Ventures Case from IS1500</a></li>
+				<li><a href="http://www.bikecuriousrentals.com" target="_blank">renting bicycles on Venice Beach</a></li>
+			</ul>
+			Look over the reservation systems from Spring 2013. Use your imagination. 
+			</p>
+			</td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			January 17, 2014<br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>HTML, CSS, Designing a Reservation System</strong></span> 
+			<div>
+				<ul>
+					<li> Reading:<br />
+					Get started reading the material on these first two sites. Some of you may know all of this, for others, the material may be new. We will discuss some of these constructs in class and learn more as we need to. The third page is a brief article on designing websites. 
+					<ul>
+						<li> <a href="http://www.w3schools.com/html/default.asp" target="_blank">w3schools HTML</a> </li>
+						<li> <a href="http://www.w3schools.com/css/" target="_blank">w3schools CSS</a> </li>
+						<li> <a href="http://www.webcredible.co.uk/user-friendly-resources/web-usability/plan-usable-website.shtml" target="_blank">Planning a usable website: A three-step guide</a> by Clara Teoh </li>
+					</ul>
+					</li>
+					<li> Decide on the reservation/rental system that you would like to build.<br />
+					Plan the site for your system by filling in this template in your blog. <br />
+					<span class="bigBlue"><b>Remember that this is your site.<br />
+					It should not be a copy of some other site.<br />
+					The design and code should both be your own.</b></span> 
+					<ul>
+						<li> <strong>Background</strong><br />
+						[Describe the background of your client and the main needs of the website; a couple of sentences is enough] </li>
+						<li> <strong>Requirements</strong> 
+						<ul>
+							<li> <strong>Users</strong><br />
+							[describe the users who will visit the website; what kinds of questions did you ask to come up with the users? Be sure to list those questions to show the client how to arrived at your list of users]</li>
+							<li> <strong>Use Cases</strong><br />
+							[what will the users want to do on the site? How did you come up with those uses? Be sure to express your use cases in the format “[verb] [ action ] [ outcome ]”, e.g., “book an event room”; be sure to list different scenarios that must be considered when designing the website, for example, three-hour events, week-long events, specific locations, catering, etc.]</li>
+							<li> <strong>Functional Requirements</strong><br />
+							[what specific needs do users have?]</li>
+							<li> <strong>Non-Functional Requirements</strong><br />
+							[are there other considerations that are not listed above, e.g., mobile access, booking via smart phones?]</li>
+						</ul>
+						</li>
+						<li> <strong>Design Specification</strong> 
+						<ul>
+							<li> <strong>Content Needs</strong><br />
+							[list the type of information that you will need to have on the website]</li>
+							<li> <strong>Media Needs</strong><br />
+							[what kinds of media will you host on the site and why? Video? Images? Forms? Calendars? Blogs?]</li>
+							<li> <strong>External Links</strong><br />
+							[what external websites will you link to? why]</li>
+						</ul>
+						</li>
+					</ul>
+					My <a href="../starshipPinafore-01/StarShipPinaforePlans.html">Background Document for Starship Pinafore</a>
+					</li>
+					<li> <strong>Page Flow</strong><br />
+					[using html and css, create an initial version of your site, e.g. <a href="../starshipPinafore-01/" target="_blank">Starship Pinafore Event Booking</a>] </li>
+					<li>[using <a href="http://www.northeastern.edu/rasala/story/index.htm">Rasala's story utility</a>, create a story of all the source code for your reservation system, e.g. 					
+					<a href="../story/index.htm?../starshipPinafore-01/" target="_blank">starshipPinafore-01 Source Code</a></li>
+				</ul>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			January 24, 2014<br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>JavaScript, jQuery, Dynamics and Interaction</strong></span> 
+			<div>
+				<ul>
+					<li> Reading:<br />
+					Read and try out some of the things in these w3schools Tutorials. You have all programmed in other languages and the Javascript structures and functions should be familiar ideas. Do read the section on the HTML DOM. jQuery is a JavaScript library that we use when we manipulate the HTML DOM (Document Object Model). 
+					<ul>
+						<li><a href="http://www.w3schools.com/js/default.asp" target="_blank">w3schools JavaScript</a> </li>
+						<li><a href="http://www.w3schools.com/jquery/default.asp" target="_blank">w3schools jQuery</a> </li>
+					</ul>
+					</li>
+					<li>This week, you will use some JavaScript and jQuery to add movement and client-side interaction to your reservation system. Be imaginative. There are many ways to do these things. 
+					<ul>
+						<li> Add a slideshow to your side to show off your products - rooms, bikes, or whatever your clients are reserving. </li>
+						<li> Add a calculator of some sort, e.g. so the client can find out what the total rental will cost. </li>
+					</ul>
+					</li>
+					<li> I have added two slide shows in this version of my <a href="../starshipPinafore-02/" target="_blank">Starship Pinafore Event Booking</a> site. See the Rooms and Locations pages. I have also added checkboxes for food and radio buttons for drink on the "Services" page and a calculator that tells the cost of the selected menu. Finally, I have added a "Credits" page with links to the image sources and to code and tutorials sources. Since that is really not part of the reservation system, I have put the Credits link at the bottom of the page. </li>
+				</ul>
+			</div>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			January 31, 2014<br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>Reservation Form</strong></span> 
+			<ul>
+				<li> Reading:<br />
+				Review the material in <a href="http://cs4550.com/story/index.htm?../LectureStories/03_PHP/">my PHP lecture</a>. 
+				<ul>
+					<li><a href="http://www.w3schools.com/php/php_forms.asp">w3Schools PHP Forms</a></li>
+					<li><a href="http://www.cs4550.com/LectureStories/03_PHP/PHPtests/contactForm.html">contactForm.html</a><br />
+					<a href="http://www.tutwow.com/htmlcss/create-a-simple-and-secure-contact-form-with-jquery-and-php/">TutWow Tutorial</a><br />
+					<span style="padding-left:50px;">We will look at these in class on Tuesday, February 5, 2012.</span></li>
+				</ul>
+				</li>
+				<li>Create a reservation form for your system. Use JavaScript, jQuery, and/or PHP for validation.</li>
+				<li>Show that you have actually collected the user's entered values with some kind of feedback, e.g. an alert box or an addition to the page. 
+				<li>We will be starting on MySQL in class this week so I do not expect that most of you will be storing the input information yet. You can change your form later but creating it now should help you think about what tables and columns you will have to create in your database. </li>
+			</ul>
+			<div>
+			</div>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			February 7, 2014<br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>Reservation Form and Email</strong></span> 
+			<ul>
+				<li> Create a reservation form with validation. </li>
+				<li> Send an email to your client confirming the reservation. </li>
+			</ul>
+			I have added a reservation form in this version of my <a href="../starshipPinafore-03/" target="_blank">Starship Pinafore Event Booking</a> site. </td>
+		<tr>
+			<td> Friday<br />
+			February 14, 2014<br />
+			by 9 PM </td>
+			<td>Create a database to back up your reservation system so that you can actually keep track of what's been reserved, by whom, and for what times. </td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			February 21, 2014 <br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>EXTRAS</strong></span> 
+			<ul>
+				<li>Clean up your reservation system</li>
+				<li>Look over the assignments so far and make sure your site meets those requirements.</li>
+				<li>Add something else</li>
+			</ul>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			February 28, 2014<br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>Final Project Proposal</strong></span> 
+			<ul>
+				<li>Use your blog to submit a proposal for your term project.<br />
+				For partners, one posting is enough. The other person should just post a pointer to their partner's blog.</li>
+				<li>Your proposal should include answers to the questions you were asked to write about for your reservation site.</li>
+				<li>Your term project should be a major work that should be at least as impressive as your reservation systems.</li>
+				<li>You may work in pairs or alone. We expect that 2-person projects reflect the efforts of two people and do more than solo projects. Let us know what each partner will be doing.</li>
+				<li>Grades will be given on the basis of look and feel, usability, quality of code, and general creativity.</li>
+				<li>Some general guidelines: 
+				<ul>
+					<li>Make good use of style sheets and php includes to get a unified feel across your pages.<br />
+					There should be several pages. How many depends on the nature of your site.</li>
+					<li>There must be database interaction.</li>
+					<li>Forms should have validation. </li>
+					<li>You should use some API, e.g. google maps, rss feed, ...</li>
+					<li>For data-driven sites, use real data should be real, e.g. from Rotten Tomatoes or Amazon.</li>
+					<li>Include social media buttons.</li>
+					<li>Add some extras, e.g. a shopping cart, captchas, file uploads (of safe things like jpgs), cookies and/or local storage, session tracking ...</li>
+					<li>If some of these items do not apply to your site, let us know why they don't fit.</li>
+				</ul>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			March 13, 2014<br />
+			by 9 PM </td>
+			<td> <span class="heading expandable"> <strong>Final Project - 1</strong></span> You should have made a good start on your final project. 
+			<ul>
+				<li>Make sure that your work is uploaded to your host and that there is a link to it from your home page.</li>
+				<li>Include links on your home page to your php source BUT make sure that your connection information is in a separate file. DO NOT show the source of that file.</li>
+				<li>Use your blog to tell us what you have done. Here are some things we expect to see at this point: 
+				<ul>
+					<li>Good use of style sheets and php includes for unified feel across pages</li>
+					<li>All static pages in place</li>
+				</ul>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			March 20, 2014<br />
+			by 9 PM </td>
+			<td> <strong>Final Project - 2</strong> Keep working on your final project. We expect to see progress every week. Use your blog to tell us what you have done. </td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			March 27, 2014<br />
+			by 9 PM </td>
+			<td> <strong>Final Project - 3</strong> Keep working on your final project. We expect to see progress every week. Use your blog to tell us what you have done. </td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			April 4, 2014<br />
+			by 9 PM </td>
+			<td> <strong>Final Project - 4</strong> Keep working on your final project. We expect to see progress every week. Use your blog to tell us what you have done. </td>
+		</tr>
+		<tr>
+			<td> Friday<br />
+			April 11, 2014<br />
+			by 9 PM </td>
+			<td> <strong>Final Project - finally done</strong> Use your blog to tell us all the special features of your project. </td>
+		</tr>
+	</table>
+	<hr />
+	<p>
+		Last Updated:&nbsp; <em> 
+		<script type="text/javascript">
+
+
+
+
+//<![CDATA[
+<!--
+document.write(document.lastModified)
+// -->
+//]]>
+		
+		
+		
+		</script>
+		</em> 
+	</p>
+</div>
+
+<!-- The course logo in the upper left corner -->
+<div class="picture" id="picture">
+</div>
+</body>
+</html>

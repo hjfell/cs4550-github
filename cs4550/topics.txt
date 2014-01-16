@@ -1,0 +1,42 @@
+Topics in Web Development
+
+HTML4 and HTML5 basics
+CSS
+JavaScript
+jQuery
+URL handling
+    URL structure
+    Query String on the server
+    Query String on the client
+HTML5 extras
+    Canvas
+    WebStorage
+    WebFileSystem
+    Offline Applications
+    Drag and Drop
+    GeoLocation
+    Messaging
+    WebWorkers
+    WebSockets
+ASP.NET basics
+
+C#
+    Handlers
+    Controls
+    Other
+
+Storage
+    Text Files  
+    Database Setup
+    SQL
+    LINQtoSQL
+    XML
+    LINQtoXML
+    JSON
+    Cookies
+    WebStorage (see above)
+    WebFileSystem (see above)
+
+Accessing other Data (e.g. Google, eBay)
+    What is available?
+    How do you use it?  

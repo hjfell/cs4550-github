@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/moreSelecting2.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 27, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>More SQL/MySQL</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>-->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">More SQL/MySQl</h1>
+
+<h3>WHERE, LIKE, NOT LIKE</h3>
+<pre>
+mysql> SELECT first_name, last_name FROM users WHERE email NOT LIKE '%@beatles.com';
+mysql> SELECT * FROM users WHERE last_name LIKE '%own';
+</pre>
+
+<h3>ORDER BY</h3>
+<pre>
+mysql> SELECT * FROM users ORDER BY registration_date;
+mysql> SELECT * FROM users ORDER BY last_name, first_name;
+mysql> SELECT first_name, last_name FROM users WHERE last_name="Simpson" ORDER BY first_name;
+mysql> SELECT first_name, last_name FROM users WHERE last_name!="Simpson" ORDER BY last_name;
+</pre>
+
+<h3>LIMIT</h3>
+<pre>
+mysql> SELECT * FROM users LIMIT 4;
+mysql> SELECT * FROM users LIMIT 4, 5;
+mysql> SELECT first_name, last_name FROM users ORDER BY registration_date DESC LIMIT 5;
+</pre>
+
+<h3>UPDATE</h3>
+<pre>
+mysql> INSERT into users (first_name, last_name, email, pass, registration_date)
+    -> VALUES ('Michael','Chabon','m.chabon@alaska.com',SHA1('verycold'),NOW());
+mysql> SELECT user_id FROM users WHERE first_name="Michael" AND last_name="Chabon";
+mysql> UPDATE users
+    -> SET email='mike@authors.com' WHERE user_id = 14;
+mysql> SELECT * FROM users WHERE user_id = 14;
+</pre>
+
+<h3>Some Functions</h3>
+<pre>
+mysql> SELECT UPPER(first_name) FROM users ORDER by last_name;
+mysql> SELECT CONCAT(last_name, ', ', first_name)
+    -> AS Name FROM users ORDER BY Name;
+mysql> SELECT RAND();
+mysql> SELECT * FROM users ORDER BY RAND();
+mysql> SELECT email FROM users ORDER BY RAND() LIMIT 1;
+mysql> SELECT DATE(registration_date) FROM users;
+mysql> SELECT DAYNAME(registration_date) FROM users;
+	Server date and time:
+mysql> SELECT NOW();
+mysql> SELECT CURDATE(), CURTIME();
+	You must use JavaScript to get the client's current date.
+</pre>
+
+<p style="width:100%;text-align:right;font-size:100%;">material from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></p>
+</div>
+
+</body>
+</html>

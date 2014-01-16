@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>canvas2D starter</title>
+<!-- 
+	canvas2D-starter.html
+	Harriet Fell January 2012
+	based on an example from 
+	Flanagan, David (2011-04-25). JavaScript: The Definitive Guide 
+	OReilly Media - A. Kindle Edition. 
+-->
+</head>
+<body> 
+<canvas id="my_canvas_id" width=300 height=300 style="border: 1px solid black;"></canvas>
+<script> 
+var canvas = document.getElementById("my_canvas_id"); 
+var c = canvas.getContext('2d');
+c.beginPath(); // Start a new path 
+c.moveTo(100, 100); // Begin a subpath at (100,100) 
+c.lineTo(200, 200); // Add a line from (100,100) to (200,200) 
+c.lineTo(100, 200); // Add a line from (200,200) to (100,200)
+
+c.fillStyle = "#f00"; // Set fill color to red
+c.fill(); // Fill a triangular area 
+c.stroke(); // Stroke two sides of the triangle
+
+//c.closePath();
+//c.stroke(); // Stroke third side of the triangle
+</script> 
+</body>
+</html>

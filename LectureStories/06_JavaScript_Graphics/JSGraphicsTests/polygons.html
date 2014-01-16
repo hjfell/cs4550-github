@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Polygons</title>
+<!-- 
+	polygons.html
+	Harriet Fell January 2012
+	based on an example from 
+	Flanagan, David (2011-04-25). JavaScript: The Definitive Guide 
+	OReilly Media - A. Kindle Edition. 
+-->
+</head>
+<body>
+<canvas id="my_canvas_id" width="500" height="500" style="border: 3px solid gray;"></canvas>. 
+<script src="polygon.js"> 
+</script> 
+
+<script> 
+var deg = Math.PI/180; // For converting degrees to radians
+
+var canvas = document.getElementById("my_canvas_id"); 
+var c = canvas.getContext('2d');
+var c2 = canvas.getContext('2d');
+
+// Start a new path and add polygon subpaths
+c.beginPath();
+// polygon(c,n,x,y,r,angle,counterclockwise)
+polygon(c, 3, 50, 70, 50);                   // Triangle
+polygon(c, 4, 150, 60, 50, Math.PI/4);       // Square
+polygon(c, 5, 255, 55, 50);                  // Pentagon
+polygon(c, 6, 365, 53, 50, Math.PI/6);       // Hexagon
+polygon(c, 4, 365, 53, 20, Math.PI/4, true); // Small square inside the hexagon
+polygon(c2, 3, 50, 270, 50);                   // Triangle
+
+// Set some properties that control how the graphics will look
+c.fillStyle = "#ccc";    // Light gray interiors
+c.strokeStyle = "#008";  // outlined with dark blue lines
+c.lineWidth = 5;         // five pixels wide.
+
+// Now draw all the polygons (each in its own subpath) with these calls
+c.fill();                // Fill the shapes
+c.stroke();              // And stroke their outlines
+
+// Start a new path and add polygon subpaths
+c2.beginPath();
+polygon(c2, 3, 50, 170, 50);                   // Triangle
+polygon(c2, 4, 150, 160, 50, Math.PI/4);       // Square
+c2.rotate(10*deg);
+polygon(c2, 3, 50, 270, 50);                   // Triangle
+polygon(c2, 3, 150, 270, 50);                   // Triangle
+polygon(c2, 3, 250, 270, 50);                   // Triangle
+polygon(c2, 3, 350, 270, 50);                   // Triangle
+// Set some properties that control how the graphics will look
+c2.fillStyle = "#occ";    // Light cyan interiors
+c2.strokeStyle = "#066";  // outlined with dark cyan lines
+c2.lineWidth = 5;         // five pixels wide.
+
+// Now draw all the polygons (each in its own subpath) with these calls
+c2.fill();                // Fill the shapes
+c2.stroke();              // And stroke their outlines
+</script> <br />
+</body>
+</html>

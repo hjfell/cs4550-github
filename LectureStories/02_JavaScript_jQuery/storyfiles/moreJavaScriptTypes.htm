@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: LectureStories/storyfiles/01_HTML_CSS/moreJavaScriptTypes.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115  
+    
+    January 20, 2013
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>More JavaScript Types</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1 class="center">More JavaScript Types</h1>
+
+<h3>JavaScript Arrays</h3>
+<ul>
+<li>
+Three was to create and array<br />
+<ul>
+<li><code>var classes=new Array();<br />
+classes[0]="cs1800";<br />
+classes[1]="cs4300";<br />
+classes[2]="cs4500";<br />
+classes[3]=6;</code><br />
+<script>
+var classes=new Array();
+classes[0]="cs1800";
+classes[1]="cs4300";
+classes[2]="cs4500";
+classes[3]=6;
+document.write("classes[1] = " + classes[1] + "<br />");
+document.write('2 + classes[0] = ' + 2 + classes[0] + "<br />");
+rrr = 2 + classes[3];
+document.write('2 + classes[3] = ' + rrr + "<br />");
+</script>
+</li>
+<li>
+<code>var classes=new Array("cs1800","cs4300","cs4550");</code>
+</li>
+<li>
+<code>var classes=("cs1800","cs4300","cs4550");</code>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3>JavaScript Objects</h3>
+<p>Almost everything in JavaScript is an Object: a String, a Number, an Array, a Date, a Function, ...</p>
+<ul>
+<li>
+<code>var student={firstname:"Alice", lastname:"Smith", grade:91};<br />
+document.write(student.firstname + " " + student.lastname + ": grade = " + student.grade + "&lt;br /&gt;");<br />
+var n = parseInt(student.grade) + 2;<br />
+document.write(student.firstname + " thinks her grade should be: " + n + "&lt;br /&gt;");<br />
+document.write((student.firstname + student.lastname).toUpperCase());<br />
+</code>
+<script>
+var student={firstname:"Alice", lastname:"Smith", grade:91};
+document.write(student.firstname + " " + student.lastname + ": grade = " + student.grade + "<br />");
+var n = parseInt(student.grade) + 2;
+document.write(student.firstname + " thinks her grade should be: " + n + "<br />");
+document.write((student.firstname + student.lastname).toUpperCase());
+</script>
+</li>
+</ul>
+</div>
+
+</body>
+</html>

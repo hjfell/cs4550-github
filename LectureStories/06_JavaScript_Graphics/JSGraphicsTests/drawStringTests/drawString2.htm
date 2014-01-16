@@ -1,0 +1,46 @@
+
+<script type="text/javascript">
+    function getString() {
+        return document.getElementById("string1").value
+    }
+    function getAng() {
+        return document.getElementById("ang1").value
+    }
+    function getStep() {
+        return -document.getElementById("step1").value
+    }
+</script> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Draw from String</title>
+<!-- 
+	drawString2.htm
+	Harriet Fell February 2012
+-->
+    <script type="text/javascript" src="drawStringPath2.js"></script>
+</head>
+
+<body>
+
+<form action="" id="getStr">
+<table>
+<tr><th>String</th><th>Angle</th><th>Step Size</th></tr>
+<tr><td><input type="text" id="string1" value ="F+F-F" /></td>
+<td><input type="number" id="ang1" value ="90" /></td>
+<td><input type="number" id="step1" value ="50" /></td></table></tr>
+<button type="button" onclick="c.clearRect(0, 0, canvas.width, canvas.height);drawStringPath2(c,getString(),getAng(),getStep());">submit</button><br />
+</form>
+
+
+<canvas id="my_canvas_id" width="500" height="500"  style="border: 1px solid black;"></canvas>
+<script>
+ var canvas = document.getElementById("my_canvas_id");
+ var c = canvas.getContext('2d');
+ var str = "F+F-F";
+</script>
+
+</body>
+</html>

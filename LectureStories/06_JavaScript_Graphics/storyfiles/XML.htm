@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfilesL/XML.htm
+    
+    Copyright 2012,
+    Harriet Fell,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    fell@ccs.neu.edu
+    
+    March, 2012
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>XML</title>   
+    <link rel="Stylesheet" type="text/css" href="../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../story/css/print.css"
+          media="print" />    
+</head>
+<body>
+<div class="pad">
+
+<h1 class="center">XML - e<b>X</b>tensible <b>M</b>arkup <b>L</b>anguage</h1>
+
+<p>XML is designed to transport and store data.  It doesn't do anything by itself.  You invent your own tags.  It complements HTML and is a W3C recommendation.</p>
+
+<h3>Structure of an XML Document</h3>
+<ul>
+<li>The first line:<br />
+<code>&lt;?xml version="1.0" encoding="utf-8" ?&gt;</code>  does not have a closing tag and is not part of the document itself.</li>
+<li>root element</li>
+<li>child elements</li>
+<li>XML document forms a Tree structure - XML DOM</li>
+<li><a href="../LSystems/LSystems.xml" target="_blank">LSystems.xml</a> - XML data file</li>
+</ul>
+
+<h3>The XML DOM model - Node Types</h3>
+<ol>
+<li>ELEMENT_NODE</li>	
+<li>ATTRIBUTE_NODE</li>	
+<li>TEXT_NODE</li>	
+<li>CDATA_SECTION_NODE</li>	
+<li>ENTITY_REFERENCE_NODE</li>	
+<li>ENTITY_NODE</li>	
+<li>PROCESSING_INSTRUCTION_NODE</li>	
+<li>COMMENT_NODE</li>	
+<li>DOCUMENT_NODE</li>	
+<li>DOCUMENT_TYPE_NODE</li>	
+<li>DOCUMENT_FRAGMENT_NODE</li>	
+<li>NOTATION_NODE</li>
+</ol>
+
+
+<p>Some Examples:</p>
+<ul>
+<li><a href="../LSystems/XMLtools.js" target="_blank">XMLtools.js</a> - general JavaScript functions for loading an XML file or a text string that contains XML information into an XML DOM.</li>
+<li><a href="../LSystems/LSystemsXML2Array.js" target="_blank">LSystemsXML2Array.js</a> - see
+<ul>
+<li>loadLSystemData(xDoc) - gets data from the XML DOM into an array of L-Systems.  Needs rewriting.</li>
+<li>save(), function delValues(el_id), function setValues(el_id) - for saving and deleting user designs</li>
+<li>LSystem2String(title, id, start, rule1, rule2, angle, level, xval, yval, step, lineWidth, color, random, thinning)<br />
+LSystem(title, id, start, rules, angle, level, xval, yval, step, lineWidth, color, random)</li>
+</ul>
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>
