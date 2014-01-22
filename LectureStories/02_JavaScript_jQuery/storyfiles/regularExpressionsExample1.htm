@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Regular Expressions - Examples</title>
+	<style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  .result {
+	  	font-size: 130%;
+	  }
+	  .result:hover {
+    	background-color: #ffcccc;
+	  }
+/*
+    Settings to enable highlight with:
+        light orange background color
+        2px dotted outline
+    
+    Used for all span elements.
+    
+    Used for elements with class special.
+*/
+
+span:hover, .special:hover {
+    background-color: #ffe000;
+    outline: 2px dotted black;
+}
+	</style>
+</head>
+<body>
+<h1>Regular Expressions - Examples</h1>
+<h3>Parse a Number</h3>
+
+<pre class="code">
+    var parse_number = /^-?\d+(?:\.\d*)?(?:e[+\-]?\d+)?$/i;
+    var test = function (num) {
+        document.writeln(parse_number.test(num));
+    };
+    test('1'); // true 
+    test('number'); // false 
+    test('98.6'); // true 
+    test('132.21.86.100'); // false 
+    test('123.45E-67'); // true 
+    test('123.45D-67'); // false
+</pre>
+<pre class="result">
+<script>
+    var parse_number = /^-?\d+(?:\.\d*)?(?:e[+\-]?\d+)?$/i;
+    var test = function (num) {
+        document.writeln(parse_number.test(num));
+    };
+    test('1'); // true 
+    test('number'); // false 
+    test('98.6'); // true 
+    test('132.21.86.100'); // false 
+    test('123.45E-67'); // true 
+    test('123.45D-67'); // false
+</script>
+</pre>
+<img src="../../../images/lectures/parse_number.png" alt="parse a number diagram" />
+
+</body>
+</html>

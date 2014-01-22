@@ -1,11 +1,16 @@
 storyfiles/JavaScript_jQuerytitle.htm	JavaScript and jQuery
-../../../story/whatisnext.htm?../LectureStories/02_JavaScript_jQuery/whatisnext.txt        What is Next?
+../../story/whatisnext.htm?../LectureStories/02_JavaScript_jQuery/whatisnext.txt        What is Next?
 storyfiles/JavaScript_intro.htm							What is JavaScript?
 storyfiles/JavaScript_howTo.htm							Writing JavaScript
 storyfiles/moreJavaScriptTypes.htm						More JavaScript Types
 storyfiles/JavaScriptObjects.htm						JavaScript Objects
 storyfiles/JavaScriptControls.htm						Controlling the Flow 
 storyfiles/JavaScriptFunctions.htm						JavaScript Functions
+storyfiles/regularExpressionsBackground.htm				Regular Expressions Background
+storyfiles/regularExpressionsDefinition.htm				Regular Expressions Definition
+storyfiles/regularExpressionsExample1.htm				Regular Expressions Example - numbers
+storyfiles/regularExpressionsExample2.htm				Regular Expressions Example - urls
+storyfiles/JavaScriptMethods.htm						JavaScript Methods
 storyfiles/jQuery-intro.htm								What is jQuery?
 storyfiles/jQuery-howto.htm								Writing jQuery
 storyfiles/jQuery-tests.htm								jQuery sample code

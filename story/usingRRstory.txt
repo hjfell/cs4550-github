@@ -1,0 +1,21 @@
+Some tips:
+	unpack Rasala's story.zip at you web root
+	do not alter anything inside this folder or add anything to the folder.
+	you must be online to use the utility as it loads jQuery from the web.
+
+In the folder where your source code lives
+	create a text file story.text
+	start with just simple contents like this in your story,txt file
+		somefileinyourfolder.html my file
+		story.txt the story file
+
+in your browser, go to
+	yourWebRootDirectory/story/index.htm?<path to your folder from the story directory>
+for example
+	http://localhost:8888/story/index.htm?../yourfolder
+
+This should bring up a two-page story.  If it works, try adding this line to your story.txt that uses showfile.htm.
+e.g
+	<path from the folder that has story.txt to the story folder>/showfile.htm?<path from the story folder back to the folder that has story.txt>/somefileinyourfolder.html my file source
+	
+Reload your browser and see if your story now has 3 pages, one with the source text of somefileinyourfolder.html.

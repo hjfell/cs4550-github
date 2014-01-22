@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var i;
+var mycars = new Array();
+mycars[0] = "Honda";
+mycars[1] = "BMW";
+
+var mybikes = new Array();
+mybikes[0] = "Holdsworth";
+mybikes[1] = "Bottecchia";
+mybikes[2] = "Fell";
+mybikes[3] = "Brown(tandem)";
+
+document.write("<br><b>My Cars</b><br>");
+for (i=0;i<mycars.length;i++)
+{
+document.write(mycars[i] + "<br>");
+}
+
+document.write("<br><b>My Bikes</b><br>");
+for (i=0;i<mybikes.length;i++)
+{
+document.write(mybikes[i] + "<br>");
+}
+
+document.write("<br><b>My Vehicles</b><br>");
+var myvehicles = mycars.concat(mybikes);
+for (i=0;i< myvehicles.length;i++)
+{
+document.write(myvehicles[i] + "<br>");
+}
+
+document.write("<br><b>My Vehicles - List</b><br>");
+var myvehiclesList = myvehicles.join(', ');
+document.write(myvehiclesList + "<br>");
+
+document.write("<br><b>My Vehicles - reversed</b><br>");
+myvehicles.reverse();
+for (i=0;i< myvehicles.length;i++)
+{
+document.write(myvehicles[i] + "<br>");
+}
+
+document.write("<br><b>My Vehicles - sorted</b><br>");
+myvehicles.sort();
+for (i=0;i< myvehicles.length;i++)
+{
+document.write(myvehicles[i] + "<br>");
+}
+
+document.write("<br><b>Some Numbers</b><br>");
+var someNumbers = [23, 19, 6, 2, 38, 11, 5];
+for (i=0;i< someNumbers.length;i++)
+{
+document.write(someNumbers[i] + " ");
+}
+
+document.write("<br><b>Some Numbers - sorted</b><br>");
+someNumbers.sort();
+for (i=0;i< someNumbers.length;i++)
+{
+document.write(someNumbers[i] + " ");
+}
+</script>
+
+</body>
+</html>

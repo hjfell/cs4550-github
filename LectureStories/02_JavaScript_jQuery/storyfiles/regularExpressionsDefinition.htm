@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Regular Expressions - Definition</title>
+	<link rel="Stylesheet" type="text/css" href="../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../jQuery/jquery-1.7.1.min.js"></script>
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1>Regular Expressions - Definition</h1>
+
+<p>A <em>regular expression</em>, <b>RE</b> is a specific pattern that "matches"
+strings of text or patterns of characters.</p>
+
+<ul>
+<li><a href="../CS4550_Regular_Expressions.pdf" target="_blank">Regular Expressions (RE)</a> from a talk by Thang Nguyen</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">Mozilla Guide to JavaScript Regular Expressions</a></li>
+</ul>
+
+<h3>Construction of a RegExp object
+<br />from Douglas Crockford, <em>JavaScript: The Good Parts</em></h3>
+
+<img src="../../../images/lectures/regexpLiteral.png" alt="regexp Literal" />
+
+<table border="1" style="border-collapse:collapse;">
+<tr><th>Flag</th><th>Meaning</th></tr> 
+<tr><td><pre class="code">g</pre></td><td>Global (match multiple times; the precise meaning of this varies with the method)</td></tr>
+<tr><td><pre class="code">i</pre></td><td>Insensitive (ignore character case)</td></tr>
+<tr><td><pre class="code">m</pre></td><td>Multiline (^ and $ can match line-ending characters)</td></tr>
+</table>
+
+<pre class="code">
+// Make a regular expression object that matches
+// a JavaScript string. 
+
+var my_regexp = /"(?:\\.|[^\\\"])*"/g;
+</pre>
+<p>or with a constructor</p>
+<pre class="code">
+var my_regexp = new RegExp("\"(?:\\\\.|[^\\\\\\\"])*\"", 'g');
+</pre>
+
+<table border="1" style="border-collapse:collapse;">
+<tr><th>Property</th><th>Use</th></tr> 
+<tr><td><pre class="code">global</pre></td><td>true if the g flag was used.</td></tr>
+<tr><td><pre class="code">ignoreCase</pre></td><td>true if the i flag was used.</td></tr>
+<tr><td><pre class="code">lastIndex</pre></td><td>The index at which to start the next exec match. Initially it is zero.</td></tr>
+<tr><td><pre class="code">multiline</pre></td><td>true if the m flag was used.</td></tr>
+<tr><td><pre class="code">source</pre></td><td>The source text of the regular expression.</td></tr>
+</table>
+<p>
+<img src="../../../images/lectures/regexpChoice.png" alt="regexp Choice" />
+</p>
+<p>
+<img src="../../../images/lectures/regexpSequence.png" alt="regexp Sequence" />
+</p>
+<p>
+<img src="../../../images/lectures/regexpFactor.png" alt="regexp Factor" />
+</p>
+<p>
+<p>Special characters: \ / [ ] ( ) { } ? + * | . ^ $ must be escaped with a \ prefix to be matched literally.<br />
+An unescaped
+<table>
+<tr><th> <span class="code">.</span> </th><td> matches any character except a line-ending character</td></tr>
+<tr><th> <span class="code">^</span> </th><td> matches the beginning of the text when the lastIndex property is zero<br />or line-ending characters when the m flag is specified.</td></tr>
+<tr><th> <span class="code">$</span> </th><td> matches the end of the text or line-ending characters when the m flag is specified</td></tr>
+</table>
+</p>
+<p> 
+<img src="../../../images/lectures/regexpEscape.png" alt="regexp Escape" />
+</p>
+<table>
+<tr><th> <span class="code"> \d</span> </th><td> is the same as <span class="code">[0-9]</span>. It matches a digit</td></tr>
+<tr><th> <span class="code"> \D</span> </th><td> is the opposite: <span class="code">[^0-9]</span></td></tr>
+<tr><th> <span class="code"> \s</span> </th><td> is the same as <span class="code">[\f\n\r\t\u000B\u0020\u00A0\u2028\u2029]</span>,<br /> a partial set of Unicode whitespace characters.</td></tr>
+<tr><th> <span class="code"> \S </span></th><td> is is the opposite: <span class="code">[^\f\n\r\t\u000B\u0020\u00A0\u2028\u2029]</span></td></tr>
+<tr><th> <span class="code"> \w </span></th><td> is the same as <span class="code">[0-9A-Z_a-z]</span></td></tr>
+<tr><th> <span class="code"> \W </span></th><td> is the opposite: <span class="code">[^0-9A-Z_a-z]</span></td></tr>
+</table>
+<p><span class="code">\1</span> is a reference to the text that was captured by group 1 so that it can be matched again.</p>
+<p><span class="code">\2</span> is a reference to group 2, <span class="code">\3</span> is a reference to group 3,...</p>
+
+<pre class="code">var doubled_words = /([A-Za-z\u00C0-\u1FFF\u2800-\uFFFD]+)\s+\1/gi;</pre>
+<p><span class="code">doubled_words</span> looks for occurrences of words (strings containing 1 or more letters) followed by whitespace followed by the same word.</p>
+
+<p>
+<img src="../../../images/lectures/regexpGroup.png" alt="regexp Group" />
+</p>
+<table>
+<tr><th><em>Capturing group</em> </th><td> <span class="code">(</span> prefix<br />
+	characters that match the group are captured and the group is given a number.</td></tr>
+<tr><th><em>Noncapturing group</em> </th><td> <span class="code">(?:</span> prefix<br />
+	matches but does not capture (or number) the matched text</td></tr>
+<tr><th><em>Positive lookahead group</em> </th><td> <span class="code">(?=</span> prefix<br />not a good part</td></tr>
+<tr><th><em>Negative lookahead group</em> </th><td> <span class="code">(?!</span> prefix<br />not a good part</td></tr>
+</table>
+
+<p>
+<img src="../../../images/lectures/regexpClass.png" alt="regexp Class" />
+</p>
+<h3>Examples</h3>
+<p><b>Vowel</b>: <span class="code">(?:a|e|i|o|u)</span> or <span class="code">[aeiou]</span></p> 
+
+<p>Classes can use ranges of characters:<br />
+<span class="code">[A-Za-z\u00C0-\u1FFF\u2800-\uFFFD]</span><br />
+<span class="code">[!-\/:-@\[-`{-˜]</span> = ASCII special characters<br /></p>
+
+<p><span class="code">[^</span> excludes the specified characters<br />
+<span class="code">[^!-\/:-@\[-`{-˜]</span> = any character that is not an ASCII special character</p>
+
+<p>
+<img src="../../../images/lectures/regexpQuantifier.png" alt="regexp Quantifier" />
+</p>
+<p>A regexp quantifier suffix that determines how many times the factor should match.<p> 
+<table>
+<tr><th> <span class="code"> {n} </span></th><td>the factor should match <span class="code">n</span> times<br />
+		<span class="code"> /w{3}/ </span>is the same as <span class="code">/www/</span><br />
+		<span class="code"> {3,} </span> means 3 or more times<br /></td></tr>
+<tr><th> <span class="code"> ? </span></th><td>is the same as <span class="code">{0,1}</span></td></tr>
+<tr><th> <span class="code"> * </span></th><td>is the same as <span class="code">{0,}</span></td></tr>
+<tr><th> <span class="code"> + </span></th><td>is the same as <span class="code">{1,}</span></td></tr>
+</table>		
+</div>
+</body>
+</html>

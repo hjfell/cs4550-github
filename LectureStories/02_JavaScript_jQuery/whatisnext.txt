@@ -1,10 +1,15 @@
 storyfiles/JavaScript_intro.htm							What is JavaScript?
 storyfiles/JavaScript_howTo.htm							Writing JavaScript
 storyfiles/moreJavaScriptTypes.htm						More JavaScript Types
-storyfiles/JavaScriptObjects.htm					JavaScript Objects
-storyfiles/JavaScriptControls.htm						Controlling the Flow
+storyfiles/JavaScriptObjects.htm						JavaScript Objects
+storyfiles/JavaScriptControls.htm						Controlling the Flow 
 storyfiles/JavaScriptFunctions.htm						JavaScript Functions
+storyfiles/regularExpressionsBackground.htm				Regular Expressions Background
+storyfiles/regularExpressionsDefinition.htm				Regular Expressions Definition
+storyfiles/regularExpressionsExample1.htm				Regular Expressions Example - numbers
+storyfiles/regularExpressionsExample2.htm				Regular Expressions Example - urls
+storyfiles/JavaScriptMethods.htm						JavaScript Methods
 storyfiles/jQuery-intro.htm								What is jQuery?
 storyfiles/jQuery-howto.htm								Writing jQuery
 storyfiles/jQuery-tests.htm								jQuery sample code
-story.txt                                        		The story file for this story 
+story.txt                                       		The story file for this story 
