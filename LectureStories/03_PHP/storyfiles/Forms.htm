@@ -23,7 +23,7 @@
           media="print" />
           
     <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="../../../../js/slideToggle.js"></script>
+    <!--<script type="text/javascript" src="../../../../js/slideToggle.js"></script>-->
     <style type="text/css">
 	  .code {
 	  	font-weight: bold;
@@ -49,6 +49,7 @@
 <p><strong>action</strong> dictates to which page the form data will be sent</p>
 <p><strong>method</strong> dictates how the data is sent to the handling page,<br />
 		the HTTP (HyperText Transfer Protocol) method to be used</p>
+<p>See <a href="http://www.w3schools.com/tags/ref_httpmethods.asp">w3schools HTTP Methods: GET vs. POST</a></p>
 <p><strong>get</strong> sends the submitted data to the receiving page as a series of name-value pairs appended to the URL. For example,<br />
 <span style="padding-left:50px;">http://www.example.com/script.php?name=Homer&amp;gender=M&amp;age=35</span>
 </p> 
@@ -69,6 +70,9 @@
 <p>
 All different kinds of input can be in the form.
 </p>
+
+<p>$_REQUEST is a special variable type, known as a superglobal. It stores all of the data sent to a PHP page through either the GET or POST method, as well as data accessible in cookies.</p>
+
 
 </div>
 

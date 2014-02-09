@@ -29,9 +29,12 @@ Fusce iaculis volutpat tortor, vel ullamcorper ante pulvinar ac. Aenean commodo 
 	
 	//concatenate my first and last names
 	$myName = $firstName . ' ' . $lastName;
-	echo "<h3>Concatenation</h3>
-	\$myName = \$firstName . ' ' . \$lastName
-	<br />echo \$myName;
+	echo "<h3>Concatenation</h3>";
+	echo "\$firstName = 'Harriet';
+		<br />\$lastName = 'Fell';
+		<br />\$myName = \$firstName . ' ' . \$lastName<br />";
+	
+	echo "echo \$myName;
 	<br />results in: $myName";	
 	
 	echo "<h3>Some String Functions</h3>";
@@ -48,13 +51,15 @@ Fusce iaculis volutpat tortor, vel ullamcorper ante pulvinar ac. Aenean commodo 
 	echo crypt($myName);
 	echo '<br />crypt($myName,"salt") = ';
 	echo crypt($myName,'salt');
-	echo '<br />\$myName[3] = ';
+	echo '<br />$myName[5] = ';
 	echo $myName[5];
 	
-	echo "<p><strong>There is a difference between \" and \'.</strong></p>";
+	echo "<p><strong>There is a difference between \" and '.</strong></p>";
 	$var = 703;
-	echo "\": var is equal to $var<br />";
-	echo '\': var is equal to $var<br />';
+	echo "\"\$var\"";
+	echo " is equal to $var<br />";
+	echo "'\$var'";
+	echo ' is equal to $var<br />';
 ?>
 
 <h3>Reference:</h3>
@@ -67,6 +72,6 @@ Fusce iaculis volutpat tortor, vel ullamcorper ante pulvinar ac. Aenean commodo 
 	showSource($_SERVER["PHP_SELF"]);
 ?>
 
-<p><a href="source.php" target=_blank">show source</a></p>
+<p><a href="source.php" target="_blank">show source</a></p>
 </body>
 </html>

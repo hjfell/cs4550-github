@@ -1,4 +1,4 @@
-// from EARLE CASTLEDINE & CRAIG SHARKIE jQuery: Novice to Ninja - Chapter 6
+// from EARLE CASTLEDINE & CRAIG SHARKIE jQuery: Novice to Ninja - Chapter 4/06
 $(document).ready(function(){
   slideShow();
 });

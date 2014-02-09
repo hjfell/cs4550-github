@@ -1,6 +1,7 @@
 ﻿storyfiles/PHP.htm          What is PHP
 storyfiles/MySQL.htm        What is SQL
 storyfiles/WritingPHP.htm   Writing PHP
+storyfiles/debuggingPHP.htm	Debugging PHP
 storyfiles/PHP2Browser.htm  Sending Data to the Web Browser
 storyfiles/PHPcode.htm   	Simple PHP Code Samples
 storyfiles/Forms.htm     	Forms

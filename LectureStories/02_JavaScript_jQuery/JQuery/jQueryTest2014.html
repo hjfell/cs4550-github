@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery Tests 2014</title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script>$(document).ready(function() {
+        alert('The document is ready.');
+    	//	var bbcolor = $('#bb').css('color');
+    	//	alert(bbcolor); 
+
+    	$('#students tbody tr:even').css({
+    	    'background-color': '#dddddd',
+    	        'color': '#666666',
+    	        'font-size': '11pt',
+    	        'line-height': '2.5em'
+    	});
+    	
+    	$('p').animate({ 
+  			padding: '20px',
+  			fontSize: '30px'
+		}, 2000);
+
+    	function bluebb() {
+    	    $('#bb').css({
+    	        'color': 'blue'
+    	    });
+    	}
+
+    	function pinktest() {
+    	    $('.test').css({
+    	        'background-color': 'pink'
+    	    });
+    	}
+    function installbehavior() {
+        $("#bluebutton").click(bluebb);
+        $("#pinkbutton").click(pinktest);
+    }
+
+    $(installbehavior);
+    });
+	</script>
+</head>
+<body>
+<p id="bb">paragraph 1</p>
+	<h3>HEADING 3</H3>
+	<p>paragraph 2</p>
+	<p class="test">test paragraph</p>
+	<h3 class="test">HEADING 3</H3>
+	
+	<table class="data" id="students">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Major</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Johny</td>
+              <td>CS</td>
+            </tr>
+            <tr>
+              <td>George</td>
+              <td>IS</td>
+            </tr>
+            <tr>
+              <td>Alice</td>
+              <td>Math</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>History</td>
+            </tr>
+            <tr>
+              <td>Susan</td>
+              <td>CS</td>
+            </tr>
+            <tr>
+              <td>Jerry</td>
+              <td>Economics</td>
+            </tr>
+          </tbody>
+        </table>
+        <button id="bluebutton">BLUE</button>
+        <button id="pinkbutton">pink test</button>
+</body>
+</html>

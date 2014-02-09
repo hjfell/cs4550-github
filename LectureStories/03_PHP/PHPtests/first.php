@@ -11,7 +11,7 @@
 <?php
 echo 'This is PHP.';
 # "\n" is supposed to cause a new-line
-print "\n";
+echo "\n";
 echo 'So is this.';
 // another COMMENT
 /* and a comment on
@@ -23,10 +23,9 @@ two lines */
 <?php
 	include '../../../php/showSource.php';
 	showSource($_SERVER["PHP_SELF"]);
-	echo $_SERVER['HTTP_CONNECTION'];
 ?>
 
-<p><a href="source.php" target=_blank">show source</a></p>
+<p><a href="source.php" target="_blank">show source</a></p>
 
 </body>
 </html>

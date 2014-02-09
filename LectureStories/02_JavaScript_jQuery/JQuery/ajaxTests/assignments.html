@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CS4550 Web Development - Assignments</title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+	</script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js">
+	</script>
+	<script>
+	$(document).ready(function() {
+		alert('The document is ready.');
+		<!--$('div:first').load('assignments/assignment1.html');-->
+
+		$('#assignments a').click(function(e) {
+    		var url = $(this).attr('href') + ' ul';
+    		$('#assignment').load(url);
+    		e.preventDefault();
+  		});
+	});	
+	</script>
+</head>
+<body>
+<h1>
+	CS4550 Web Development - Assignments
+</h1>
+<!--<div id="firstOne">
+first
+</div>-->
+<ul id="assignments">
+	<li><a href="assignments/assignment1.html">Assignment 1 - Getting Setup</a></li>
+	<li><a href="assignments/assignment2.html">Assignment 2 - HTML, CSS, Designing a Reservation System</a></li>
+	<li><a href="assignments/assignment3.html">Assignment 3 - JavaScript, jQuery, Dynamics and Interaction</a></li>
+</ul>
+<div id="assignment">
+	Click on an assignment to get the details. 
+</div>
+</body>
+</html>

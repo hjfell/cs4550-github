@@ -1,5 +1,5 @@
 <?php 
-$link = @mysql_connect('../../cs4550com.ipagemysql.com', 'fell', 'JOHNLennon5*6*'); 
+$link = @mysql_connect('../../cs4550com.ipagemysql.com', 'fell', 'mypassword'); 
 if (!$link) { 
     die('Could not connect: ' . mysql_error()); 
 } 

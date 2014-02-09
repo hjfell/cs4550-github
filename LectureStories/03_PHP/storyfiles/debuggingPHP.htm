@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/template.htm
+    
+    Copyright 2013
+    Harriet Fell
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    
+    
+    January 27, 2014
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Debugging PHP</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/slide.css" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/screen.css"
+          media="screen" />    
+    <link rel="Stylesheet" type="text/css" href="../../../../story/css/print.css"
+          media="print" />
+    
+    <script type="text/javascript" src="../../../../jQuery/jquery-1.7.1.min.js"></script>
+    <!--<script type="text/javascript" src="../../../../js/slideToggle.js"></script>-->
+    <style type="text/css">
+	  .code {
+	  	font-weight: bold;
+	  	color: #00f;
+	  	font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+	  }
+	  .code:hover {
+    	background-color: #ffff88;
+	  }
+	  </style>
+</head>
+<body>
+
+<div class="pad">
+<h1>Debugging PHP</h1>
+
+<p>
+To debug a PHP script 
+<ol>
+<li>Make sure you’re always running PHP scripts through a URL! (i.e. via http://something)</li>
+<li>Know what version of PHP you’re running.  Run a phpinfo.php script or reference the PHP_VERSION constant</li>
+<li>Make sure display _errors is on. This is a basic PHP configuration setting. Check by executing phpinfo( ).</li>
+<li>Look for errors in your browser.</li>
+<li>Check the HTML source code. Sometimes the PHP error message can be hidden there!</li>
+<li>Trust the error message.</li>
+<li>Take a break!</li>
+<ol>
+<span style="padding-left:50px;font-size:60%;">suggestions from Larry Ullman, <em>PHP and MySQL for Dynamic Web Sites, Fourth Edition</em></span>
+</p>
+
+</div>
+
+</body>
+</html>

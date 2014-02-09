@@ -1,0 +1,46 @@
+Plan for cs4550 Friday January 24, 2014
+
+LectureStories/02_JavaScript_jQuery/ slide 11 Regular expression for numbers
+LectureStories/02_JavaScript_jQuery/ slide 12 Regular expression for urls
+LectureStories/02_JavaScript_jQuery/ slide 13 JavaScript Methods
+	arrays.htm
+	arrays.htm source
+		var mycars = new Array();
+		mycars[0] = "Honda";
+		var mybikes = new Array();
+		var myvehicles = mycars.concat(mybikes);
+		var myvehiclesList = myvehicles.join(', ');
+		myvehicles.reverse();
+		myvehicles.sort();
+		var someNumbers = [23, 19, 6, 2, 38, 11, 5];
+		someNumbers.sort();
+LectureStories/02_JavaScript_jQuery/ slide 14 What is jQuery?
+LectureStories/02_JavaScript_jQuery/ slide 15 Writing jQuery
+	$(selector).action()
+	$(document).ready(function(){
+   		// jQuery methods go here...
+	});
+	RUN - modify
+	02_JavaScript_jQuery/JQuery/jQueryTest2014.html
+LectureStories/02_JavaScript_jQuery/ slide 16 jQuery Sample Code
+	Basic jQuery selections jquerytest.php
+	jQuery slideToggle used to make expandable panels
+	This example by Daniel Gornstein shows a neat application of these panels:
+		Flash Cards for Ethics Class
+	jQuery used to create radio buttons to draw different levels of the Koch Snowflake
+		starshipPinafore-02/services.html	food.js
+		starshipPinafore-02/services2.html	food2.js
+	slideshows
+My first JavaScript - slideshow - June 1, 2001
+		http://www.ccs.neu.edu/home/fell/FishWeb/aquarium.html
+		http://www.ccs.neu.edu/home/fell/GardenWeb/garden.html
+		starshipPinafore-02/rooms.html
+			using slideshow.js
+			using slideshowRooms.js
+				Visit the source site
+	jQuery used to substitute text JQueryHTML1.php
+	jQuery UI used to select list items listTest1.php
+	jQuery UI used to select similar list items listTest2.php
+	Rasala's selector tests
+	A simple example of syntax and use of a jQuery callback function from w3schools
+	

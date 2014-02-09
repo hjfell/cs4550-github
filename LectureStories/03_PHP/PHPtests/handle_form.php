@@ -6,6 +6,12 @@
 </head>
 <body>
 <!-- PHP and MySQL for Dynamic Web Sites: Visual QuickPro Guide (4th Edition) by Larry E. Ullman -->
+<!-- Could use 
+	$name = $_REQUEST['name']; 
+	$email = $_REQUEST['email']; 
+	$comments = $_REQUEST['comments'];
+-->
+
 <?php # Script 2.5 - handle_form.php #4
 
 // Print the submitted information:

@@ -1,0 +1,32 @@
+Firebug
+Chrome	
+	Developer Tools
+	JavaScript Console
+Safari
+	Web Inspector
+
+http://jsfiddle.net/hjfell/FUa8C/1/
+	
+Look again at rooms and the two slide shows.
+	in particular the conditional next
+	
+jQuery cheat-sheet (slide 14)
+
+A little Ajax
+	see text insert in jsfiddle
+	LectureStories/02_JavaScript_jQuery/JQuery/ajaxTests/assignments.html
+
+We can keep adding to the JavaScript/jQuery
+
+-- Try to get started with everything then keep building
+
+Now get started on PHP.
+	for predefined variables, try on 2 browsers and on server
+
+============= another time
+Some of my JavaScript/jQuery Programs
+	Math for Tanabata
+	2D L-System Designer
+		A page about building this designer and learning JavaScript along the way. LSystem-tests.htm
+		Finishing the design tool with XML and Web Storage
+	

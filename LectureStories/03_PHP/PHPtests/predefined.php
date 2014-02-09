@@ -50,6 +50,6 @@ echo "<p>based on code in $source</p>";
 	showSource($_SERVER["PHP_SELF"]);
 ?>
 
-<p><a href="source.php" target=_blank">show source</a></p>
+<p><a href="source.php" target="_blank">show source</a></p>
 </body>
 </html>
